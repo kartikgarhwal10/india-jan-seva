@@ -1,0 +1,140 @@
+{
+  "products": [
+    {
+      "id": "pan-pvc",
+      "name": "PAN PVC Card",
+      "slug": "pan-pvc",
+      "description": "Permanent Account Number (PAN) printed on premium, durable, wallet-sized PVC plastic card. High-quality thermal printing with official colors.",
+      "price": 149,
+      "image": "/images/pvc-pan.webp",
+      "status": "Active",
+      "requiredDocument": "PAN Card PDF or clear photo",
+      "category": "Identity"
+    },
+    {
+      "id": "voter-pvc",
+      "name": "Voter ID PVC Card",
+      "slug": "voter-pvc",
+      "description": "Get your Electoral Photo Identity Card (EPIC) printed on premium PVC plastic. Includes barcode security styling.",
+      "price": 149,
+      "image": "/images/pvc-voter.webp",
+      "status": "Active",
+      "requiredDocument": "Voter Card PDF or photo",
+      "category": "Identity"
+    },
+    {
+      "id": "ayushman-pvc",
+      "name": "Ayushman Bharat (PM-JAY) PVC Card",
+      "slug": "ayushman-pvc",
+      "description": "Your Ayushman health cover card printed on a durable PVC card. Water-resistant, long-lasting print.",
+      "price": 149,
+      "image": "/images/pvc-ayushman.webp",
+      "status": "Active",
+      "requiredDocument": "Ayushman Card PDF",
+      "category": "Health"
+    },
+    {
+      "id": "dl-pvc",
+      "name": "Driving Licence PVC Card",
+      "slug": "dl-pvc",
+      "description": "Get your official Driving Licence printed on standard durable smart-card format PVC. Sharp text and details.",
+      "price": 199,
+      "image": "/images/pvc-dl.webp",
+      "status": "Active",
+      "requiredDocument": "Driving Licence PDF or photo",
+      "category": "Transport"
+    },
+    {
+      "id": "rc-pvc",
+      "name": "Vehicle RC PVC Card",
+      "slug": "rc-pvc",
+      "description": "Vehicle Registration Certificate (RC) printed in premium PVC layout. Perfect wallet companion for drivers.",
+      "price": 199,
+      "image": "/images/pvc-rc.webp",
+      "status": "Active",
+      "requiredDocument": "Vehicle RC PDF or screenshot",
+      "category": "Transport"
+    },
+    {
+      "id": "eshram-pvc",
+      "name": "E-Shram PVC Card",
+      "slug": "eshram-pvc",
+      "description": "Official E-Shram card printed on hard plastic. High resolution printing with QR code details sharp and scannable.",
+      "price": 149,
+      "image": "/images/pvc-eshram.webp",
+      "status": "Active",
+      "requiredDocument": "E-Shram Card PDF/Number",
+      "category": "Government"
+    },
+    {
+      "id": "abha-pvc",
+      "name": "ABHA Health ID PVC Card",
+      "slug": "abha-pvc",
+      "description": "Ayushman Bharat Health Account (ABHA) card printed on premium plastic card. Fits nicely in wallets.",
+      "price": 149,
+      "image": "/images/pvc-abha.webp",
+      "status": "Active",
+      "requiredDocument": "ABHA Card PDF",
+      "category": "Health"
+    },
+    {
+      "id": "ration-pvc",
+      "name": "Ration PVC Card",
+      "slug": "ration-pvc",
+      "description": "Digital Ration card layout adapted to compact PVC printing. Handy resource for accessing rations locally.",
+      "price": 149,
+      "image": "/images/pvc-ration.webp",
+      "status": "Active",
+      "requiredDocument": "Ration Card PDF",
+      "category": "Government"
+    }
+  ],
+  "orders": [
+    {
+      "id": "IJS-PVC-10258",
+      "customerName": "Rahul Kumar",
+      "phone": "9876543210",
+      "email": "rahul.kumar@example.com",
+      "productId": "pan-pvc",
+      "productName": "PAN PVC Card",
+      "amount": 149,
+      "paymentStatus": "Paid",
+      "orderStatus": "PROCESSING",
+      "trackingNumber": "TRK9876543",
+      "documentUrl": "/uploads/mock-pan.pdf",
+      "address": "Mohalla Quila, Near Jama Masjid",
+      "village": "Jarwal",
+      "district": "Bahraich",
+      "state": "Uttar Pradesh",
+      "pinCode": "271901",
+      "createdAt": "2026-08-18T10:00:00.000Z",
+      "updatedAt": "2026-08-18T10:30:00.000Z"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "rev1",
+      "customerName": "Rahul Sharma",
+      "location": "Jarwal",
+      "rating": 5,
+      "review": "Very fast service! I got my PAN card printed on PVC in just 2 days. The print quality is outstanding and looks very premium.",
+      "createdAt": "2026-08-17T12:00:00.000Z"
+    },
+    {
+      "id": "rev2",
+      "customerName": "Amit Pathak",
+      "location": "Bahraich",
+      "rating": 5,
+      "review": "Excellent customer support. I ordered my Ayushman PVC card, and the local delivery was extremely swift. Staff is very helpful.",
+      "createdAt": "2026-08-16T14:30:00.000Z"
+    },
+    {
+      "id": "rev3",
+      "customerName": "Mohammad Asif",
+      "location": "Harchanda",
+      "rating": 5,
+      "review": "High quality plastic cards and the QR code is perfectly scannable. Recommended for everyone looking for PVC cards in Bahraich.",
+      "createdAt": "2026-08-15T09:00:00.000Z"
+    }
+  ]
+}
