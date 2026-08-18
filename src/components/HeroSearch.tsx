@@ -121,15 +121,15 @@ export default function HeroSearch() {
       )}
 
       {/* Quick click suggestions */}
-      <div className="flex flex-wrap gap-2 justify-center mt-3 text-[11px] font-bold text-slate-400">
+      <div className="flex flex-wrap gap-2 justify-center mt-3 text-[11px] font-extrabold text-slate-200">
         <span>Popular:</span>
-        <button onClick={() => triggerScrollTo('#gov')} className="text-saffron hover:underline">PAN Card</button>
+        <button onClick={() => triggerScrollTo('#gov')} className="text-saffron hover:text-amber-450 hover:underline">PAN Card</button>
         <span>•</span>
-        <button onClick={() => triggerScrollTo('#banking')} className="text-saffron hover:underline">AePS Banking</button>
+        <button onClick={() => triggerScrollTo('#banking')} className="text-saffron hover:text-amber-450 hover:underline">AePS Banking</button>
         <span>•</span>
-        <button onClick={() => triggerScrollTo('#bills')} className="text-saffron hover:underline">Electricity Bill</button>
+        <button onClick={() => triggerScrollTo('#bills')} className="text-saffron hover:text-amber-450 hover:underline">Electricity Bill</button>
         <span>•</span>
-        <button onClick={() => triggerScrollTo('#pvc')} className="text-saffron hover:underline">PVC Cards</button>
+        <button onClick={() => triggerScrollTo('#pvc')} className="text-saffron hover:text-amber-450 hover:underline">PVC Cards</button>
       </div>
 
     </div>

@@ -95,26 +95,25 @@ export default async function HomePage() {
 
   return (
     <div className="flex flex-col min-h-screen bg-slate-50 text-slate-800">
-      
-      {/* 1. HERO SECTION */}
-      <section className="relative min-h-[600px] w-full overflow-hidden bg-slate-950 flex items-center pt-32 pb-20">
+           {/* 1. HERO SECTION */}
+      <section className="relative min-h-[600px] w-full overflow-hidden bg-[#070f1e] flex items-center pt-32 pb-20">
         {/* Subtle color blob backdrops */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-saffron/10 rounded-full blur-3xl -translate-x-1/2 pointer-events-none"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl translate-x-1/2 pointer-events-none"></div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-saffron/5 rounded-full blur-3xl -translate-x-1/2 pointer-events-none"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl translate-x-1/2 pointer-events-none"></div>
         
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 text-center space-y-8">
           
           <div className="space-y-4">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-saffron-light text-saffron-dark animate-pulse">
-              <span className="w-1.5 h-1.5 rounded-full bg-saffron-dark"></span>
+            <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full text-xs font-black bg-amber-100 text-[#ea580c] border border-amber-200/50 animate-pulse shadow-sm">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#ea580c]"></span>
               INDIA JAN SEVA
             </span>
             
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-tight tracking-tight max-w-4xl mx-auto">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-[#FFFFFF] leading-tight tracking-tight max-w-4xl mx-auto">
               Your Trusted Digital Service & Citizen Assistance Centre
             </h1>
             
-            <p className="text-slate-350 text-base sm:text-lg max-w-3xl mx-auto leading-relaxed">
+            <p className="text-[#E5E7EB] text-sm sm:text-base lg:text-lg max-w-2xl mx-auto leading-relaxed">
               Access essential digital, government assistance, banking, documentation, education, travel and PVC smart card printing services from one convenient, secure platform.
             </p>
           </div>
@@ -126,7 +125,7 @@ export default async function HomePage() {
           <div className="flex flex-wrap justify-center gap-4 pt-4">
             <a
               href="#services"
-              className="inline-flex items-center space-x-2 bg-saffron hover:bg-saffron-dark text-white font-bold px-7 py-3.5 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 transform hover:-translate-y-0.5 text-sm"
+              className="inline-flex items-center space-x-2 bg-[#ea580c] hover:bg-[#c2410c] text-white font-bold px-7 py-3.5 rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 transform hover:-translate-y-0.5 text-sm"
             >
               <span>Explore Services</span>
               <ChevronRight className="w-4.5 h-4.5" />
@@ -134,15 +133,15 @@ export default async function HomePage() {
             
             <Link
               href="/pvc-cards"
-              className="inline-flex items-center space-x-2 bg-slate-900 border border-slate-700 hover:border-slate-500 text-slate-200 hover:text-white px-7 py-3.5 rounded-xl text-sm font-bold transition-all duration-200"
+              className="inline-flex items-center space-x-2 bg-[#0F172A]/85 border border-white/25 hover:border-white/40 hover:bg-[#0F172A] text-white px-7 py-3.5 rounded-xl text-sm font-bold transition-all duration-200 shadow-md"
             >
-              <CreditCard className="w-4.5 h-4.5 text-saffron" />
+              <CreditCard className="w-4.5 h-4.5 text-saffron shrink-0" />
               <span>Order PVC Card</span>
             </Link>
 
             <Link
               href="/track"
-              className="inline-flex items-center space-x-2 bg-slate-900 border border-slate-700 hover:border-slate-500 text-slate-200 hover:text-white px-7 py-3.5 rounded-xl text-sm font-bold transition-all duration-200"
+              className="inline-flex items-center space-x-2 bg-[#0F172A]/85 border border-white/25 hover:border-white/40 hover:bg-[#0F172A] text-white px-7 py-3.5 rounded-xl text-sm font-bold transition-all duration-200 shadow-md"
             >
               <span>Track Order Status</span>
             </Link>
@@ -152,22 +151,22 @@ export default async function HomePage() {
       </section>
 
       {/* 2. QUICK SERVICE CATEGORY BAR */}
-      <section className="bg-slate-900 border-y border-slate-800 py-6">
+      <section className="bg-[#070f1e] border-y border-slate-900 py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {quickCategories.map((qc, idx) => (
               <a
                 key={idx}
                 href={qc.hash}
-                className="bg-slate-950 border border-slate-850 hover:border-slate-750 p-4 rounded-xl flex items-center justify-between text-left group transition-all"
+                className="bg-[#0F172A] border border-white/15 hover:border-saffron/40 hover:bg-[#1e293b] p-4 rounded-xl flex items-center justify-between text-left group transition-all duration-300"
               >
-                <div className="space-y-1.5">
-                  <div className="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center border border-slate-800 shadow-inner group-hover:scale-105 transition-transform">
+                <div className="space-y-2">
+                  <div className="w-8.5 h-8.5 rounded-lg bg-slate-950 flex items-center justify-center border border-slate-850 shadow-inner group-hover:scale-105 transition-transform">
                     {qc.icon}
                   </div>
-                  <h3 className="text-xs font-bold text-white leading-tight pr-2">{qc.title}</h3>
+                  <h3 className="text-xs font-black text-white leading-snug pr-1">{qc.title}</h3>
                 </div>
-                <ChevronRight className="w-4 h-4 text-slate-600 group-hover:text-saffron transition-colors" />
+                <ChevronRight className="w-4.5 h-4.5 text-[#CBD5E1] group-hover:text-saffron transition-colors" />
               </a>
             ))}
           </div>
@@ -185,7 +184,7 @@ export default async function HomePage() {
                 <div className="space-y-2">
                   <span className="text-xs font-bold uppercase tracking-widest text-saffron">Citizen First</span>
                   <h4 className="text-2xl font-black">India Jan Seva Platform</h4>
-                  <p className="text-xs text-slate-350 leading-relaxed">
+                  <p className="text-xs text-slate-200 leading-relaxed">
                     Designed to simplify complex registration portals and print services, delivering hard copies directly to citizens.
                   </p>
                 </div>
@@ -198,12 +197,12 @@ export default async function HomePage() {
 
             {/* Content block */}
             <div className="lg:col-span-7 space-y-6 text-left">
-              <span className="text-xs font-bold text-saffron tracking-widest uppercase">About India Jan Seva</span>
+              <span className="text-xs font-black text-[#F97316] tracking-widest uppercase">About India Jan Seva</span>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
                 Making Digital Services Simple & Accessible
               </h2>
               
-              <div className="space-y-4 text-slate-600 leading-relaxed text-sm sm:text-base">
+              <div className="space-y-4 text-[#475569] leading-relaxed text-sm sm:text-base">
                 <p>
                   <strong>India Jan Seva</strong> is a digital service platform designed to make essential digital, documentation, government assistance, banking, education and citizen services more convenient and accessible. We bridge the technological gap for citizens, allowing everyone to securely apply for documents and recharges online.
                 </p>
