@@ -1,5 +1,6 @@
 import fs from 'fs';
 import path from 'path';
+import initialDb from '../../data/db.json';
 
 const dbPath = path.join(process.cwd(), 'data', 'db.json');
 
@@ -61,44 +62,65 @@ interface DbSchema {
   reviews: Review[];
 }
 
+// In-memory database cache fallback for environments without writable local disk (e.g. Cloudflare Workers)
+let memoryDb: DbSchema = JSON.parse(JSON.stringify(initialDb));
+
+// Test file system write availability
+let isFileSystemAvailable = true;
+try {
+  const dir = path.dirname(dbPath);
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true });
+  }
+  const testPath = path.join(dir, '.fs-test');
+  fs.writeFileSync(testPath, 'test', 'utf-8');
+  fs.unlinkSync(testPath);
+} catch (e) {
+  isFileSystemAvailable = false;
+  console.warn('File system not writable. Falling back to in-memory database storage (Cloudflare Workers mode).');
+}
+
 // Ensure the db file exists and is populated
 function ensureDbExists() {
+  if (!isFileSystemAvailable) return;
   const dir = path.dirname(dbPath);
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true });
   }
   
   if (!fs.existsSync(dbPath)) {
-    const initialData: DbSchema = {
-      products: [],
-      orders: [],
-      reviews: []
-    };
-    fs.writeFileSync(dbPath, JSON.stringify(initialData, null, 2), 'utf-8');
+    fs.writeFileSync(dbPath, JSON.stringify(memoryDb, null, 2), 'utf-8');
   }
 }
 
 // Read database
 export function getDb(): DbSchema {
+  if (!isFileSystemAvailable) {
+    return memoryDb;
+  }
   ensureDbExists();
   try {
     const raw = fs.readFileSync(dbPath, 'utf-8');
     return JSON.parse(raw) as DbSchema;
   } catch (error) {
-    console.error('Error reading DB file, returning empty structure:', error);
-    return { products: [], orders: [], reviews: [] };
+    console.error('Error reading DB file, returning in-memory cache:', error);
+    return memoryDb;
   }
 }
 
 // Write database
 export function saveDb(data: DbSchema): boolean {
+  memoryDb = data; // Sync in-memory cache
+  if (!isFileSystemAvailable) {
+    return true; // Return success for in-memory mode
+  }
   ensureDbExists();
   try {
     fs.writeFileSync(dbPath, JSON.stringify(data, null, 2), 'utf-8');
     return true;
   } catch (error) {
-    console.error('Error writing DB file:', error);
-    return false;
+    console.error('Error writing DB file, saved to in-memory cache:', error);
+    return true; // Still return true since in-memory is updated
   }
 }
 

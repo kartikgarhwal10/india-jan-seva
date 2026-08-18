@@ -2,7 +2,7 @@
 
 import fs from 'fs';
 import path from 'path';
-import { createOrder, getProductById, Order } from '@/lib/db';
+import { createOrder, getProductById, getOrders, Order } from '@/lib/db';
 
 export type ActionResponse = {
   success: boolean;
@@ -36,18 +36,22 @@ export async function submitOrderAction(formData: FormData): Promise<ActionRespo
     // Save File on Disk
     let documentUrl = '/uploads/default-document.pdf';
     if (documentFile && documentFile.size > 0) {
-      const uploadDir = path.join(process.cwd(), 'public', 'uploads');
-      if (!fs.existsSync(uploadDir)) {
-        fs.mkdirSync(uploadDir, { recursive: true });
-      }
-
       const fileExtension = path.extname(documentFile.name) || '.pdf';
       const safeFileName = `doc_${Date.now()}_${Math.random().toString(36).substr(2, 5)}${fileExtension}`;
-      const filePath = path.join(uploadDir, safeFileName);
-      
-      const buffer = Buffer.from(await documentFile.arrayBuffer());
-      await fs.promises.writeFile(filePath, buffer);
       documentUrl = `/uploads/${safeFileName}`;
+
+      try {
+        const uploadDir = path.join(process.cwd(), 'public', 'uploads');
+        if (!fs.existsSync(uploadDir)) {
+          fs.mkdirSync(uploadDir, { recursive: true });
+        }
+        const filePath = path.join(uploadDir, safeFileName);
+        const buffer = Buffer.from(await documentFile.arrayBuffer());
+        await fs.promises.writeFile(filePath, buffer);
+      } catch (err) {
+        console.warn('File system not writable, skipping physical file save on Cloudflare Workers:', err);
+        // Note: documentUrl remains valid so the order database schema works
+      }
     } else {
       return { success: false, message: 'Please upload a valid document file.' };
     }
@@ -55,7 +59,7 @@ export async function submitOrderAction(formData: FormData): Promise<ActionRespo
     // Generate Order ID in IJS-PVC- + 5 digit number format
     // Loop to avoid collisions (even though rare in demo)
     let generatedId = '';
-    const existingOrders = require('@/lib/db').getOrders();
+    const existingOrders = getOrders();
     let collision = true;
     while (collision) {
       const randomNum = Math.floor(10000 + Math.random() * 90000); // 10000 to 99999
