@@ -1,0 +1,150 @@
+.wrapper {
+  margin-top: 80px;
+  background-color: var(--background);
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, #002c5c 100%);
+  color: #fff;
+  padding: 5rem 1.5rem;
+  text-align: center;
+}
+
+.heroTitle {
+  font-size: 2.75rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.heroSubtitle {
+  font-size: 1.2rem;
+  color: #cbd5e1;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 5.5rem 1.5rem;
+}
+
+.faqGroup {
+  margin-bottom: 3.5rem;
+}
+
+.faqGroup:last-child {
+  margin-bottom: 0;
+}
+
+.groupTitle {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.groupIcon {
+  color: var(--primary);
+}
+
+.faqList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faqItem {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: border-color var(--transition-fast);
+}
+
+.faqItem[open] {
+  border-color: var(--primary-light);
+}
+
+.faqSummary {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--text-main);
+  cursor: pointer;
+  user-select: none;
+}
+
+.faqSummary::-webkit-details-marker {
+  display: none;
+}
+
+.faqIcon {
+  font-size: 1.2rem;
+  color: var(--primary);
+  transition: transform var(--transition-fast);
+}
+
+.faqItem[open] .faqIcon {
+  transform: rotate(45deg);
+}
+
+.faqAnswer {
+  padding: 0 1.5rem 1.5rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Sidebar Callout Help */
+.helpCallout {
+  background: var(--primary-light);
+  border: 1px solid rgba(0, 86, 179, 0.1);
+  padding: 2.5rem;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.helpCallout h3 {
+  font-weight: 800;
+  font-size: 1.4rem;
+  color: var(--text-main);
+}
+
+.helpCallout p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  max-width: 500px;
+  line-height: 1.5;
+}
+
+.helpBtn {
+  background: var(--primary);
+  color: #fff;
+  border-radius: var(--radius-md);
+  padding: 0.7rem 1.75rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 10px rgba(0, 86, 179, 0.2);
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+  margin-top: 0.5rem;
+}
+
+.helpBtn:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-1px);
+}

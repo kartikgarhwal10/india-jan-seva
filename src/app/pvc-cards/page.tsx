@@ -1,34 +1,109 @@
-import type { Metadata } from 'next';
-import { getProducts } from '@/lib/db';
-import CatalogClient from './CatalogClient';
+import Link from "next/link";
+import { prisma } from "@/lib/prisma";
+import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
+import PVCProductCard from "@/components/PVCProductCard/PVCProductCard";
+import styles from "./pvcCards.module.css";
 
-export const metadata: Metadata = {
-  title: "Premium PVC Smart Cards Online Catalog - India Jan Seva",
-  description: "Browse and order high-quality PVC smart card printing online. We print PAN cards, Voter IDs, Ayushman Health cards, Driving Licences, and vehicle RCs. Fast shipping across India.",
+interface PageProps {
+  searchParams: Promise<{ category?: string }>;
+}
+
+export const metadata = {
+  title: "Order PVC Smart Cards Online | Unique Computer Centre - CSC Point",
+  description: "Get wallet-sized, waterproof PVC smart cards printed online for Aadhaar, PAN, Voter ID, Driving Licence, and RC starting at ₹149.",
 };
 
-export default async function PvcCardsPage() {
-  const products = getProducts();
+export default async function PvcCardsPage({ searchParams }: PageProps) {
+  const { category = "all" } = await searchParams;
+
+  // Query active products from database filtered by category
+  const products = await prisma.product.findMany({
+    where: {
+      active: true,
+      ...(category !== "all" ? { category } : {}),
+    },
+    orderBy: {
+      price: "asc",
+    },
+  });
+
+  const categories = [
+    { key: "all", label: "All Cards" },
+    { key: "identity", label: "Identity Cards" },
+    { key: "utility", label: "Utility Cards" },
+    { key: "academic_others", label: "Academic & Others" },
+  ];
 
   return (
-    <div className="bg-slate-50 min-h-screen pt-28 pb-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Page Header */}
-        <div className="text-center max-w-2xl mx-auto mb-12 space-y-3">
-          <span className="text-xs font-bold text-saffron tracking-widest uppercase">PVC Smart Cards</span>
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
-            Premium PVC Card Catalog
-          </h1>
-          <p className="text-slate-500 text-sm sm:text-base leading-relaxed">
-            Choose from our supported card prints below. Upload your identity file PDF, complete our payment process, and receive a hard plastic wallet card.
+    <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
+      <Header />
+      
+      <main className={styles.wrapper}>
+        {/* Banner Hero */}
+        <section className={styles.hero} aria-labelledby="hero-title">
+          <h1 id="hero-title" className={styles.heroTitle}>Premium PVC Smart Cards</h1>
+          <p className={styles.heroSubtitle}>
+            Order high-quality, durable, waterproof plastic smart prints of your essential documents. Starting at just ₹149 with all India home delivery.
           </p>
-        </div>
+        </section>
 
-        {/* Dynamic Catalog Section */}
-        <CatalogClient initialProducts={products} />
+        <section className={styles.container}>
+          {/* Category Tabs (Links for SSR/SEO advantages) */}
+          <div className={styles.tabs} role="tablist" aria-label="Product categories">
+            {categories.map((cat) => {
+              const isActive = category === cat.key;
+              const href = cat.key === "all" ? "/pvc-cards" : `/pvc-cards?category=${cat.key}`;
+              return (
+                <Link
+                  key={cat.key}
+                  href={href}
+                  className={`${styles.tab} ${isActive ? styles.tabActive : ""}`}
+                  role="tab"
+                  aria-selected={isActive}
+                  aria-controls="pvc-grid"
+                >
+                  {cat.label}
+                </Link>
+              );
+            })}
+          </div>
 
-      </div>
+          {/* Intro Section */}
+          <div className={styles.introSection}>
+            <p className={styles.introText}>
+              We print your official government-issued identity documents exactly as provided onto high-grade PVC plastic cards. Select your document below to configure your order.
+            </p>
+          </div>
+
+          {/* Product Grid */}
+          <div id="pvc-grid" className={styles.pvcGrid} role="region" aria-live="polite">
+            {products.length > 0 ? (
+              products.map((product) => (
+                <PVCProductCard
+                  key={product.id}
+                  product={{
+                    id: product.id,
+                    slug: product.slug,
+                    name: product.name,
+                    price: product.price,
+                    shortDescription: product.shortDescription,
+                    description: product.description,
+                    image: product.image,
+                    active: product.active,
+                  }}
+                />
+              ))
+            ) : (
+              <div style={{ gridColumn: "span 3", textAlign: "center", padding: "4rem" }}>
+                <p style={{ color: "var(--text-light)" }}>No PVC cards available under this category.</p>
+              </div>
+            )}
+          </div>
+        </section>
+      </main>
+
+      <Footer />
     </div>
   );
 }

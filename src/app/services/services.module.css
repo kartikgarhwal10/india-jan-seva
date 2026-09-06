@@ -1,0 +1,212 @@
+.wrapper {
+  margin-top: 80px;
+  background-color: var(--background);
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, #002c5c 100%);
+  color: #fff;
+  padding: 5rem 1.5rem;
+  text-align: center;
+}
+
+.heroTitle {
+  font-size: 2.75rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.heroSubtitle {
+  font-size: 1.2rem;
+  color: #cbd5e1;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 5.5rem 1.5rem;
+}
+
+/* Category Filters Tabs */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 3.5rem;
+  flex-wrap: wrap;
+}
+
+.tab {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  padding: 0.6rem 1.5rem;
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.tab:hover {
+  background-color: var(--surface-alt);
+  color: var(--text-main);
+}
+
+.tabActive {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+
+.tabActive:hover {
+  background-color: var(--primary-hover);
+  color: #fff;
+}
+
+/* Services Page Grids */
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2.5rem;
+}
+
+.serviceCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  scroll-margin-top: 100px; /* Offset sticky header when deep linking */
+}
+
+.serviceCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.serviceHeader {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.serviceIcon {
+  font-size: 2.25rem;
+  width: 60px;
+  height: 60px;
+  background: var(--surface-alt);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.serviceName {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.serviceDesc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.requirements {
+  font-size: 0.9rem;
+  background: var(--surface-alt);
+  padding: 1.25rem;
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.requirements h5 {
+  font-weight: 800;
+  color: var(--text-main);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+}
+
+.requirements ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.requirements li {
+  position: relative;
+  padding-left: 1rem;
+  color: var(--text-muted);
+}
+
+.requirements li::before {
+  content: "•";
+  color: var(--primary);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  border-top: 1px solid var(--border);
+  padding-top: 1.25rem;
+}
+
+.timeTag {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-light);
+}
+
+.enquireBtn {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #fff;
+  background: #25d366;
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color var(--transition-fast);
+}
+
+.enquireBtn:hover {
+  background: #20ba5a;
+}
+
+.officialBtn {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary);
+  text-decoration: underline;
+}
+
+.officialBtn:hover {
+  color: var(--primary-hover);
+}
+
+@media (max-width: 768px) {
+  .servicesGrid {
+    gap: 1.5rem;
+  }
+  .serviceCard {
+    padding: 1.75rem;
+  }
+}

@@ -1,190 +1,143 @@
-import type { Metadata } from 'next';
-import { notFound } from 'next/navigation';
-import Link from 'next/link';
-import { getProductBySlug, getProducts } from '@/lib/db';
-import CardMockup from '@/components/CardMockup';
-import { 
-  ArrowLeft, 
-  CreditCard, 
-  Phone, 
-  CheckCircle, 
-  FileText, 
-  ShieldAlert, 
-  TrendingUp, 
-  Truck 
-} from 'lucide-react';
+import Image from "next/image";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { prisma } from "@/lib/prisma";
+import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
+import { SITE_CONFIG } from "@/lib/config";
+import styles from "../pvcCards.module.css";
 
-interface Props {
+interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
-// Generate dynamic metadata for SEO
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+// Helper to safely parse JSON strings to arrays
+function parseJsonArray(jsonStr: string): string[] {
+  try {
+    return JSON.parse(jsonStr);
+  } catch {
+    return [jsonStr];
+  }
+}
+
+// Dynamic SEO metadata generation from DB
+export async function generateMetadata({ params }: PageProps) {
   const { slug } = await params;
-  const product = getProductBySlug(slug);
+  const product = await prisma.product.findUnique({
+    where: { slug, active: true },
+  });
   
   if (!product) {
-    return { title: 'Product Not Found' };
+    return {
+      title: "Product Not Found",
+    };
   }
 
   return {
-    title: `${product.name} Printing Service Online - India Jan Seva`,
-    description: `Order a premium PVC smart card print of your ${product.name}. Upload document PDF, pay securely, and get it delivered in ${product.price === 199 ? '1-2 days' : '3-5 days'}.`,
+    title: `${product.name} | Order PVC Cards Online`,
+    description: `Order your premium, wallet-sized, waterproof ${product.name} online at just ₹${product.price}. High-fidelity smart print with fast home delivery.`,
+    openGraph: {
+      title: `${product.name} | Unique Computer Centre - CSC Point`,
+      description: product.description,
+      type: "website",
+      images: [{ url: product.image }],
+    }
   };
 }
 
-export default async function ProductDetailPage({ params }: Props) {
+export default async function ProductDetails({ params }: PageProps) {
   const { slug } = await params;
-  const product = getProductBySlug(slug);
+  
+  const product = await prisma.product.findUnique({
+    where: { slug, active: true },
+  });
 
   if (!product) {
     notFound();
   }
 
-  const getWhatsAppLink = () => {
-    const text = `Hello India Jan Seva, mujhe ${product.name} PVC Card order karna hai. Details link: indiajanseva.in/pvc-cards/${product.slug}`;
-    return `https://wa.me/919876543210?text=${encodeURIComponent(text)}`;
-  };
+  const whatsAppLink = SITE_CONFIG.getWhatsAppProductLink(product.name);
+  const requirements = parseJsonArray(product.requirements);
+  const features = parseJsonArray(product.features);
 
   return (
-    <div className="bg-slate-50 min-h-screen pt-28 pb-20 text-left">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Back Link */}
-        <Link
-          href="/pvc-cards"
-          className="inline-flex items-center space-x-1.5 text-slate-500 hover:text-slate-900 font-semibold text-xs mb-8 transition-colors"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Back to PVC Catalog</span>
-        </Link>
-
-        {/* Grid layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-          
-          {/* Left Column: Visual Mockup & Verification */}
-          <div className="lg:col-span-5 space-y-6">
-            <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-card flex items-center justify-center h-64">
-              <CardMockup cardId={product.id} name="YOUR DETAILS HERE" interactive={false} />
+    <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
+      <Header />
+      
+      <main className={styles.wrapper}>
+        <section className={styles.container}>
+          <div className={styles.detailGrid}>
+            {/* Product Image Column */}
+            <div className={styles.detailImgWrapper}>
+              <Image
+                src={product.image}
+                alt={product.name}
+                fill
+                sizes="(max-width: 900px) 100vw, 40vw"
+                className={styles.detailImage}
+                priority
+              />
             </div>
 
-            {/* Quick specifications */}
-            <div className="bg-slate-900 text-slate-300 p-6 rounded-2xl space-y-4">
-              <h3 className="font-bold text-white text-sm tracking-wide uppercase border-b border-slate-800 pb-2">
-                Card Specifications
-              </h3>
-              <div className="space-y-2 text-xs">
-                <div className="flex justify-between">
-                  <span className="text-slate-400">Material Type</span>
-                  <span className="font-semibold text-white">Polyvinyl Chloride (PVC)</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-slate-400">Dimensions</span>
-                  <span className="font-semibold text-white">85.6mm x 54mm (ISO CR-80)</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-slate-400">Thickness</span>
-                  <span className="font-semibold text-white">760 Micron (Standard ATM Card)</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-slate-400">Print Quality</span>
-                  <span className="font-semibold text-white">300 DPI Dye-Sublimation</span>
-                </div>
-                <div className="flex justify-between">
-                  <span className="text-slate-400">Finish Layer</span>
-                  <span className="font-semibold text-white">Dual-sided Gloss Overlay</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Column: Pricing, Requirements, Action CTAs */}
-          <div className="lg:col-span-7 space-y-6 bg-white p-8 rounded-2xl border border-slate-100 shadow-card">
-            
-            {/* Heading block */}
-            <div className="space-y-2.5">
-              <span className="text-xs font-bold text-saffron tracking-widest uppercase bg-saffron-light px-2.5 py-0.5 rounded-full inline-block">
-                {product.category} Category
-              </span>
-              <h1 className="text-2xl sm:text-3xl font-black text-slate-900 leading-tight">
-                {product.name} Printing
-              </h1>
-              <p className="text-slate-500 text-sm leading-relaxed">
-                {product.description}
-              </p>
-            </div>
-
-            {/* Price block */}
-            <div className="flex items-center space-x-4 bg-slate-50 p-4 rounded-xl border border-slate-100">
-              <div>
-                <span className="text-[10px] text-slate-400 block font-bold leading-none uppercase">Assistance & Printing Fee</span>
-                <span className="text-2xl font-black text-slate-900">₹{product.price}</span>
-              </div>
-              <div className="h-8 border-r border-slate-200"></div>
-              <div className="flex items-center text-slate-500 text-xs gap-1.5">
-                <Truck className="w-4 h-4 text-saffron shrink-0" />
-                <span>Standard Delivery (All India)</span>
-              </div>
-            </div>
-
-            {/* Document requirement warning */}
-            <div className="space-y-3">
-              <h3 className="font-bold text-slate-900 text-sm flex items-center space-x-1.5">
-                <FileText className="w-4 h-4 text-saffron" />
-                <span>Required Document</span>
-              </h3>
-              <p className="text-slate-600 text-xs">
-                To fulfill this order, we require you to upload your official <strong>{product.requiredDocument}</strong>. Please ensure the file is high resolution, as low-resolution files result in blurry text.
-              </p>
+            {/* Product Info Column */}
+            <div className={styles.detailInfo}>
+              <span className={styles.detailBadge}>PVC Smart Print</span>
+              <h1 className={styles.detailName}>{product.name}</h1>
               
-              <div className="bg-amber-50 border border-amber-100 rounded-xl p-3 text-[11px] text-amber-800 flex items-start space-x-2">
-                <ShieldAlert className="w-4 h-4 shrink-0 mt-0.5" />
-                <span>
-                  <strong>Legal Notice:</strong> We do NOT issue official cards. We are a private center assisting citizens with printing cards they are already legally entitled to. You must possess the original file.
+              <div className={styles.detailPriceSection}>
+                <span className={styles.detailCurrency}>₹</span>
+                <span className={styles.detailPrice}>{product.price}</span>
+                <span className={styles.detailPeriod}>/ print</span>
+                <span style={{ fontSize: "0.85rem", color: "var(--accent)", fontWeight: 700, marginLeft: "1rem" }}>
+                  Free Shipping Included
                 </span>
               </div>
-            </div>
 
-            {/* Action buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 border-t border-slate-100 pt-6">
-              {/* Checkout Form Button */}
-              <Link
-                href={`/order?cardId=${product.id}`}
-                className="flex items-center justify-center space-x-2 bg-saffron hover:bg-saffron-dark text-white font-bold px-8 py-3.5 rounded-lg shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5 text-sm sm:flex-1"
-              >
-                <CreditCard className="w-4 h-4" />
-                <span>Order Online Now</span>
-              </Link>
+              <p className={styles.detailDesc}>{product.description}</p>
 
-              {/* Order on WhatsApp */}
-              <a
-                href={getWhatsAppLink()}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center space-x-2 bg-green-50 border border-green-200 text-green-700 hover:bg-green-100 font-bold px-8 py-3.5 rounded-lg text-sm sm:flex-1 transition-colors"
-              >
-                <Phone className="w-4 h-4" />
-                <span>Order on WhatsApp</span>
-              </a>
-            </div>
+              {/* Requirements & Features Lists */}
+              <div className={styles.listsSection}>
+                <div className={styles.listBlock}>
+                  <h4>Required Documents:</h4>
+                  <ul>
+                    {requirements.map((req, idx) => (
+                      <li key={idx}>{req}</li>
+                    ))}
+                  </ul>
+                </div>
 
-            {/* Delivery & Security lists */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-slate-50 text-xs text-slate-500">
-              <div className="flex items-start space-x-2">
-                <CheckCircle className="w-4 h-4 text-green shrink-0 mt-0.5" />
-                <span><strong>Secure Identity Handling:</strong> Files are deleted after print completion.</span>
+                <div className={styles.listBlock}>
+                  <h4>Premium Features:</h4>
+                  <ul className={styles.featureList}>
+                    {features.map((feat, idx) => (
+                      <li key={idx}>{feat}</li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-              <div className="flex items-start space-x-2">
-                <CheckCircle className="w-4 h-4 text-green shrink-0 mt-0.5" />
-                <span><strong>Fast Dispatch:</strong> Dispatched in 24 hours with courier tracking.</span>
+
+              <div style={{ color: "var(--text-light)", fontSize: "0.9rem" }}>
+                <strong>Estimated Delivery:</strong> {product.deliveryTime}
+              </div>
+
+              {/* Actions */}
+              <div className={styles.detailActions}>
+                <Link href={`/order?product=${product.slug}`} className={styles.detailBtnPrimary}>
+                  Order This Card
+                </Link>
+                <a href={whatsAppLink} target="_blank" rel="noopener noreferrer" className={styles.detailBtnSecondary}>
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                    <path d="M12.004 2C6.51 2 2.014 6.5 2.014 12c0 2.18.7 4.21 1.9 5.86l-1.25 4.57 4.69-1.23C8.924 21.84 10.424 22 12.004 22c5.49 0 9.99-4.5 9.99-10S17.494 2 12.004 2zm5.72 13.9c-.24.68-1.2 1.25-1.63 1.3-.43.05-.98.24-2.93-.52-2.5-1-4.11-3.56-4.23-3.73-.13-.17-1-1.34-1-2.55 0-1.2.62-1.8 1.1-1.85.12-.02.26-.03.38-.03.12 0 .28-.05.44.33.17.4.58 1.43.64 1.54.06.12.1.25.02.4-.08.16-.16.27-.3.44-.14.16-.3.3-.43.43-.13.13-.27.27-.12.53.15.26.68 1.12 1.46 1.82.99.9 1.83 1.18 2.09 1.31.26.13.41.1.56-.07.15-.17.65-.76.82-1.02.17-.26.35-.22.58-.13.24.08 1.5.7 1.76.83.26.13.43.2.49.3.06.13.06.74-.18 1.42z" />
+                  </svg>
+                  Order via WhatsApp
+                </a>
               </div>
             </div>
-
           </div>
-          
-        </div>
+        </section>
+      </main>
 
-      </div>
+      <Footer />
     </div>
   );
 }

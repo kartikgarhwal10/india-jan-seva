@@ -1,121 +1,121 @@
-import type { Metadata } from 'next';
-import { ShieldCheck, Target, Users, Landmark } from 'lucide-react';
+import Image from "next/image";
+import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
+import styles from "./about.module.css";
 
-export const metadata: Metadata = {
-  title: 'About India Jan Seva - Digital Citizen Assistance',
-  description: 'Learn about the mission, values, and community reach of India Jan Seva. Providing transparent and convenient digital, government, and banking services support.',
+export const metadata = {
+  title: "About Us | Unique Computer Centre - CSC Point",
+  description: "Learn about the history of Unique Computer Centre in Jarwal Road, our mission, vision, and core values under Mohd Irfak Ahmad.",
 };
 
-export default function AboutPage() {
-  const stats = [
-    { label: 'Years Facilitating Portals', val: '8+' },
-    { label: 'PVC Smart Cards Printed', val: '5,000+' },
-    { label: 'Demo Support Locations', val: '8 States' },
-    { label: 'Customer Satisfaction', val: '99.8%' }
-  ];
-
-  const values = [
-    {
-      icon: <ShieldCheck className="w-6 h-6 text-saffron" />,
-      title: "Data Confidentiality",
-      desc: "We enforce strict security. Citizen uploads are encrypted during transmission and permanently deleted from our servers upon print order completion."
-    },
-    {
-      icon: <Target className="w-6 h-6 text-green" />,
-      title: "Integrity & Transparency",
-      desc: "No hidden charges or premium fees. We display service price points clearly, helping citizens apply for recharges and documents securely."
-    },
-    {
-      icon: <Users className="w-6 h-6 text-blue-500" />,
-      title: "Dedicated Local Helplines",
-      desc: "We support our clients through every step of their registration, providing instant transaction receipts and tracking status updates on WhatsApp."
-    }
-  ];
-
+export default function About() {
   return (
-    <div className="bg-slate-50 min-h-screen pt-28 pb-20 text-left">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-        
-        {/* Header */}
-        <div className="text-center max-w-2xl mx-auto space-y-3">
-          <span className="text-xs font-bold text-saffron tracking-widest uppercase">Our Platform</span>
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-slate-900 leading-tight">
-            About India Jan Seva
-          </h1>
-          <p className="text-slate-500 text-sm sm:text-base leading-relaxed">
-            Making essential documentation, banking, education, and printing services simple, transparent, and accessible.
+    <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
+      <Header />
+      
+      <main className={styles.wrapper}>
+        {/* Banner Hero */}
+        <section className={styles.hero}>
+          <h1 className={styles.heroTitle}>About Our Centre</h1>
+          <p className={styles.heroSubtitle}>
+            Unique Computer Centre - CSC Point: Empowering local residents with digital accessibility, smart prints, and secure government assistance.
           </p>
-        </div>
+        </section>
 
-        {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 bg-slate-900 text-white p-8 rounded-3xl shadow-lg">
-          {stats.map((s, idx) => (
-            <div key={idx} className="text-center space-y-1">
-              <p className="text-3xl sm:text-4xl font-black text-saffron">{s.val}</p>
-              <p className="text-[10px] sm:text-xs text-slate-400 font-bold uppercase tracking-wider">{s.label}</p>
-            </div>
-          ))}
-        </div>
-
-        {/* Community Vision */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-7 space-y-6">
-            <h2 className="text-2xl font-extrabold text-slate-900">Our Mission & Community Vision</h2>
-            <div className="space-y-4 text-slate-600 leading-relaxed text-sm sm:text-base">
-              <p>
-                <strong>India Jan Seva</strong> is a digital service platform designed to make essential digital, documentation, government assistance, banking, education and citizen services more convenient and accessible. We bridge the technological gap for citizens, allowing everyone to securely apply for documents and recharges online.
+        {/* History Intro */}
+        <section className={styles.container}>
+          <div className={styles.introGrid}>
+            <div className={styles.introContent}>
+              <span className={styles.sectionBadge}>Our Beginnings</span>
+              <h2 className={styles.title}>Serving Bahraich Since 2018</h2>
+              <p className={styles.text}>
+                Founded by <strong>Mohd Irfak Ahmad</strong> in 2018, Unique Computer Centre was established in Harchanda, Jarwal, to address a critical gap: local citizens had to travel long distances to Bahraich town or Gonda just to download an Aadhaar print, correct a PAN card, or apply for student scholarships.
               </p>
-              <p>
-                By building this web ordering desk, we aim to extend our services to citizens across India, offering the same level of trust, speed, and privacy that our local partners have enjoyed. We support a wide network of local entrepreneurs who run Jan Seva Kiosk terminals to assist clients physically in rural and semi-urban districts.
+              <p className={styles.text}>
+                Starting with a single desktop computer and printer, we have grown into Jarwal&apos;s leading digital facilitation hub. Today, we assist over 2,500 citizens monthly in accessing crucial government-to-citizen (G2C) services and offer advanced PVC smart card printing shipped nationwide.
               </p>
             </div>
-          </div>
-
-          {/* Cards */}
-          <div className="lg:col-span-5 space-y-6">
-            <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-card flex items-center space-x-3.5">
-              <div className="w-12 h-12 rounded-xl bg-slate-100/80 flex items-center justify-center shrink-0">
-                <Landmark className="w-6 h-6 text-saffron" />
-              </div>
-              <div>
-                <h4 className="font-extrabold text-slate-900 text-sm">Citizen Assistance Portal</h4>
-                <p className="text-xs text-slate-500">Helping citizens navigate administrative portals.</p>
-              </div>
-            </div>
-
-            <div className="bg-white p-6 rounded-2xl border border-slate-100 shadow-card flex items-center space-x-3.5">
-              <div className="w-12 h-12 rounded-xl bg-slate-100/80 flex items-center justify-center shrink-0">
-                <ShieldCheck className="w-6 h-6 text-green" />
-              </div>
-              <div>
-                <h4 className="font-extrabold text-slate-900 text-sm">Thermal Smart Card Printers</h4>
-                <p className="text-xs text-slate-500">ATM-standard CR-80 plastic smart cards.</p>
-              </div>
+            <div className={styles.introImageWrapper}>
+              <Image
+                src="/images/csc-workspace.jpg"
+                alt="Unique CSC Centre workspace inside view"
+                fill
+                sizes="(max-width: 900px) 100vw, 45vw"
+                className={styles.introImage}
+              />
             </div>
           </div>
-        </div>
 
-        {/* Pillars */}
-        <div className="space-y-8 border-t border-slate-200/50 pt-16 text-center">
-          <div className="max-w-xl mx-auto space-y-2">
-            <h2 className="text-2xl font-extrabold text-slate-900">Our Core Pillars</h2>
-            <p className="text-slate-500 text-xs sm:text-sm">Providing access to essential services transparently.</p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {values.map((v, idx) => (
-              <div key={idx} className="bg-white p-6 rounded-2xl border border-slate-100 shadow-card text-left space-y-3.5">
-                <div className="w-10 h-10 rounded-lg bg-slate-50 flex items-center justify-center border border-slate-100 shadow-inner">
-                  {v.icon}
-                </div>
-                <h3 className="font-bold text-base text-slate-900">{v.title}</h3>
-                <p className="text-slate-500 text-xs leading-relaxed">{v.desc}</p>
+          {/* Mission & Vision cards */}
+          <div className={styles.visionSection}>
+            <div className={styles.visionGrid}>
+              <div className={styles.visionCard}>
+                <span className={styles.cardIcon}>🎯</span>
+                <h3 className={styles.cardTitle}>Our Mission</h3>
+                <p className={styles.cardText}>
+                  To provide rural and town citizens with direct, transparent, and error-free access to government welfare programs, digital document services, and high-fidelity smart cards, eliminating delays and intermediary corruption.
+                </p>
               </div>
-            ))}
-          </div>
-        </div>
 
-      </div>
+              <div className={styles.visionCard}>
+                <span className={styles.cardIcon}>👁️</span>
+                <h3 className={styles.cardTitle}>Our Vision</h3>
+                <p className={styles.cardText}>
+                  To become a trusted, multi-service digital franchise network across Uttar Pradesh, where any citizen can get immediate, verified documentation support, financial services, and technical literacy under one roof.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Timeline */}
+          <div className={styles.timelineSection}>
+            <div className={styles.timelineHeader}>
+              <span className={styles.sectionBadge}>Our Milestones</span>
+              <h2 className={styles.title} style={{ textAlign: "center" }}>Historical Journey</h2>
+            </div>
+            
+            <div className={styles.timeline}>
+              <div className={styles.timelineItem}>
+                <div className={styles.timelineDot}></div>
+                <span className={styles.timelineYear}>2018</span>
+                <h3 className={styles.timelineTitle}>Establishment</h3>
+                <p className={styles.timelineText}>
+                  Unique Computer Centre opened doors in Harchanda, Jarwal with basic printing, typing, and internet services.
+                </p>
+              </div>
+
+              <div className={styles.timelineItem}>
+                <div className={styles.timelineDot}></div>
+                <span className={styles.timelineYear}>2020</span>
+                <h3 className={styles.timelineTitle}>Official CSC Point Status</h3>
+                <p className={styles.timelineText}>
+                  Authorized as a government Common Services Centre (CSC), enabling us to process official Aadhaar downloads, Ayushman cards, and PM-Kisan registrations directly.
+                </p>
+              </div>
+
+              <div className={styles.timelineItem}>
+                <div className={styles.timelineDot}></div>
+                <span className={styles.timelineYear}>2023</span>
+                <h3 className={styles.timelineTitle}>PVC Printing &amp; Banking Support</h3>
+                <p className={styles.timelineText}>
+                  Introduced high-definition PVC smart card printing setups and launched Aadhaar Enabled Payment System (AePS) terminal services for direct bank withdrawals at our centre.
+                </p>
+              </div>
+
+              <div className={styles.timelineItem}>
+                <div className={styles.timelineDot}></div>
+                <span className={styles.timelineYear}>2026</span>
+                <h3 className={styles.timelineTitle}>Digital Platform Launch</h3>
+                <p className={styles.timelineText}>
+                  Launched `uniquecscpoint.in` enabling online document submissions, payment gateway checkouts, and tracking portals for PVC card orders all across India.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
     </div>
   );
 }

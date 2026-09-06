@@ -1,0 +1,378 @@
+.wrapper {
+  margin-top: 80px;
+  background-color: var(--background);
+  min-height: 85vh;
+  padding: 4rem 1.5rem;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Success Banner */
+.successBanner {
+  background-color: var(--accent-light);
+  border: 1px solid rgba(0, 168, 107, 0.2);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  animation: slideDown var(--transition-normal) forwards;
+}
+
+.successIcon {
+  font-size: 3rem;
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.successTitle {
+  color: var(--accent-hover);
+  font-weight: 800;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.successText {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.highlightId {
+  font-weight: 800;
+  color: var(--primary);
+  font-size: 1.2rem;
+  background: var(--surface);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  display: inline-block;
+  margin-top: 0.5rem;
+  letter-spacing: 0.05em;
+}
+
+/* Search Card */
+.searchCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 3rem;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.searchTitle {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+}
+
+.searchSubtitle {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.searchBar {
+  display: flex;
+  gap: 0.75rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.input {
+  flex: 1;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 0.8rem 1.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  background: var(--background);
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.05em;
+  transition: border-color var(--transition-fast);
+}
+
+.input:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+.searchBtn {
+  background: var(--primary);
+  color: #fff;
+  border: 1px solid var(--primary);
+  border-radius: var(--radius-md);
+  padding: 0.8rem 2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color var(--transition-fast);
+}
+
+.searchBtn:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Info Details Card */
+.detailsCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 3rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.detailsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1.5rem;
+}
+
+.orderMeta h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.orderMeta p {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+.statusBadge {
+  font-size: 0.85rem;
+  font-weight: 800;
+  padding: 0.4rem 1rem;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.statusBadge.pending_payment {
+  background-color: rgba(245, 158, 11, 0.15);
+  color: #d97706;
+}
+
+.statusBadge.processing, .statusBadge.printing {
+  background-color: rgba(0, 86, 179, 0.1);
+  color: var(--primary);
+}
+
+.statusBadge.shipped {
+  background-color: rgba(139, 92, 246, 0.1);
+  color: #7c3aed;
+}
+
+.statusBadge.delivered {
+  background-color: rgba(16, 185, 129, 0.1);
+  color: #059669;
+}
+
+.statusBadge.failed, .statusBadge.cancelled {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--danger);
+}
+
+/* Timeline Layout */
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin: 1.5rem 0;
+  padding-bottom: 1.5rem;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: var(--border);
+  z-index: 1;
+}
+
+.timelineProgress {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  height: 4px;
+  background-color: var(--accent);
+  z-index: 2;
+  transition: width var(--transition-slow);
+}
+
+.timelineStep {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 3;
+  width: 25%;
+  position: relative;
+}
+
+.timelineCircle {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-full);
+  background-color: var(--surface);
+  border: 3px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.stepActive .timelineCircle {
+  border-color: var(--primary);
+  background-color: var(--surface);
+}
+
+.stepActive .timelineCircle::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: var(--primary);
+  border-radius: var(--radius-full);
+}
+
+.stepDone .timelineCircle {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: bold;
+  content: "✓";
+}
+
+.stepDone .timelineCircle::after {
+  content: "✓";
+  color: #fff;
+}
+
+.timelineLabel {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-light);
+  margin-top: 0.75rem;
+  text-align: center;
+}
+
+.stepActive .timelineLabel {
+  color: var(--primary);
+}
+
+.stepDone .timelineLabel {
+  color: var(--text-main);
+}
+
+/* Dispatch details box */
+.dispatchBox {
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.dispatchBox h4 {
+  font-weight: 800;
+  font-size: 1rem;
+  color: var(--text-main);
+}
+
+.dispatchInfo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.dispatchLabel {
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+.dispatchValue {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text-main);
+}
+
+.trackLink {
+  color: var(--primary);
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.trackLink:hover {
+  color: var(--primary-hover);
+}
+
+/* Error States */
+.errorAlert {
+  background-color: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  color: var(--danger);
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 640px) {
+  .detailsCard {
+    padding: 2rem 1.5rem;
+  }
+  .timeline {
+    flex-direction: column;
+    gap: 2rem;
+    padding-left: 2rem;
+    align-items: flex-start;
+  }
+  .timeline::before {
+    left: 24px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    height: auto;
+  }
+  .timelineProgress {
+    left: 24px;
+    top: 0;
+    width: 4px;
+    height: 0%;
+    transition: height var(--transition-slow);
+  }
+  .timelineStep {
+    flex-direction: row;
+    width: 100%;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  .timelineLabel {
+    margin-top: 0;
+    text-align: left;
+  }
+}

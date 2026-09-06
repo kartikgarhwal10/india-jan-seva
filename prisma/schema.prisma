@@ -1,0 +1,148 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model Product {
+  id               String   @id @default(uuid())
+  slug             String   @unique
+  name             String
+  price            Float
+  description      String
+  shortDescription String   @default("")
+  requirements     String // JSON or comma-separated string
+  features         String // JSON or comma-separated string
+  deliveryTime     String
+  image            String
+  category         String   @default("pvc")
+  active           Boolean  @default(true)
+  featured         Boolean  @default(false)
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+  orders           Order[]
+}
+
+model Service {
+  id             String   @id @default(uuid())
+  slug           String   @unique
+  name           String
+  category       String // csc, digital, education, banking
+  icon           String
+  description    String
+  requirements   String // JSON or comma-separated string
+  processingTime String
+  officialLink   String?
+  active         Boolean  @default(true)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+}
+
+model Order {
+  id             String   @id // Will be our UCCPVCXXXX format (e.g. UCCPVC10001)
+  customerName   String
+  customerMobile String
+  customerEmail  String
+  deliveryAddress String
+  villageTown    String
+  district       String
+  state          String
+  pinCode        String
+  documentPath   String // Private uploads file path
+  amount         Float
+  paymentStatus  String // PENDING, PAID, FAILED
+  orderStatus    String // PENDING_PAYMENT, PAID, PROCESSING, PRINTING, QUALITY_CHECK, PACKED, SHIPPED, DELIVERED, CANCELLED, REFUNDED
+  razorpayOrderId String? @unique
+  razorpayPaymentId String?
+  courierName    String?
+  trackingNumber String?
+  notes          String?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  productId      String
+  product        Product  @relation(fields: [productId], references: [id])
+  
+  partnerId      String?
+  partner        Partner? @relation(fields: [partnerId], references: [id])
+  commissions    PartnerCommission[]
+}
+
+model BlogPost {
+  id            String   @id @default(uuid())
+  title         String
+  slug          String   @unique
+  summary       String
+  content       String
+  category      String
+  author        String
+  publishedDate String
+  readTime      String
+  image         String
+  published     Boolean  @default(true)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+model Review {
+  id        String   @id @default(uuid())
+  rating    Int
+  content   String
+  author    String
+  location  String
+  date      String
+  approved  Boolean  @default(true)
+  createdAt DateTime @default(now())
+}
+
+model GalleryItem {
+  id        String   @id @default(uuid())
+  title     String
+  category  String // centre, pvc, staff
+  image     String
+  alt       String
+  createdAt DateTime @default(now())
+}
+
+model Partner {
+  id             String   @id @default(uuid())
+  name           String
+  shopName       String
+  phone          String   @unique
+  email          String   @unique
+  password       String   // Hashed password
+  address        String
+  status         String   // PENDING, APPROVED, REJECTED
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+
+  orders         Order[]
+  commissions    PartnerCommission[]
+}
+
+model PartnerCommission {
+  id         String   @id @default(uuid())
+  amount     Float
+  status     String   // PENDING, PAID
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  partnerId  String
+  partner    Partner  @relation(fields: [partnerId], references: [id])
+  
+  orderId    String
+  order      Order    @relation(fields: [orderId], references: [id])
+}
+
+model Setting {
+  id        String   @id @default(uuid())
+  key       String   @unique
+  value     String
+  updatedAt DateTime @updatedAt
+}

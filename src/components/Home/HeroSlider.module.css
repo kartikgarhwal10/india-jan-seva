@@ -1,0 +1,218 @@
+.heroSection {
+  position: relative;
+  height: 600px;
+  width: 100%;
+  overflow: hidden;
+  margin-top: 80px; /* offset header height */
+  background: var(--primary-dark);
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    height: 480px;
+  }
+}
+
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-slow) ease, visibility var(--transition-slow) ease;
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+
+.slide.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+}
+
+.contentContainer {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+.slideContent {
+  max-width: 650px;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.fadeInUp {
+  animation: fadeInUp 0.8s forwards 0.3s ease;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.welcomeBadge {
+  background: rgba(0, 86, 179, 0.2);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  color: #38bdf8;
+  padding: 0.35rem 1rem;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  margin-bottom: 1.25rem;
+}
+
+.title {
+  color: #fff;
+  font-size: 3.25rem;
+  font-weight: 900;
+  line-height: 1.15;
+  margin-bottom: 1.25rem;
+  letter-spacing: -0.01em;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.25rem;
+  }
+}
+
+.subtitle {
+  color: #cbd5e1;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  margin-bottom: 2.25rem;
+}
+
+@media (max-width: 768px) {
+  .subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.75rem;
+  }
+}
+
+.ctaGroup {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btnPrimary {
+  background: var(--primary);
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: 1rem;
+  border: 1px solid var(--primary);
+  box-shadow: 0 4px 14px rgba(0, 86, 179, 0.4);
+  transition: background var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.btnPrimary:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 86, 179, 0.5);
+}
+
+.btnSecondary {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  font-size: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  transition: background var(--transition-fast), border var(--transition-fast), transform var(--transition-fast);
+}
+
+.btnSecondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Arrows Navigation */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  background: rgba(9, 21, 41, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background var(--transition-fast), border-color var(--transition-fast);
+}
+
+.arrow:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+.arrowLeft {
+  left: 2rem;
+}
+
+.arrowRight {
+  right: 2rem;
+}
+
+@media (max-width: 768px) {
+  .arrow {
+    display: none; /* hide arrows on mobile, swipe is standard */
+  }
+}
+
+/* Dot Indicators */
+.dotsContainer {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.75rem;
+  z-index: 10;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: background var(--transition-fast), width var(--transition-fast);
+}
+
+.dotActive {
+  background: var(--primary);
+  width: 28px;
+}

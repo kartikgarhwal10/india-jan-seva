@@ -1,39 +1,31 @@
-import type { Metadata } from 'next';
-import { getProducts } from '@/lib/db';
-import OrderWizard from './OrderWizard';
+import { Suspense } from "react";
+import { prisma } from "@/lib/prisma";
+import OrderForm from "./OrderForm";
+import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
+import styles from "./order.module.css";
 
-export const metadata: Metadata = {
-  title: 'Order PVC Smart Card Online - India Jan Seva',
-  description: 'Order your PVC smart card online. Fill details, upload scanned files, pay securely and track printing and delivery updates.',
+export const metadata = {
+  title: "Order PVC Smart Cards Online | Unique Computer Centre - CSC Point",
+  description: "Place your order for high-quality plastic PVC Aadhaar, PAN, Voter ID, and driving licence smart cards. Safe document uploads and secure payments.",
 };
 
-interface Props {
-  searchParams: Promise<{ cardId?: string }>;
-}
-
-export default async function OrderPage({ searchParams }: Props) {
-  const { cardId } = await searchParams;
-  const products = getProducts();
+export default async function OrderPage() {
+  // Query all active products from SQLite database
+  const products = await prisma.product.findMany({
+    where: { active: true },
+    orderBy: { price: "asc" },
+  });
 
   return (
-    <div className="bg-slate-50 min-h-screen pt-28 pb-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-10 space-y-2">
-          <span className="text-xs font-bold text-saffron tracking-widest uppercase">Order PVC Card</span>
-          <h1 className="text-3xl font-black text-slate-900 leading-tight">
-            PVC Card Ordering Desk
-          </h1>
-          <p className="text-slate-500 text-sm leading-relaxed">
-            Follow the instructions, submit details, and we will print your heavy-duty plastic card with official guidelines and ship to your doorstep.
-          </p>
-        </div>
-
-        {/* Wizard Form */}
-        <OrderWizard products={products} initialCardId={cardId} />
-
-      </div>
+    <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
+      <Header />
+      <main className={styles.wrapper}>
+        <Suspense fallback={<div className={styles.container}><p style={{ textAlign: "center" }}>Loading checkout wizard...</p></div>}>
+          <OrderForm products={products} />
+        </Suspense>
+      </main>
+      <Footer />
     </div>
   );
 }
