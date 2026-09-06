@@ -27,14 +27,14 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "This order is already paid." }, { status: 400 });
     }
 
-    const keyId = process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID;
+    const keyId = process.env.NEXT_PUBLIC_RAZORPAY_KEY_ID || process.env.RAZORPAY_KEY_ID;
     const keySecret = process.env.RAZORPAY_KEY_SECRET;
 
     // 4. Handle missing environment variables gracefully (Local Dev check)
     if (!keyId || !keySecret) {
       console.error("Razorpay Credentials Missing. NEXT_PUBLIC_RAZORPAY_KEY_ID or RAZORPAY_KEY_SECRET is not configured.");
       
-      // If we are explicitly running mock test mode
+      // If we are explicitly running mock test mode in development only
       if (process.env.NODE_ENV === "development") {
         // Create local mock Razorpay Order ID for sandbox dev checks
         const mockRpOrderId = `order_mock_${Math.random().toString(36).substring(2, 11)}`;

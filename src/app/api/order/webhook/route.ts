@@ -35,7 +35,7 @@ export async function POST(request: Request) {
     const event = JSON.parse(rawBody);
     console.log(`[RAZORPAY WEBHOOK] Received event: ${event.event}`);
 
-    // 3. Process payment.captured or order.paid events
+    // 3. Process payment.captured, order.paid, or payment.failed events
     if (event.event === "order.paid" || event.event === "payment.captured") {
       const payload = event.payload;
       const razorpayOrderId = payload.order?.entity?.id || payload.payment?.entity?.order_id;
@@ -91,6 +91,24 @@ export async function POST(request: Request) {
       }
 
       console.log(`[RAZORPAY WEBHOOK] Order ${order.id} status successfully updated to PAID / PROCESSING.`);
+    } else if (event.event === "payment.failed") {
+      const payload = event.payload;
+      const razorpayOrderId = payload.payment?.entity?.order_id;
+      if (razorpayOrderId) {
+        const order = await prisma.order.findFirst({
+          where: { razorpayOrderId },
+        });
+        if (order && order.paymentStatus !== "PAID") {
+          await prisma.order.update({
+            where: { id: order.id },
+            data: {
+              paymentStatus: "FAILED",
+              orderStatus: "Failed Payment",
+            },
+          });
+          console.log(`[RAZORPAY WEBHOOK] Order ${order.id} marked as FAILED via webhook.`);
+        }
+      }
     }
 
     return NextResponse.json({ success: true });

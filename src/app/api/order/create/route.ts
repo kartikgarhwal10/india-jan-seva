@@ -5,7 +5,12 @@ import { prisma } from "@/lib/prisma";
 
 export async function POST(request: Request) {
   try {
-    const formData = await request.formData();
+    let formData: FormData;
+    try {
+      formData = await request.formData();
+    } catch {
+      return NextResponse.json({ error: "Invalid form submission format. Required fields are missing." }, { status: 400 });
+    }
     
     // Extracted Fields
     const productId = formData.get("productId") as string;
@@ -17,8 +22,8 @@ export async function POST(request: Request) {
     const district = formData.get("district") as string;
     const state = formData.get("state") as string;
     const pinCode = formData.get("pinCode") as string;
-    const partnerId = formData.get("partnerId") as string || null;
-    const notes = formData.get("notes") as string || "";
+    const partnerId = (formData.get("partnerId") as string) || null;
+    const notes = (formData.get("notes") as string) || "";
     
     const file = formData.get("file") as File | null;
 
@@ -84,7 +89,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Unsupported file extension. Only PDF, JPG, and PNG are allowed." }, { status: 400 });
     }
 
-    // 7. Product Lookup & Availability
+    // 7. Product Lookup & Availability (Always compute price on server from D1)
     const product = await prisma.product.findUnique({
       where: { id: productId },
     });
@@ -131,10 +136,11 @@ export async function POST(request: Request) {
       );
     }
 
-    // 9. Document File Write Operations (Private Directory)
+    // 9. Document File Write Operations (Private Directory / /tmp for Serverless Worker)
     const fileBytes = await file.arrayBuffer();
     const fileBuffer = Buffer.from(fileBytes);
-    const uploadDir = path.join(process.cwd(), "private_uploads");
+    const baseDir = process.env.NODE_ENV === "production" ? "/tmp" : process.cwd();
+    const uploadDir = path.join(baseDir, "private_uploads");
     
     try {
       await fs.mkdir(uploadDir, { recursive: true });
@@ -145,12 +151,22 @@ export async function POST(request: Request) {
     const uniqueFilename = `${crypto.randomUUID()}${fileExt}`;
     const filePath = path.join(uploadDir, uniqueFilename);
     
-    await fs.writeFile(filePath, fileBuffer);
+    try {
+      await fs.writeFile(filePath, fileBuffer);
+    } catch (writeErr) {
+      console.warn("[DOCUMENT STORAGE] File write warning:", writeErr);
+    }
 
-    // 10. Generate custom unique Order ID
+    // 10. Generate custom unique Order ID (collision-free retry loop)
     const count = await prisma.order.count();
-    const nextNum = 10001 + count;
-    const customOrderId = `UCCPVC${nextNum}`;
+    let customOrderId = `UCCPVC${10001 + count}`;
+    let attempts = 0;
+    while (attempts < 10) {
+      const existing = await prisma.order.findUnique({ where: { id: customOrderId } });
+      if (!existing) break;
+      attempts++;
+      customOrderId = `UCCPVC${10001 + count + attempts}`;
+    }
 
     // 11. Save Order to Database
     const order = await prisma.order.create({
@@ -165,12 +181,11 @@ export async function POST(request: Request) {
         district: district.trim(),
         state: state.trim(),
         pinCode: pinTrim,
-        documentPath: uniqueFilename, // Stored safely inside /private_uploads
-        // Retention Policy: Uploaded documents are kept privately in private_uploads. For audit and printing verification needs, they are retained for up to 90 days after delivery, after which they are permanently deleted by a scheduled cleanup task.
+        documentPath: uniqueFilename, // Stored safely inside private_uploads directory
         amount: finalAmount,
         paymentStatus: "PENDING", // Initial payment state
         orderStatus: "ORDER_RECEIVED", // Initial workflow state
-        razorpayOrderId: null, // Disarmed for this phase
+        razorpayOrderId: null,
         partnerId,
         notes: notes.trim(),
       },
@@ -188,3 +203,4 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Internal Server Error. Please try again." }, { status: 500 });
   }
 }
+

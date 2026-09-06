@@ -4,6 +4,7 @@ import type { D1Database } from "@cloudflare/workers-types";
 
 const globalForPrisma = globalThis as unknown as {
   prismaNode: PrismaClient | undefined;
+  prismaEdge: PrismaClient | undefined;
 };
 
 /**
@@ -38,8 +39,13 @@ function getCloudflareD1(): D1Database | null {
 export function getPrisma(): PrismaClient {
   const d1 = getCloudflareD1();
   if (d1) {
-    const adapter = new PrismaD1(d1);
-    return new PrismaClient({ adapter });
+    if (!globalForPrisma.prismaEdge) {
+      // eslint-disable-next-line @typescript-eslint/no-require-imports
+      const { PrismaClient: PrismaClientEdge } = require("@/generated/prisma/edge");
+      const adapter = new PrismaD1(d1);
+      globalForPrisma.prismaEdge = new PrismaClientEdge({ adapter });
+    }
+    return globalForPrisma.prismaEdge!;
   }
 
   if (!globalForPrisma.prismaNode) {

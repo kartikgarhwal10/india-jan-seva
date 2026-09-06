@@ -8,7 +8,7 @@ export async function POST(request: Request) {
     const { orderId, razorpayPaymentId, razorpayOrderId, razorpaySignature, isMock } = body;
 
     if (!orderId || !razorpayPaymentId || !razorpayOrderId) {
-      return NextResponse.json({ error: "Required fields are missing." }, { status: 400 });
+      return NextResponse.json({ error: "Required payment fields are missing." }, { status: 400 });
     }
 
     const order = await prisma.order.findUnique({
@@ -19,13 +19,23 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Order not found." }, { status: 404 });
     }
 
+    // Idempotency: If order is already marked as PAID, return success
+    if (order.paymentStatus === "PAID") {
+      return NextResponse.json({ success: true, message: "Order is already paid and confirmed." });
+    }
+
+    // Verify matching Razorpay Order ID to prevent cross-order payment replay
+    if (order.razorpayOrderId && order.razorpayOrderId !== razorpayOrderId) {
+      return NextResponse.json({ error: "Razorpay Order ID does not match order record." }, { status: 400 });
+    }
+
     const keySecret = process.env.RAZORPAY_KEY_SECRET;
     let paymentVerified = false;
 
-    if (isMock && !keySecret) {
-      // In development test environment, allow mock verification
+    if (isMock && process.env.NODE_ENV === "development" && !keySecret) {
+      // In local development test environment ONLY, allow mock verification
       paymentVerified = true;
-      console.log(`[MOCK PAYMENT] Order ${orderId} verified successfully.`);
+      console.log(`[MOCK PAYMENT] Order ${orderId} verified successfully in local dev.`);
     } else if (keySecret) {
       // Cryptographic signature check
       if (!razorpaySignature) {
@@ -38,6 +48,11 @@ export async function POST(request: Request) {
         .digest("hex");
 
       paymentVerified = generatedSignature === razorpaySignature;
+    } else {
+      return NextResponse.json(
+        { error: "Payment gateway credentials are not configured on the server." },
+        { status: 503 }
+      );
     }
 
     if (paymentVerified) {
@@ -48,22 +63,26 @@ export async function POST(request: Request) {
           paymentStatus: "PAID",
           orderStatus: "PROCESSING",
           razorpayPaymentId: razorpayPaymentId,
+          razorpayOrderId: razorpayOrderId,
         },
       });
 
-      // If partner placed this order, calculate commission
+      // If partner placed this order, record partner commission
       if (order.partnerId) {
-        // Simple partner commission rule: Partner gains credit directly, or we create a PartnerCommission record.
-        // Reseller already bought at discount ₹80, so commission is typically 0 for self-orders,
-        // or if they referred, we calculate it here. Let's create a pending commission record.
-        await prisma.partnerCommission.create({
-          data: {
-            amount: 0.0, // Since they got the card at direct reseller pricing, commission is built-in
-            status: "PAID",
-            partnerId: order.partnerId,
-            orderId: order.id,
-          },
+        const existingCommission = await prisma.partnerCommission.findFirst({
+          where: { orderId: order.id },
         });
+
+        if (!existingCommission) {
+          await prisma.partnerCommission.create({
+            data: {
+              amount: 0.0, // Reseller pricing is built-in
+              status: "PAID",
+              partnerId: order.partnerId,
+              orderId: order.id,
+            },
+          });
+        }
       }
 
       return NextResponse.json({ success: true, message: "Payment verified and order confirmed." });
@@ -82,3 +101,4 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
   }
 }
+
