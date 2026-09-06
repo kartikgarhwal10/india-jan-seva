@@ -11,6 +11,13 @@
 		"directory": ".open-next/assets",
 		"binding": "ASSETS"
 	},
+	"d1_databases": [
+		{
+			"binding": "DB",
+			"database_name": "india-jan-seva-db",
+			"database_id": "93bcfa64-293a-4250-98bb-40850d8f1bcc"
+		}
+	],
 	"services": [
 		{
 			"binding": "WORKER_SELF_REFERENCE",
