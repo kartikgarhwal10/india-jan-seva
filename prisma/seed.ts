@@ -109,9 +109,9 @@ const services = [
 const pvcProducts = [
   {
     slug: "aadhaar-pvc",
-    name: "Aadhaar PVC Smart Card",
+    name: "Aadhaar PVC Card",
     price: 149,
-    shortDescription: "Pocket-sized, waterproof Aadhaar smart card print with dynamic QR code.",
+    shortDescription: "Premium quality • Durable • Smart Look • Easy Ordering",
     description: "Order a durable, wallet-sized, waterproof Aadhaar smart card printed on premium plastic (PVC) with UV protection.",
     requirements: JSON.stringify([
       "Official Aadhaar PDF File (Downloaded from myAadhaar portal)",
@@ -124,15 +124,15 @@ const pvcProducts = [
       "Guaranteed barcode/QR code scan readability"
     ]),
     deliveryTime: "3 - 7 Days across India",
-    image: "/images/pvc-aadhaar-mockup.jpg",
+    image: "/images/cards/aadhaar-pvc.jpg",
     category: "identity",
     featured: true
   },
   {
     slug: "pan-pvc",
-    name: "PAN PVC Smart Card",
+    name: "PAN PVC Card",
     price: 149,
-    shortDescription: "Permanent Account Number printed on durable glossy plastic.",
+    shortDescription: "Premium quality • Durable • Smart Look • Easy Ordering",
     description: "Get your Permanent Account Number printed on a premium glossy plastic PVC card. Convenient replacement for paper/faded cards.",
     requirements: JSON.stringify([
       "Official e-PAN Card PDF file",
@@ -145,15 +145,15 @@ const pvcProducts = [
       "Fits securely in wallets"
     ]),
     deliveryTime: "3 - 7 Days across India",
-    image: "/images/pvc-pan-mockup.jpg",
+    image: "/images/cards/pan-pvc.jpg",
     category: "identity",
     featured: true
   },
   {
     slug: "ayushman-pvc",
-    name: "Ayushman Bharat PVC Card",
+    name: "Ayushman PVC Card",
     price: 149,
-    shortDescription: "PM-JAY Golden card on durable plastic for emergency hospital support.",
+    shortDescription: "Premium quality • Durable • Smart Look • Easy Ordering",
     description: "Make your PM-JAY Golden health card easy to carry in your wallet. Crucial for emergency hospital admissions.",
     requirements: JSON.stringify([
       "Ayushman Golden Card PDF file",
@@ -166,57 +166,15 @@ const pvcProducts = [
       "Glossy protection overlay"
     ]),
     deliveryTime: "3 - 7 Days across India",
-    image: "/images/pvc-aadhaar-mockup.jpg",
+    image: "/images/cards/ayushman-pvc.jpg",
     category: "utility",
     featured: true
   },
   {
-    slug: "voter-pvc",
-    name: "Voter ID PVC Smart Card",
-    price: 149,
-    shortDescription: "Upgrade your paper Voter ID card to a durable plastic smart card.",
-    description: "Upgrade your old paper Voter Card to a modern, security-enabled PVC Smart Voter ID.",
-    requirements: JSON.stringify([
-      "Voter ID PDF or EPIC Number",
-      "OR Voter card photo scan"
-    ]),
-    features: JSON.stringify([
-      "Official standard dimensions",
-      "Enhanced durability",
-      "Readable election barcode",
-      "Dual-sided color printing"
-    ]),
-    deliveryTime: "3 - 7 Days across India",
-    image: "/images/pvc-pan-mockup.jpg",
-    category: "identity",
-    featured: true
-  },
-  {
-    slug: "driving-licence-pvc",
-    name: "Driving Licence PVC Card",
-    price: 149,
-    shortDescription: "Premium plastic driving licence print matching official layouts.",
-    description: "Convert your temporary virtual driving licence PDF into a robust, high-quality plastic card to show to authorities.",
-    requirements: JSON.stringify([
-      "Driving Licence PDF downloaded from Sarathi / DigiLocker",
-      "OR Driving Licence Number"
-    ]),
-    features: JSON.stringify([
-      "Premium thick PVC material",
-      "High resolution typography",
-      "Official design alignment",
-      "Waterproof finish"
-    ]),
-    deliveryTime: "3 - 7 Days across India",
-    image: "/images/pvc-pan-mockup.jpg",
-    category: "identity",
-    featured: false
-  },
-  {
     slug: "rc-pvc",
-    name: "Vehicle RC PVC Smart Card",
+    name: "Vehicle RC PVC Card",
     price: 149,
-    shortDescription: "Wallet-sized duplicate Registration Certificate for vehicle dashboards.",
+    shortDescription: "Premium quality • Durable • Smart Look • Easy Ordering",
     description: "Order a durable plastic duplicate of your Vehicle Registration Certificate (RC) for dashboard convenience.",
     requirements: JSON.stringify([
       "Registration Certificate PDF from Vahan / DigiLocker",
@@ -229,36 +187,36 @@ const pvcProducts = [
       "Accurate official format"
     ]),
     deliveryTime: "3 - 7 Days across India",
-    image: "/images/pvc-aadhaar-mockup.jpg",
+    image: "/images/cards/rc-pvc.jpg",
     category: "identity",
-    featured: false
+    featured: true
   },
   {
-    slug: "e-shram-pvc",
-    name: "e-Shram PVC Card",
+    slug: "student-id-pvc",
+    name: "Student ID PVC Card",
     price: 149,
-    shortDescription: "e-Shram card printed on premium plastic for unorganized sector workers.",
-    description: "Get your e-Shram worker identification card printed on a durable, waterproof PVC smart card to easily carry to work sites and secure government benefits.",
+    shortDescription: "Premium quality • Durable • Smart Look • Easy Ordering",
+    description: "Print your school/college student identity card on a glossy, durable plastic PVC smart card with custom lanyards.",
     requirements: JSON.stringify([
-      "e-Shram Card PDF downloaded from official portal",
-      "OR e-Shram registered phone number"
+      "Student ID Card layout PDF or high-res photo scan",
+      "OR Admission form receipt with student photo"
     ]),
     features: JSON.stringify([
-      "High-contrast color print",
-      "Standard credit card size",
-      "Laminated moisture barrier",
-      "Heavy duty plastic build"
+      "Vivid color rendering",
+      "Durable badge protection coating",
+      "Double-sided custom print matching",
+      "Free lanyard slot punch if requested"
     ]),
     deliveryTime: "3 - 7 Days across India",
-    image: "/images/pvc-aadhaar-mockup.jpg",
-    category: "utility",
-    featured: false
+    image: "/images/cards/student-id-pvc.jpg",
+    category: "academic_others",
+    featured: true
   },
   {
     slug: "abha-pvc",
-    name: "ABHA Health ID PVC Card",
+    name: "ABHA PVC Card",
     price: 149,
-    shortDescription: "Ayushman Bharat Health Account Card printed on plastic.",
+    shortDescription: "Premium quality • Durable • Smart Look • Easy Ordering",
     description: "Print your Ayushman Bharat Health Account (ABHA) card on premium plastic. Convenient, wallet-sized, and long-lasting for easy hospital scans.",
     requirements: JSON.stringify([
       "ABHA Health Card PDF downloaded from ABHA portal",
@@ -271,36 +229,15 @@ const pvcProducts = [
       "Official alignment layouts"
     ]),
     deliveryTime: "3 - 7 Days across India",
-    image: "/images/pvc-pan-mockup.jpg",
+    image: "/images/cards/abha-pvc.jpg",
     category: "utility",
-    featured: false
-  },
-  {
-    slug: "udid-pvc",
-    name: "Unique Disability ID (UDID) PVC Card",
-    price: 149,
-    shortDescription: "Durable smart card duplicate of your disability identification.",
-    description: "Convert your paper disability card into a wallet-sized, waterproof UDID smart card. Highly durable and convenient for obtaining travel and medical concessions.",
-    requirements: JSON.stringify([
-      "UDID Card PDF or Certificate PDF",
-      "OR UDID Number details"
-    ]),
-    features: JSON.stringify([
-      "Reinforced heavy plastic structure",
-      "Vibrant high-contrast visibility",
-      "Dual-sided official layouts",
-      "Waterproof and tearproof design"
-    ]),
-    deliveryTime: "3 - 7 Days across India",
-    image: "/images/pvc-aadhaar-mockup.jpg",
-    category: "utility",
-    featured: false
+    featured: true
   },
   {
     slug: "ration-pvc",
-    name: "Ration Card PVC Print",
+    name: "Ration Card PVC",
     price: 149,
-    shortDescription: "Premium wallet-sized duplicate card for your family ration registry.",
+    shortDescription: "Premium quality • Durable • Smart Look • Easy Ordering",
     description: "Get your digital ration card details printed onto a durable, easy-to-carry PVC plastic card for convenient usage at government ration shops.",
     requirements: JSON.stringify([
       "Ration Card PDF file or photo scan",
@@ -313,36 +250,57 @@ const pvcProducts = [
       "Waterproof glossy finish"
     ]),
     deliveryTime: "3 - 7 Days across India",
-    image: "/images/pvc-pan-mockup.jpg",
+    image: "/images/cards/ration-pvc.jpg",
     category: "utility",
+    featured: true
+  },
+  {
+    slug: "driving-licence-pvc",
+    name: "Vehicle DL PVC Card",
+    price: 149,
+    shortDescription: "Premium quality • Durable • Smart Look • Easy Ordering",
+    description: "Convert your temporary virtual driving licence PDF into a robust, high-quality plastic card to show to authorities.",
+    requirements: JSON.stringify([
+      "Driving Licence PDF downloaded from Sarathi / DigiLocker",
+      "OR Driving Licence Number"
+    ]),
+    features: JSON.stringify([
+      "Premium thick PVC material",
+      "High resolution typography",
+      "Official design alignment",
+      "Waterproof finish"
+    ]),
+    deliveryTime: "3 - 7 Days across India",
+    image: "/images/cards/dl-pvc.jpg",
+    category: "identity",
     featured: false
   },
   {
-    slug: "uan-pvc",
-    name: "EPFO UAN PVC Smart Card",
+    slug: "e-shram-pvc",
+    name: "e-Shram PVC Card",
     price: 149,
-    shortDescription: "Universal Account Number card on plastic for EPF members.",
-    description: "Get your Universal Account Number (UAN) details printed on a glossy PVC smart card. Highly convenient for EPFO member verifications at bank branches and new offices.",
+    shortDescription: "Premium quality • Durable • Smart Look • Easy Ordering",
+    description: "Get your e-Shram worker identification card printed on a durable, waterproof PVC smart card to easily carry to work sites and secure government benefits.",
     requirements: JSON.stringify([
-      "UAN Card PDF from Unified Member Portal",
-      "OR UAN Number details"
+      "e-Shram Card PDF downloaded from official portal",
+      "OR e-Shram registered phone number"
     ]),
     features: JSON.stringify([
-      "ATM card dimensions template",
-      "Glossy wear-resistant laminate",
-      "Official EPFO green themes matching",
-      "Clear Member details rendering"
+      "High-contrast color print",
+      "Standard credit card size",
+      "Laminated moisture barrier",
+      "Heavy duty plastic build"
     ]),
     deliveryTime: "3 - 7 Days across India",
-    image: "/images/pvc-aadhaar-mockup.jpg",
+    image: "/images/cards/eshram-pvc.jpg",
     category: "utility",
     featured: false
   },
   {
     slug: "farmer-id-pvc",
-    name: "Farmer ID PVC Smart Card",
+    name: "Farmer ID PVC Card (Kisan Card)",
     price: 149,
-    shortDescription: "PM-Kisan identity card printed on durable plastic.",
+    shortDescription: "Premium quality • Durable • Smart Look • Easy Ordering",
     description: "Print your PM-Kisan Farmer ID registry details onto a glossy, waterproof plastic smart card for easy presentation at local cooperative markets and seeds counters.",
     requirements: JSON.stringify([
       "PM-Kisan registry summary or Farmer Certificate PDF",
@@ -355,29 +313,71 @@ const pvcProducts = [
       "ATM pocket-friendly shape"
     ]),
     deliveryTime: "3 - 7 Days across India",
-    image: "/images/pvc-aadhaar-mockup.jpg",
+    image: "/images/cards/kisan-pvc.jpg",
     category: "academic_others",
     featured: false
   },
   {
-    slug: "student-id-pvc",
-    name: "Student ID PVC Card",
+    slug: "voter-pvc",
+    name: "Voter ID PVC Card",
     price: 149,
-    shortDescription: "Student identification details duplicated on a glossy smart card.",
-    description: "Convert your temporary paper student identity documents or school/college registry cards into a glossy, durable plastic card with sharp fonts.",
+    shortDescription: "Premium quality • Durable • Smart Look • Easy Ordering",
+    description: "Upgrade your old paper Voter Card to a modern, security-enabled PVC Smart Voter ID.",
     requirements: JSON.stringify([
-      "Student ID Card layout PDF or high-res photo scan",
-      "OR Admission form receipt with student photo"
+      "Voter ID PDF or EPIC Number",
+      "OR Voter card photo scan"
     ]),
     features: JSON.stringify([
-      "Vivid color rendering",
-      "Durable badge protection coating",
-      "Double-sided custom print matching",
-      "Free lanyard slot punch if requested"
+      "Official standard dimensions",
+      "Enhanced durability",
+      "Readable election barcode",
+      "Dual-sided color printing"
     ]),
     deliveryTime: "3 - 7 Days across India",
-    image: "/images/pvc-pan-mockup.jpg",
-    category: "academic_others",
+    image: "/images/cards/voter-pvc.jpg",
+    category: "identity",
+    featured: false
+  },
+  {
+    slug: "udid-pvc",
+    name: "Unique Disability ID (UDID) PVC Card",
+    price: 149,
+    shortDescription: "Premium quality • Durable • Smart Look • Easy Ordering",
+    description: "Convert your paper disability card into a wallet-sized, waterproof UDID smart card. Highly durable and convenient for obtaining travel and medical concessions.",
+    requirements: JSON.stringify([
+      "UDID Card PDF or Certificate PDF",
+      "OR UDID Number details"
+    ]),
+    features: JSON.stringify([
+      "Reinforced heavy plastic structure",
+      "Vibrant high-contrast visibility",
+      "Dual-sided official layouts",
+      "Waterproof and tearproof design"
+    ]),
+    deliveryTime: "3 - 7 Days across India",
+    image: "/images/cards/udid-pvc.jpg",
+    category: "utility",
+    featured: false
+  },
+  {
+    slug: "uan-pvc",
+    name: "EPFO UAN PVC Card",
+    price: 149,
+    shortDescription: "Premium quality • Durable • Smart Look • Easy Ordering",
+    description: "Get your Universal Account Number (UAN) details printed on a glossy PVC smart card. Highly convenient for EPFO member verifications at bank branches and new offices.",
+    requirements: JSON.stringify([
+      "UAN Card PDF from Unified Member Portal",
+      "OR UAN Number details"
+    ]),
+    features: JSON.stringify([
+      "ATM card dimensions template",
+      "Glossy wear-resistant laminate",
+      "Official EPFO green themes matching",
+      "Clear Member details rendering"
+    ]),
+    deliveryTime: "3 - 7 Days across India",
+    image: "/images/cards/uan-pvc.jpg",
+    category: "utility",
     featured: false
   }
 ];
@@ -583,10 +583,10 @@ async function main() {
 
   // Seed default settings
   const defaultSettings = [
-    { key: "whatsapp_number", value: "917084666326" },
-    { key: "business_phone", value: "+91 70846 66326" },
-    { key: "business_email", value: "support@uniquecscpoint.in" },
-    { key: "business_address", value: "Harchanda, Jarwal, Bahraich, Uttar Pradesh, 271904" },
+    { key: "whatsapp_number", value: "918299315137" },
+    { key: "business_phone", value: "+91 82993 15137" },
+    { key: "business_email", value: "Uniquecscpoint1020@gmail.com" },
+    { key: "business_address", value: "Aryavart bank ke bagal, Harchanda, Jarwal, Bahraich (UP) 271904" },
     { key: "pvc_base_price", value: "149" },
   ];
 

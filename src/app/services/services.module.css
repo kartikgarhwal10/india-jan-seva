@@ -210,3 +210,74 @@
     padding: 1.75rem;
   }
 }
+
+/* Category Group Section */
+.categoryGroupBlock {
+  margin-bottom: 4rem;
+}
+
+.categoryRibbonHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 1.75rem;
+  border-radius: 12px;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.ribbonTitleGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.ribbonIcon {
+  font-size: 1.6rem;
+}
+
+.ribbonTitleHi {
+  font-size: 1.4rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+
+.ribbonTitleEn {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+.waBtn {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #fff;
+  background: #10b981;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  text-decoration: none;
+  transition: background-color var(--transition-fast);
+}
+
+.waBtn:hover {
+  background: #059669;
+}
+
+@media (max-width: 768px) {
+  .categoryRibbonHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+    padding: 0.8rem 1.25rem;
+  }
+  .ribbonTitleHi {
+    font-size: 1.15rem;
+  }
+  .ribbonTitleEn {
+    font-size: 0.85rem;
+  }
+}

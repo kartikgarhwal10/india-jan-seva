@@ -71,28 +71,35 @@ function TrackingContent() {
   };
 
   // Convert DB statuses to timeline steps
-  // Timeline Stages: Order Received -> Processing -> Shipped -> Delivered
-  const getTimelineStatus = (status: string) => {
-    const stages = ["Order Received", "Processing", "Shipped", "Delivered"];
-    const statusMap: Record<string, string> = {
-      PENDING_PAYMENT: "None",
-      "Failed Payment": "None",
-      PENDING: "Order Received",
-      PAID: "Order Received",
-      ORDER_RECEIVED: "Order Received",
-      "Order Received": "Order Received",
-      PROCESSING: "Processing",
-      PRINTING: "Processing",
-      QUALITY_CHECK: "Processing",
-      PACKED: "Processing",
-      SHIPPED: "Shipped",
-      DELIVERED: "Delivered",
-      CANCELLED: "None",
-      REFUNDED: "None",
-    };
+  // Timeline Stages: Order Received -> Payment Confirmed -> Printing -> Packed -> Shipped -> Delivered
+  const getTimelineStatus = (status: string, paymentStatus: string) => {
+    const stages = [
+      "Order Received",
+      "Payment Confirmed",
+      "Printing",
+      "Packed",
+      "Shipped",
+      "Delivered",
+    ];
 
-    const currentStage = statusMap[status] || "Order Received";
-    
+    let currentStage = "Order Received";
+    const upperStatus = (status || "").toUpperCase();
+    const upperPay = (paymentStatus || "").toUpperCase();
+
+    if (upperStatus === "DELIVERED") {
+      currentStage = "Delivered";
+    } else if (upperStatus === "SHIPPED") {
+      currentStage = "Shipped";
+    } else if (upperStatus === "PACKED") {
+      currentStage = "Packed";
+    } else if (upperStatus === "PRINTING" || upperStatus === "QUALITY_CHECK" || upperStatus === "PROCESSING") {
+      currentStage = "Printing";
+    } else if (upperPay === "PAID" || upperStatus === "PAID") {
+      currentStage = "Payment Confirmed";
+    } else {
+      currentStage = "Order Received";
+    }
+
     return {
       isDone: (stage: string) => {
         const currentIdx = stages.indexOf(currentStage);
@@ -104,17 +111,18 @@ function TrackingContent() {
         return currentStage === stage;
       },
       progressWidth: () => {
-        if (currentStage === "None") return "0%";
         if (currentStage === "Order Received") return "0%";
-        if (currentStage === "Processing") return "33.3%";
-        if (currentStage === "Shipped") return "66.6%";
+        if (currentStage === "Payment Confirmed") return "20%";
+        if (currentStage === "Printing") return "40%";
+        if (currentStage === "Packed") return "60%";
+        if (currentStage === "Shipped") return "80%";
         if (currentStage === "Delivered") return "100%";
         return "0%";
-      }
+      },
     };
   };
 
-  const timeline = order ? getTimelineStatus(order.orderStatus) : null;
+  const timeline = order ? getTimelineStatus(order.orderStatus, order.paymentStatus) : null;
 
   return (
     <div className={styles.container}>
@@ -124,7 +132,7 @@ function TrackingContent() {
           <span className={styles.successIcon}>🎉</span>
           <h2 className={styles.successTitle}>Order Placed Successfully!</h2>
           <p className={styles.successText}>
-            Thank you for ordering with Unique Computer Centre. Your payment is verified, and we have received your documents securely.
+            Thank you for ordering with Unique Computer Centre. Your payment status is logged, and we have received your documents securely.
           </p>
           <div className={styles.highlightId}>
             Order ID: {urlOrderId}
@@ -166,7 +174,7 @@ function TrackingContent() {
             <div className={styles.orderMeta}>
               <h3>Order details for {order.id}</h3>
               <p>Product: <strong>{order.productName}</strong></p>
-              <p>Amount Paid: <strong>₹{order.amount.toFixed(2)}</strong></p>
+              <p>Amount: <strong>₹{order.amount.toFixed(2)}</strong> ({order.paymentStatus})</p>
               <p>Last Update: {new Date(order.updatedAt).toLocaleString("en-IN")}</p>
             </div>
             <span className={`${styles.statusBadge} ${styles[order.orderStatus.toLowerCase().replace(" ", "_")] || styles.processing}`}>
@@ -186,20 +194,30 @@ function TrackingContent() {
                   style={{ width: timeline.progressWidth() }}
                 ></div>
 
-                {/* Steps */}
+                {/* 6 Steps */}
                 <div className={`${styles.timelineStep} ${timeline.isDone("Order Received") ? styles.stepDone : ""} ${timeline.isActive("Order Received") ? styles.stepActive : ""}`}>
                   <div className={styles.timelineCircle}></div>
                   <span className={styles.timelineLabel}>Order Received</span>
                 </div>
 
-                <div className={`${styles.timelineStep} ${timeline.isDone("Processing") ? styles.stepDone : ""} ${timeline.isActive("Processing") ? styles.stepActive : ""}`}>
+                <div className={`${styles.timelineStep} ${timeline.isDone("Payment Confirmed") ? styles.stepDone : ""} ${timeline.isActive("Payment Confirmed") ? styles.stepActive : ""}`}>
                   <div className={styles.timelineCircle}></div>
-                  <span className={styles.timelineLabel}>Printing &amp; Packing</span>
+                  <span className={styles.timelineLabel}>Payment Confirmed</span>
+                </div>
+
+                <div className={`${styles.timelineStep} ${timeline.isDone("Printing") ? styles.stepDone : ""} ${timeline.isActive("Printing") ? styles.stepActive : ""}`}>
+                  <div className={styles.timelineCircle}></div>
+                  <span className={styles.timelineLabel}>Printing</span>
+                </div>
+
+                <div className={`${styles.timelineStep} ${timeline.isDone("Packed") ? styles.stepDone : ""} ${timeline.isActive("Packed") ? styles.stepActive : ""}`}>
+                  <div className={styles.timelineCircle}></div>
+                  <span className={styles.timelineLabel}>Packed</span>
                 </div>
 
                 <div className={`${styles.timelineStep} ${timeline.isDone("Shipped") ? styles.stepDone : ""} ${timeline.isActive("Shipped") ? styles.stepActive : ""}`}>
                   <div className={styles.timelineCircle}></div>
-                  <span className={styles.timelineLabel}>Dispatched</span>
+                  <span className={styles.timelineLabel}>Shipped</span>
                 </div>
 
                 <div className={`${styles.timelineStep} ${timeline.isDone("Delivered") ? styles.stepDone : ""} ${timeline.isActive("Delivered") ? styles.stepActive : ""}`}>

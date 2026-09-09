@@ -2,10 +2,12 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
+import { SITE_CONFIG } from "@/lib/config";
 import styles from "./HeroSlider.module.css";
 
 interface Slide {
   id: number;
+  badge: string;
   title: string;
   subtitle: string;
   bgImage: string;
@@ -22,24 +24,49 @@ export default function HeroSlider() {
   const slides: Slide[] = [
     {
       id: 1,
-      title: "Welcome to Unique Computer Centre",
-      subtitle: "CSC Services | Digital Services | Online Applications | Banking Support",
-      bgImage: "/images/csc-workspace.jpg",
-      primaryCtaText: "Our Services",
-      primaryCtaLink: "/services",
-      secondaryCtaText: "Contact Us",
-      secondaryCtaLink: "/contact",
+      badge: "Unique CSC Point • Harchanda, Jarwal",
+      title: "Unique Computer Centre – CSC Point",
+      subtitle: "Your Official Common Services Centre & SBI Customer Service Point in Harchanda, Jarwal, Bahraich.",
+      bgImage: "/images/hero-center-exterior.jpg",
+      primaryCtaText: "Explore CSC Services",
+      primaryCtaLink: "/services/csc",
+      secondaryCtaText: "WhatsApp Us",
+      secondaryCtaLink: SITE_CONFIG.getWhatsAppHelpLink(),
+      isExternal: true,
     },
     {
       id: 2,
-      title: "Premium PVC Smart Cards",
-      subtitle: "Aadhaar, PAN, Voter, Ayushman, Driving Licence, RC printed on premium plastic starting at just ₹149",
-      bgImage: "/images/pvc-aadhaar-mockup.jpg",
+      badge: "Customer Service Point",
+      title: "Direct Government & Financial Assistance",
+      subtitle: "Aadhaar Print, PAN Card Correction, Ayushman Card & Instant Cash Withdrawal at Our Front Counter.",
+      bgImage: "/images/hero-center-counter.jpg",
+      primaryCtaText: "View All Services",
+      primaryCtaLink: "/services",
+      secondaryCtaText: "Contact Centre",
+      secondaryCtaLink: "/contact",
+    },
+    {
+      id: 3,
+      badge: "SBI Customer Service Point (CSP)",
+      title: "SBI Banking & Government Scheme Registrations",
+      subtitle: "PM Suraksha Bima, Jeevan Jyoti Bima, Atal Pension Yojana & AEPS Cash Withdrawals.",
+      bgImage: "/images/hero-center-banking.jpg",
+      primaryCtaText: "Banking & Services",
+      primaryCtaLink: "/services/csc",
+      secondaryCtaText: "WhatsApp Support",
+      secondaryCtaLink: SITE_CONFIG.getWhatsAppHelpLink(),
+      isExternal: true,
+    },
+    {
+      id: 4,
+      badge: "CSC Digital Documentation Hub",
+      title: "PM-Kisan eKYC, EPFO & Smart Card Prints",
+      subtitle: "Fast eKYC, APAAR ID, Driving Licence, Income/Caste Certificates & PVC Smart Card Printing.",
+      bgImage: "/images/hero-center-csc.jpg",
       primaryCtaText: "Order PVC Card",
       primaryCtaLink: "/order",
-      secondaryCtaText: "Order on WhatsApp",
-      secondaryCtaLink: "https://wa.me/917084666326?text=Hello%20Unique%20Computer%20Centre,%20mujhe%20PVC%20Card%20order%20karna%20hai.",
-      isExternal: true,
+      secondaryCtaText: "Track Order",
+      secondaryCtaLink: "/track-order",
     },
   ];
 
@@ -64,12 +91,12 @@ export default function HeroSlider() {
             key={slide.id}
             className={`${styles.slide} ${index === currentSlide ? styles.active : ""}`}
             style={{
-              backgroundImage: `linear-gradient(to right, rgba(9, 21, 41, 0.85) 30%, rgba(9, 21, 41, 0.4) 100%), url(${slide.bgImage})`,
+              backgroundImage: `linear-gradient(to right, rgba(9, 21, 41, 0.9) 35%, rgba(9, 21, 41, 0.5) 100%), url(${slide.bgImage})`,
             }}
           >
             <div className={styles.contentContainer}>
               <div className={`${styles.slideContent} ${index === currentSlide ? styles.fadeInUp : ""}`}>
-                <span className={styles.welcomeBadge}>Digital Seva Kendra</span>
+                <span className={styles.welcomeBadge}>{slide.badge}</span>
                 <h1 className={styles.title}>{slide.title}</h1>
                 <p className={styles.subtitle}>{slide.subtitle}</p>
                 <div className={styles.ctaGroup}>
@@ -119,3 +146,4 @@ export default function HeroSlider() {
     </section>
   );
 }
+

@@ -4,6 +4,7 @@ import { useState } from "react";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import { services } from "@/lib/mockData";
+import { SITE_CONFIG } from "@/lib/config";
 import styles from "./services.module.css";
 
 export default function ServicesPage() {
@@ -43,7 +44,7 @@ export default function ServicesPage() {
               onClick={() => setFilter("digital")}
               className={`${styles.tab} ${filter === "digital" ? styles.tabActive : ""}`}
             >
-              Digital Services
+              Digital Products
             </button>
             <button
               onClick={() => setFilter("education")}
@@ -84,7 +85,7 @@ export default function ServicesPage() {
                       </a>
                     )}
                     <a
-                      href={`https://wa.me/917084666326?text=Hello%20Unique%20Computer%20Centre,%20mujhe%20${encodeURIComponent(service.name)}%20service%20ke%20liye%20apply%20karna%20hai.`}
+                      href={SITE_CONFIG.getWhatsAppServiceLink(service.name)}
                       target="_blank"
                       rel="noopener noreferrer"
                       className={styles.enquireBtn}

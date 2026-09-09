@@ -1,16 +1,15 @@
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
-import { services } from "@/lib/mockData";
+import { educationCourses } from "@/lib/mockData";
+import { SITE_CONFIG } from "@/lib/config";
 import styles from "../services.module.css";
 
 export const metadata = {
-  title: "Education Services | Unique Computer Centre - CSC Point",
-  description: "Get assistance with UP Board form filling, scholarship registrations, university admissions, and basic computer courses.",
+  title: "Education & Computer Courses | Unique Computer Centre - CSC Point",
+  description: "Computer literacy training courses, typing classes, Tally accounting, UP Board form assistance, and scholarship application support.",
 };
 
-export default function EducationServices() {
-  const eduServices = services.filter((s) => s.category === "education");
-
+export default function EducationPage() {
   return (
     <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
       <Header />
@@ -20,55 +19,88 @@ export default function EducationServices() {
         <section className={styles.hero}>
           <h1 className={styles.heroTitle}>Education &amp; Computer Courses</h1>
           <p className={styles.heroSubtitle}>
-            Student scholarship forms, UP Board registrations, university admission support, and digital literacy classes.
+            Practical computer training, typing speed development, Tally Prime accounting, and scholarship assistance at our Harchanda centre.
           </p>
         </section>
 
         <section className={styles.container}>
-          <div className={styles.servicesGrid}>
-            {eduServices.map((service) => (
-              <div key={service.id} className={styles.serviceCard}>
+          <h2 style={{ fontSize: "1.5rem", fontWeight: 700, marginBottom: "1.5rem", color: "var(--text-main)" }}>
+            Available Computer Training Courses
+          </h2>
+          <div className={styles.servicesGrid} style={{ marginBottom: "3rem" }}>
+            {educationCourses.map((course) => (
+              <div key={course.id} className={styles.serviceCard}>
                 <div className={styles.serviceHeader}>
-                  <span className={styles.serviceIcon}>{service.icon}</span>
-                  <h3 className={styles.serviceName}>{service.name}</h3>
+                  <span className={styles.serviceIcon}>{course.icon}</span>
+                  <h3 className={styles.serviceName}>{course.name}</h3>
                 </div>
-                <p className={styles.serviceDesc}>{service.description}</p>
+                <p className={styles.serviceDesc}>{course.description}</p>
+                
                 <div className={styles.requirements}>
-                  <h5>Required Documents / Qualifications:</h5>
+                  <h5>Course Highlights:</h5>
                   <ul>
-                    {service.requirements.map((req, idx) => (
-                      <li key={idx}>{req}</li>
+                    {course.features.map((feat, idx) => (
+                      <li key={idx}>{feat}</li>
                     ))}
                   </ul>
                 </div>
+
+                <div style={{ margin: "1rem 0", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                  <span style={{ fontSize: "0.9rem", color: "var(--text-muted)", fontWeight: 600 }}>Duration: {course.duration}</span>
+                  {course.fee && <span style={{ fontSize: "1.1rem", fontWeight: 800, color: "var(--primary)" }}>{course.fee}</span>}
+                </div>
+
                 <div className={styles.cardFooter}>
-                  <span className={styles.timeTag}>Duration/Time: {service.processingTime}</span>
-                  <div style={{ display: "flex", gap: "0.75rem", alignItems: "center" }}>
-                    {service.officialLink && (
-                      <a
-                        href={service.officialLink}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={styles.officialBtn}
-                      >
-                        Official Site
-                      </a>
-                    )}
-                    <a
-                      href={`https://wa.me/917084666326?text=Hello%20Unique%20Computer%20Centre,%20mujhe%20${encodeURIComponent(service.name)}%20educational%20service%20ke%20liye%20enquiry%20karni%20hai.`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={styles.enquireBtn}
-                    >
-                      <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
-                        <path d="M12.004 2C6.51 2 2.014 6.5 2.014 12c0 2.18.7 4.21 1.9 5.86l-1.25 4.57 4.69-1.23C8.924 21.84 10.424 22 12.004 22c5.49 0 9.99-4.5 9.99-10S17.494 2 12.004 2zm5.72 13.9c-.24.68-1.2 1.25-1.63 1.3-.43.05-.98.24-2.93-.52-2.5-1-4.11-3.56-4.23-3.73-.13-.17-1-1.34-1-2.55 0-1.2.62-1.8 1.1-1.85.12-.02.26-.03.38-.03.12 0 .28-.05.44.33.17.4.58 1.43.64 1.54.06.12.1.25.02.4-.08.16-.16.27-.3.44-.14.16-.3.3-.43.43-.13.13-.27.27-.12.53.15.26.68 1.12 1.46 1.82.99.9 1.83 1.18 2.09 1.31.26.13.41.1.56-.07.15-.17.65-.76.82-1.02.17-.26.35-.22.58-.13.24.08 1.5.7 1.76.83.26.13.43.2.49.3.06.13.06.74-.18 1.42z"/>
-                      </svg>
-                      WhatsApp
-                    </a>
-                  </div>
+                  <span className={styles.timeTag}>In-person Centre Training</span>
+                  <a
+                    href={SITE_CONFIG.getWhatsAppServiceLink(`${course.name} Course Enrollment`)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={styles.enquireBtn}
+                  >
+                    Enroll Now &rarr;
+                  </a>
                 </div>
               </div>
             ))}
+          </div>
+
+          {/* Academic Form Assistance */}
+          <h2 style={{ fontSize: "1.5rem", fontWeight: 700, marginBottom: "1.5rem", color: "var(--text-main)" }}>
+            Academic &amp; Scholarship Online Assistance
+          </h2>
+          <div className={styles.servicesGrid}>
+            <div className={styles.serviceCard}>
+              <div className={styles.serviceHeader}>
+                <span className={styles.serviceIcon}>🎓</span>
+                <h3 className={styles.serviceName}>UP Pre/Post Matric Scholarship Form</h3>
+              </div>
+              <p className={styles.serviceDesc}>
+                Online application assistance for Class 9 to University scholarship schemes under UP Social Welfare department.
+              </p>
+              <div className={styles.cardFooter}>
+                <span className={styles.timeTag}>Instant Form Filing</span>
+                <a href={SITE_CONFIG.getWhatsAppServiceLink("UP Scholarship Form")} className={styles.enquireBtn} target="_blank" rel="noopener noreferrer">
+                  Apply via WhatsApp &rarr;
+                </a>
+              </div>
+            </div>
+
+            <div className={styles.serviceCard}>
+              <div className={styles.serviceHeader}>
+                <span className={styles.serviceIcon}>📝</span>
+                <h3 className={styles.serviceName}>UP Board &amp; University Exam Forms</h3>
+              </div>
+              <p className={styles.serviceDesc}>
+                Error-free registration for Class 10/12 board exams, private candidate forms, and university admit card printouts.
+              </p>
+              <div className={styles.cardFooter}>
+                <span className={styles.timeTag}>Same Day Service</span>
+                <a href={SITE_CONFIG.getWhatsAppServiceLink("UP Board Exam Form")} className={styles.enquireBtn} target="_blank" rel="noopener noreferrer">
+                  Apply via WhatsApp &rarr;
+                </a>
+              </div>
+            </div>
           </div>
         </section>
       </main>
@@ -77,3 +109,4 @@ export default function EducationServices() {
     </div>
   );
 }
+

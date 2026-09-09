@@ -134,6 +134,191 @@
   transform: translateX(3px);
 }
 
+/* Explore Our Services Section */
+.exploreHeader {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.exploreTitle {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #1e293b;
+  position: relative;
+  display: inline-block;
+}
+
+.titleUnderline {
+  width: 48px;
+  height: 4px;
+  background: #0284c7;
+  border-radius: 2px;
+  margin: 0.6rem auto 0 auto;
+}
+
+.exploreGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 1100px) {
+  .exploreGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .exploreGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.exploreCard {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.exploreCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.cardBanner {
+  height: 165px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardBannerCsc { background: #e0f2fe; }
+.cardBannerPvc { background: #fce7f3; }
+.cardBannerDigital { background: #fef3c7; }
+.cardBannerEducation { background: #dcfce7; }
+
+.cardBody {
+  padding: 1.25rem 1.25rem 1.5rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 0.6rem;
+}
+
+.cardDescription {
+  font-size: 0.88rem;
+  color: #475569;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+  min-height: 52px;
+}
+
+.featuresList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #334155;
+}
+
+.featureIconBlue {
+  color: #0284c7;
+  font-weight: 700;
+}
+
+.featureIconPink {
+  color: #db2777;
+  font-weight: 700;
+}
+
+.featureIconGold {
+  color: #d97706;
+  font-weight: 700;
+}
+
+.featureIconGreen {
+  color: #16a34a;
+  font-weight: 700;
+}
+
+.cardActions {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.btnViewDetails {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 0.65rem 1rem;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  color: #0284c7;
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.btnViewDetails:hover {
+  background: #f8fafc;
+  border-color: #0284c7;
+}
+
+.btnBookWhatsApp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  width: 100%;
+  text-align: center;
+  padding: 0.7rem 1rem;
+  background: #10b981;
+  border: none;
+  border-radius: 6px;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.btnBookWhatsApp:hover {
+  background: #059669;
+  transform: translateY(-1px);
+}
+
 /* Popular Services Grid */
 .servicesGrid {
   display: grid;

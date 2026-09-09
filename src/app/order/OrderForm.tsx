@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import Script from "next/script";
+import { SITE_CONFIG } from "@/lib/config";
 import styles from "./order.module.css";
 
 interface Product {
@@ -147,7 +148,7 @@ export default function OrderForm({ products }: OrderFormProps) {
         return;
       }
       if (!/^[6-9]\d{9}$/.test(mobileTrim)) {
-        setErrorMsg("Please enter a valid 10-digit Indian mobile number (e.g. 7084666326).");
+        setErrorMsg("Please enter a valid 10-digit Indian mobile number (e.g. 8299315137).");
         return;
       }
       if (customerEmail.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(customerEmail.trim())) {
@@ -419,7 +420,7 @@ export default function OrderForm({ products }: OrderFormProps) {
                 Track Order
               </Link>
               <a
-                href={`https://wa.me/917084666326?text=Hello%20Unique%20Computer%20Centre,%20mera%20Order%20ID%20${createdOrder.orderId}%20ki%20payment%20successful%20ho%20gayi%20hai.`}
+                href={`https://wa.me/${SITE_CONFIG.whatsAppNumber}?text=Hello%20Unique%20Computer%20Centre,%20mera%20Order%20ID%20${createdOrder.orderId}%20ki%20payment%20successful%20ho%20gayi%20hai.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.waOrderBtn}
@@ -487,7 +488,7 @@ export default function OrderForm({ products }: OrderFormProps) {
                 Track Order
               </Link>
               <a
-                href={`https://wa.me/917084666326?text=Hello%20Unique%20Computer%20Centre,%20mera%20Order%20ID%20${createdOrder.orderId}%20ki%20payment%20fail%20ho%20gayi%20hai.`}
+                href={`https://wa.me/${SITE_CONFIG.whatsAppNumber}?text=Hello%20Unique%20Computer%20Centre,%20mera%20Order%20ID%20${createdOrder.orderId}%20ki%20payment%20fail%20ho%20gayi%20hai.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.waOrderBtn}
@@ -576,7 +577,7 @@ export default function OrderForm({ products }: OrderFormProps) {
               Track Order
             </Link>
             <a
-              href={`https://wa.me/917084666326?text=Hello%20Unique%20Computer%20Centre,%20mera%20Order%20ID%20${createdOrder.orderId}%20pending%20hai%20aur%20mujhe%20help%20chahiye.`}
+              href={`https://wa.me/${SITE_CONFIG.whatsAppNumber}?text=Hello%20Unique%20Computer%20Centre,%20mera%20Order%20ID%20${createdOrder.orderId}%20pending%20hai%20aur%20mujhe%20help%20chahiye.`}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.waOrderBtn}
@@ -669,15 +670,16 @@ export default function OrderForm({ products }: OrderFormProps) {
               </div>
 
               <div className={styles.formGroup} style={{ gridColumn: "span 2" }}>
-                <label className={styles.label}>Email Address</label>
+                <label className={styles.label}>Email Address (Optional)</label>
                 <input
                   type="email"
                   value={customerEmail}
                   onChange={(e) => setCustomerEmail(e.target.value)}
                   className={styles.input}
-                  placeholder="Enter email address (optional)"
+                  placeholder="Enter email address"
                 />
               </div>
+
 
               {/* Upload Drop Zone */}
               <div className={styles.fullWidth} style={{ marginTop: "1rem" }}>

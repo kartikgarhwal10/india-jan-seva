@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="eduBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e8f5e9"/>
+      <stop offset="100%" stop-color="#c8e6c9"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#1b5e20" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#eduBg)"/>
+  
+  <!-- Subtle decorative elements -->
+  <circle cx="100" cy="80" r="40" fill="#a5d6a7" opacity="0.4"/>
+  <circle cx="720" cy="360" r="60" fill="#81c784" opacity="0.3"/>
+  <circle cx="680" cy="90" r="25" fill="#a5d6a7" opacity="0.5"/>
+
+  <!-- Books Stack -->
+  <g filter="url(#shadow)" transform="translate(260, 160)">
+    <!-- Book 1 (Bottom - Blue) -->
+    <path d="M 20 180 L 260 180 L 250 220 L 10 220 Z" fill="#1e88e5"/>
+    <rect x="250" y="180" width="25" height="40" rx="3" fill="#0d47a1"/>
+    <rect x="25" y="190" width="220" height="8" fill="#e3f2fd" opacity="0.8"/>
+    
+    <!-- Book 2 (Middle - Red) -->
+    <path d="M 40 135 L 240 135 L 230 175 L 30 175 Z" fill="#e53935"/>
+    <rect x="230" y="135" width="25" height="40" rx="3" fill="#b71c1c"/>
+    <rect x="45" y="145" width="180" height="8" fill="#ffebee" opacity="0.8"/>
+
+    <!-- Book 3 (Top - Gold/Orange) -->
+    <path d="M 60 90 L 220 90 L 210 130 L 50 130 Z" fill="#fb8c00"/>
+    <rect x="210" y="90" width="25" height="40" rx="3" fill="#e65100"/>
+    <rect x="65" y="100" width="140" height="8" fill="#fff3e0" opacity="0.8"/>
+
+    <!-- Mortarboard Graduation Cap -->
+    <!-- Cap Base / Skullcap -->
+    <path d="M 90 60 Q 140 45 190 60 L 190 78 Q 140 95 90 78 Z" fill="#263238"/>
+    <!-- Cap Top Diamond -->
+    <polygon points="140,5 240,40 140,75 40,40" fill="#37474f"/>
+    <polygon points="140,5 240,40 140,48 40,40" fill="#455a64"/>
+    <!-- Button on Top -->
+    <circle cx="140" cy="40" r="6" fill="#fbc02d"/>
+    <!-- Tassel -->
+    <path d="M 140 40 Q 200 45 225 90" stroke="#fbc02d" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <polygon points="220,90 230,90 227,115 218,115" fill="#fbc02d"/>
+  </g>
+
+  <!-- Diploma Scroll (Right Side) -->
+  <g filter="url(#shadow)" transform="translate(520, 230) rotate(-15)">
+    <!-- Scroll Paper -->
+    <rect x="0" y="0" width="160" height="45" rx="22" fill="#fff8e1" stroke="#ffe082" stroke-width="2"/>
+    <!-- Red Ribbon Ribbon Tie -->
+    <rect x="65" y="-2" width="28" height="49" rx="3" fill="#d32f2f"/>
+    <!-- Ribbon Ends -->
+    <path d="M 72 47 L 65 75 L 78 68 L 88 75 L 83 47 Z" fill="#b71c1c"/>
+  </g>
+</svg>

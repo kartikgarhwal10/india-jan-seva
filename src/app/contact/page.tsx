@@ -3,7 +3,9 @@
 import { useState } from "react";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
+import { SITE_CONFIG } from "@/lib/config";
 import styles from "./contact.module.css";
+
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -74,37 +76,38 @@ export default function Contact() {
                   <div className={styles.icon}>📍</div>
                   <div className={styles.infoDetails}>
                     <h4>Physical Address</h4>
-                    <p>Unique Computer Centre - CSC Point</p>
-                    <p>Harchanda, Jarwal, Bahraich, Uttar Pradesh, 271904</p>
+                    <p>{SITE_CONFIG.brandSubtitle}</p>
+                    <p>{SITE_CONFIG.businessAddress}</p>
                   </div>
                 </li>
                 <li className={styles.infoItem}>
                   <div className={styles.icon}>📞</div>
                   <div className={styles.infoDetails}>
                     <h4>Call Support</h4>
-                    <a href="tel:+917084666326">+91 70846 66326</a>
-                    <p style={{ fontSize: "0.85rem", color: "var(--text-light)" }}>Mon-Sat (08:00 AM - 07:00 PM)</p>
+                    <a href={`tel:${SITE_CONFIG.phoneNumber.replace(/\s+/g, "")}`}>{SITE_CONFIG.phoneNumber}</a>
+                    <p style={{ fontSize: "0.85rem", color: "var(--text-light)" }}>{SITE_CONFIG.openingHours}</p>
                   </div>
                 </li>
                 <li className={styles.infoItem}>
                   <div className={styles.icon}>💬</div>
                   <div className={styles.infoDetails}>
                     <h4>WhatsApp Support</h4>
-                    <a href="https://wa.me/917084666326?text=Hello%20Unique%20Computer%20Centre,%20mujhe%20help%20chahiye." target="_blank" rel="noopener noreferrer">
-                      +91 70846 66326
+                    <a href={SITE_CONFIG.getWhatsAppHelpLink()} target="_blank" rel="noopener noreferrer">
+                      {SITE_CONFIG.phoneNumber}
                     </a>
-                    <p style={{ fontSize: "0.85rem", color: "var(--text-light)" }}>Available for PVC card updates</p>
+                    <p style={{ fontSize: "0.85rem", color: "var(--text-light)" }}>Instant service &amp; order assistance</p>
                   </div>
                 </li>
                 <li className={styles.infoItem}>
                   <div className={styles.icon}>✉️</div>
                   <div className={styles.infoDetails}>
                     <h4>Email Support</h4>
-                    <a href="mailto:support@uniquecscpoint.in">support@uniquecscpoint.in</a>
+                    <a href={`mailto:${SITE_CONFIG.emailAddress}`}>{SITE_CONFIG.emailAddress}</a>
                   </div>
                 </li>
               </ul>
             </div>
+
 
             {/* Contact Form Column */}
             <div className={styles.formCard}>

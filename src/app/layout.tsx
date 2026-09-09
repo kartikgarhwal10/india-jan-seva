@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
+import { SITE_CONFIG } from "@/lib/config";
 import "./globals.css";
 
 const roboto = Roboto({
@@ -9,12 +10,12 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Unique Computer Centre - CSC Point | Digital Services & PVC Cards",
-  description: "Get professional CSC, banking-support, digital documentation, education services, and premium PVC smart cards at Unique Computer Centre, Jarwal, Bahraich, UP.",
-  keywords: ["CSC Center Jarwal", "CSC Bahraich", "PVC Card print online", "PAN card correction", "Aadhaar print UP", "digital services Harchanda", "Unique CSC Point"],
+  title: "Unique CSC Point | Unique Computer Centre - CSC Point",
+  description: "Official Common Services Centre (CSC) offering Aadhaar assistance, PAN cards, PVC smart cards, Ayushman cards, Digital Products, and Education Courses in Jarwal, Bahraich, UP.",
+  keywords: ["Unique CSC Point", "CSC Center Jarwal", "CSC Bahraich", "PVC Card print online", "PAN card correction", "Aadhaar print UP", "Digital Products Harchanda"],
   openGraph: {
-    title: "Unique Computer Centre - CSC Point | Digital Services & PVC Cards",
-    description: "Your local Common Services Centre in Jarwal, Bahraich. We offer Aadhaar assistance, PAN cards, PVC smart cards, and online digital documentation services.",
+    title: "Unique CSC Point | Unique Computer Centre",
+    description: "Your trusted Common Services Centre in Jarwal, Bahraich. Aadhaar assistance, PAN cards, PVC smart cards, Digital Products, and Education Courses.",
     type: "website",
     locale: "en_IN",
   }
@@ -28,14 +29,15 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Unique Computer Centre - CSC Point",
+    "name": SITE_CONFIG.brandSubtitle,
     "image": "https://uniquecscpoint.in/images/csc-workspace.jpg",
     "url": "https://uniquecscpoint.in",
-    "telephone": "+91 70846 66326",
+    "telephone": SITE_CONFIG.phoneNumber,
+    "email": SITE_CONFIG.emailAddress,
     "priceRange": "₹50 - ₹200",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Harchanda, Jarwal",
+      "streetAddress": "Aryavart bank ke bagal, Harchanda, Jarwal",
       "addressLocality": "Bahraich",
       "addressRegion": "Uttar Pradesh",
       "postalCode": "271904",
@@ -68,4 +70,5 @@ export default function RootLayout({
     </html>
   );
 }
+
 

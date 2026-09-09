@@ -1,5 +1,6 @@
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
+import { SITE_CONFIG } from "@/lib/config";
 import styles from "../DocLayout.module.css";
 
 export const metadata = {
@@ -68,7 +69,7 @@ export default function PrivacyPolicy() {
 
             <h2>5. Contact Us</h2>
             <p>
-              If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us at <strong>support@uniquecscpoint.in</strong> or visit our office at Harchanda, Jarwal, Bahraich, Uttar Pradesh.
+              If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us at <strong>{SITE_CONFIG.emailAddress}</strong> or visit our office at {SITE_CONFIG.businessAddress}.
             </p>
           </div>
         </div>
