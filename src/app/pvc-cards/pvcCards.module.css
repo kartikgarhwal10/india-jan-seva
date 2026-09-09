@@ -321,6 +321,49 @@
   .detailName {
     font-size: 2rem;
   }
+  .detailActions {
+    flex-direction: column;
+    width: 100%;
+  }
+  .detailBtnPrimary, .detailBtnSecondary {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    min-height: 44px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 3rem 1rem;
+  }
+  .heroTitle {
+    font-size: 1.75rem;
+  }
+  .heroSubtitle {
+    font-size: 0.95rem;
+  }
+  .container {
+    padding: 2.5rem 1rem;
+  }
+  .pvcGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .actionGroup {
+    grid-template-columns: 1fr;
+  }
+  .orderBtn, .waOrderBtn {
+    min-height: 44px;
+  }
+  .tabs {
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+  .tab {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
 }
 
 /* Category filter tabs */

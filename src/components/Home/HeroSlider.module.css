@@ -185,8 +185,58 @@
 }
 
 @media (max-width: 768px) {
+  .heroSection {
+    height: 520px;
+  }
+  .title {
+    font-size: 2rem;
+  }
+  .subtitle {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
   .arrow {
-    display: none; /* hide arrows on mobile, swipe is standard */
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroSection {
+    height: auto;
+    min-height: 500px;
+    padding: 2rem 0;
+  }
+  .contentContainer {
+    padding: 0 1.25rem;
+  }
+  .welcomeBadge {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+  .title {
+    font-size: 1.65rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.25;
+  }
+  .subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+  }
+  .ctaGroup {
+    flex-direction: column;
+    width: 100%;
+    gap: 0.75rem;
+  }
+  .btnPrimary, .btnSecondary {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+  }
+  .dotsContainer {
+    bottom: 1rem;
   }
 }
 

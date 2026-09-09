@@ -227,3 +227,32 @@
     padding: 2rem;
   }
 }
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 3rem 1rem;
+  }
+  .heroTitle {
+    font-size: 1.75rem;
+  }
+  .heroSubtitle {
+    font-size: 0.95rem;
+  }
+  .container {
+    padding: 2.5rem 1rem;
+  }
+  .pricingGrid {
+    grid-template-columns: 1fr;
+  }
+  .pricingCard {
+    padding: 1.75rem 1.25rem;
+  }
+  .tableContainer {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .pricingTable th, .pricingTable td {
+    padding: 0.85rem 1rem;
+    font-size: 0.85rem;
+  }
+}

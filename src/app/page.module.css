@@ -999,3 +999,79 @@
     gap: 2.5rem;
   }
 }
+
+@media (max-width: 480px) {
+  .section {
+    padding: 3rem 1rem;
+  }
+  .sectionTitle {
+    font-size: 1.55rem;
+  }
+  .sectionSubtitle {
+    font-size: 0.9rem;
+  }
+  .categoryCard {
+    padding: 1.75rem 1.25rem;
+  }
+  .exploreCard {
+    border-radius: 12px;
+  }
+  .cardBody {
+    padding: 1rem;
+  }
+  .cardDescription {
+    min-height: auto;
+    font-size: 0.85rem;
+  }
+  .founderStats {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .statVal {
+    font-size: 1.4rem;
+  }
+  .ctaSection {
+    padding: 3.5rem 1rem;
+  }
+  .ctaTitle {
+    font-size: 1.6rem;
+  }
+  .ctaDesc {
+    font-size: 0.95rem;
+  }
+  .ctaButtons {
+    flex-direction: column;
+    width: 100%;
+  }
+  .ctaBtnPrimary, .ctaBtnSecondary {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    min-height: 44px;
+  }
+  .contactInfoCard {
+    padding: 1.5rem;
+  }
+  .mapWrapper {
+    min-height: 280px;
+  }
+}
+
+@media (max-width: 640px) {
+  .categoriesGrid,
+  .servicesGrid,
+  .pvcGrid,
+  .whyGrid,
+  .reviewsGrid,
+  .howGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .pvcActionGroup {
+    grid-template-columns: 1fr;
+  }
+  .orderBtn, .waOrderBtn {
+    min-height: 44px;
+  }
+}
+

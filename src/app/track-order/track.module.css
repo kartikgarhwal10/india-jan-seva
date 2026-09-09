@@ -342,8 +342,25 @@
 }
 
 @media (max-width: 640px) {
+  .wrapper {
+    padding: 2rem 0.75rem;
+  }
+  .searchCard {
+    padding: 1.5rem 1rem;
+  }
+  .searchBar {
+    flex-direction: column;
+    width: 100%;
+  }
+  .searchBtn {
+    width: 100%;
+    min-height: 44px;
+  }
   .detailsCard {
-    padding: 2rem 1.5rem;
+    padding: 1.5rem 1rem;
+  }
+  .dispatchInfo {
+    grid-template-columns: 1fr;
   }
   .timeline {
     flex-direction: column;

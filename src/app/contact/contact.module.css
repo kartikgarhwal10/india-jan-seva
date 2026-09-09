@@ -241,3 +241,30 @@
     padding: 2rem;
   }
 }
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 3rem 1rem;
+  }
+  .heroTitle {
+    font-size: 1.75rem;
+  }
+  .heroSubtitle {
+    font-size: 0.95rem;
+  }
+  .container {
+    padding: 2.5rem 1rem;
+  }
+  .infoCard, .formCard {
+    padding: 1.5rem 1rem;
+  }
+  .submitBtn {
+    width: 100%;
+    justify-content: center;
+    min-height: 44px;
+    align-self: stretch;
+  }
+  .mapCard {
+    height: 300px;
+  }
+}

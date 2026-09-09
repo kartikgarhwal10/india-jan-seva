@@ -19,6 +19,9 @@
   border-radius: var(--radius-lg);
   width: 100%;
   max-width: 520px;
+  max-height: 90vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   padding: 2rem;
   position: relative;
   box-shadow: var(--shadow-lg);
@@ -32,14 +35,19 @@
 
 .closeBtn {
   position: absolute;
-  top: 1.25rem;
-  right: 1.25rem;
+  top: 1rem;
+  right: 1rem;
   background: transparent;
   border: none;
   font-size: 1.25rem;
   color: var(--text-muted);
   cursor: pointer;
-  padding: 0.25rem;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
 }
 
 .closeBtn:hover {
@@ -135,6 +143,7 @@
   color: var(--text-main);
   font-weight: 600;
   cursor: pointer;
+  min-height: 44px;
 }
 
 .submitBtn {
@@ -147,6 +156,10 @@
   font-weight: 700;
   cursor: pointer;
   transition: background 0.2s;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .submitBtn:hover {
@@ -156,4 +169,17 @@
 .successBox {
   text-align: center;
   padding: 2rem 1rem;
+}
+
+@media (max-width: 480px) {
+  .modal {
+    padding: 1.5rem 1rem;
+  }
+  .actions {
+    flex-direction: column;
+  }
+  .cancelBtn, .submitBtn {
+    width: 100%;
+    flex: none;
+  }
 }

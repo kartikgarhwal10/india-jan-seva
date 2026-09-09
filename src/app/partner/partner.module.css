@@ -285,3 +285,34 @@
     padding: 2rem;
   }
 }
+
+@media (max-width: 640px) {
+  .wrapper {
+    padding: 2rem 0.75rem;
+  }
+  .introText h1 {
+    font-size: 1.75rem;
+  }
+  .introText p {
+    font-size: 0.95rem;
+  }
+  .authCard {
+    padding: 1.5rem 1rem;
+  }
+  .resellerCallout {
+    padding: 1.5rem 1rem;
+    flex-direction: column;
+    text-align: center;
+  }
+  .placeOrderBtn {
+    width: 100%;
+    text-align: center;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .sidebarCard {
+    padding: 1.5rem 1rem;
+  }
+}

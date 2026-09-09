@@ -205,3 +205,30 @@
   color: var(--text-muted);
   line-height: 1.5;
 }
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 3rem 1rem;
+  }
+  .heroTitle {
+    font-size: 1.75rem;
+  }
+  .heroSubtitle {
+    font-size: 0.95rem;
+  }
+  .container {
+    padding: 2.5rem 1rem;
+  }
+  .title {
+    font-size: 1.6rem;
+  }
+  .visionSection {
+    padding: 3rem 1rem;
+  }
+  .visionCard {
+    padding: 1.5rem 1rem;
+  }
+  .timeline {
+    padding-left: 2rem;
+  }
+}

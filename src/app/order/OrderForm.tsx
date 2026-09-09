@@ -669,7 +669,7 @@ export default function OrderForm({ products }: OrderFormProps) {
                 />
               </div>
 
-              <div className={styles.formGroup} style={{ gridColumn: "span 2" }}>
+              <div className={`${styles.formGroup} ${styles.fullWidth}`}>
                 <label className={styles.label}>Email Address (Optional)</label>
                 <input
                   type="email"
@@ -708,7 +708,7 @@ export default function OrderForm({ products }: OrderFormProps) {
                       type="file"
                       id="file-picker"
                       onChange={handleFileChange}
-                      accept=".pdf,.jpg,.jpeg,.png"
+                      accept=".pdf,.jpg,.jpeg,.png,image/*"
                       className={styles.fileInput}
                       tabIndex={-1}
                     />
@@ -737,7 +737,7 @@ export default function OrderForm({ products }: OrderFormProps) {
           <div>
             <h2 className={styles.checkoutTitle}>Step 3: Delivery Address</h2>
             <div className={styles.formGrid} style={{ marginTop: "1.5rem" }}>
-              <div className={styles.formGroup} style={{ gridColumn: "span 2" }}>
+              <div className={`${styles.formGroup} ${styles.fullWidth}`}>
                 <label className={styles.label}>Full Address (House / Street / Shop Name) <span style={{ color: "var(--danger)" }}>*</span></label>
                 <input
                   type="text"
@@ -789,6 +789,8 @@ export default function OrderForm({ products }: OrderFormProps) {
                 <label className={styles.label}>PIN Code <span style={{ color: "var(--danger)" }}>*</span></label>
                 <input
                   type="text"
+                  inputMode="numeric"
+                  pattern="[0-9]*"
                   value={pinCode}
                   onChange={(e) => setPinCode(e.target.value)}
                   className={styles.input}
@@ -797,7 +799,7 @@ export default function OrderForm({ products }: OrderFormProps) {
                 />
               </div>
 
-              <div className={styles.formGroup} style={{ gridColumn: "span 2" }}>
+              <div className={`${styles.formGroup} ${styles.fullWidth}`}>
                 <label className={styles.label}>Special Delivery Instructions (Optional)</label>
                 <input
                   type="text"

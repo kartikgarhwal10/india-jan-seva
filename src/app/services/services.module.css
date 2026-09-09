@@ -281,3 +281,43 @@
     font-size: 0.85rem;
   }
 }
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 3rem 1rem;
+  }
+  .heroTitle {
+    font-size: 1.75rem;
+  }
+  .heroSubtitle {
+    font-size: 0.95rem;
+  }
+  .container {
+    padding: 2.5rem 1rem;
+  }
+  .servicesGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .serviceCard {
+    padding: 1.5rem 1rem;
+  }
+  .cardFooter {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+  .enquireBtn {
+    width: 100%;
+    justify-content: center;
+    min-height: 44px;
+  }
+  .tabs {
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+  .tab {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+}
