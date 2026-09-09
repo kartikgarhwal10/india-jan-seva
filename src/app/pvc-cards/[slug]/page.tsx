@@ -45,12 +45,46 @@ export async function generateMetadata({ params }: PageProps) {
   };
 }
 
+import { pvcProducts } from "@/lib/mockData";
+
 export default async function ProductDetails({ params }: PageProps) {
   const { slug } = await params;
   
-  const product = await prisma.product.findUnique({
-    where: { slug, active: true },
-  });
+  let product: {
+    name: string;
+    price: number;
+    description: string;
+    requirements: string;
+    features: string;
+    deliveryTime: string;
+    image: string;
+  } | null = null;
+
+  try {
+    const dbProduct = await prisma.product.findUnique({
+      where: { slug, active: true },
+    });
+    if (dbProduct) {
+      product = dbProduct;
+    }
+  } catch (e) {
+    console.warn("Error querying product DB on Vercel:", e);
+  }
+
+  if (!product) {
+    const mock = pvcProducts.find((p) => p.slug === slug);
+    if (mock) {
+      product = {
+        name: mock.name,
+        price: mock.price,
+        description: mock.description,
+        requirements: JSON.stringify(mock.requirements),
+        features: JSON.stringify(mock.features),
+        deliveryTime: mock.deliveryTime,
+        image: mock.image,
+      };
+    }
+  }
 
   if (!product) {
     notFound();
@@ -122,7 +156,7 @@ export default async function ProductDetails({ params }: PageProps) {
 
               {/* Actions */}
               <div className={styles.detailActions}>
-                <Link href={`/order?product=${product.slug}`} className={styles.detailBtnPrimary}>
+                <Link href={`/order?product=${slug}`} className={styles.detailBtnPrimary}>
                   Order This Card
                 </Link>
                 <a href={whatsAppLink} target="_blank" rel="noopener noreferrer" className={styles.detailBtnSecondary}>

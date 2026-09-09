@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "postinstall": "prisma generate",
-    "build": "prisma generate && node scripts/patch-prisma-wasm.js && next build",
+    "build": "prisma generate && npx tsx prisma/seed.ts && node scripts/patch-prisma-wasm.js && next build",
     "build:cloudflare": "opennextjs-cloudflare build",
     "start": "next start",
     "lint": "eslint"

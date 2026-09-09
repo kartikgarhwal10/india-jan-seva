@@ -14,19 +14,55 @@ export const metadata = {
   description: "Get wallet-sized, waterproof PVC smart cards printed online for Aadhaar, PAN, Voter ID, Driving Licence, and RC starting at ₹149.",
 };
 
+import { pvcProducts } from "@/lib/mockData";
+
+export interface PVCProductItem {
+  id: string;
+  slug: string;
+  name: string;
+  price: number;
+  shortDescription?: string;
+  description: string;
+  image: string;
+  active?: boolean;
+}
+
 export default async function PvcCardsPage({ searchParams }: PageProps) {
   const { category = "all" } = await searchParams;
 
-  // Query active products from database filtered by category
-  const products = await prisma.product.findMany({
-    where: {
+  let products: PVCProductItem[] = [];
+
+  try {
+    const dbProducts = await prisma.product.findMany({
+      where: {
+        active: true,
+        ...(category !== "all" ? { category } : {}),
+      },
+      orderBy: {
+        price: "asc",
+      },
+    });
+
+    if (dbProducts && dbProducts.length > 0) {
+      products = dbProducts;
+    }
+  } catch (e) {
+    console.warn("Prisma DB fetch warning on Vercel, using fallback mock data:", e);
+  }
+
+  // Fallback to static mock products if DB query returned 0 items or failed
+  if (products.length === 0) {
+    products = pvcProducts.map((p) => ({
+      id: p.id,
+      slug: p.slug,
+      name: p.name,
+      price: p.price,
+      shortDescription: "Premium quality • Durable • Smart Look • Easy Ordering",
+      description: p.description,
+      image: p.image,
       active: true,
-      ...(category !== "all" ? { category } : {}),
-    },
-    orderBy: {
-      price: "asc",
-    },
-  });
+    }));
+  }
 
   const categories = [
     { key: "all", label: "All Cards" },
