@@ -78,12 +78,11 @@
   white-space: nowrap;
 }
 
-.brandTitleLine1,
-.brandTitleLine2 {
+.brandTitle {
   font-weight: 800;
-  font-size: 0.86rem;
+  font-size: 0.88rem;
   color: #ffffff;
-  line-height: 1.1;
+  line-height: 1.15;
   white-space: nowrap;
   letter-spacing: 0.02em;
   text-align: center;
@@ -97,7 +96,7 @@
   text-transform: uppercase;
   white-space: nowrap;
   line-height: 1.15;
-  margin-top: 0.1rem;
+  margin-top: 0.12rem;
   text-align: center;
 }
 
@@ -268,8 +267,7 @@
   .container {
     padding: 0 0.75rem;
   }
-  .brandTitleLine1,
-  .brandTitleLine2 {
+  .brandTitle {
     font-size: 0.8rem;
   }
   .brandSubtitle {
@@ -293,8 +291,7 @@
 
 /* Mobile Responsive */
 @media (max-width: 1024px) {
-  .brandTitleLine1,
-  .brandTitleLine2 {
+  .brandTitle {
     font-size: 0.82rem;
   }
   .brandSubtitle {

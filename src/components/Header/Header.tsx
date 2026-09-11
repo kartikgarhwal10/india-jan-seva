@@ -75,8 +75,7 @@ export default function Header({ whatsAppNumber = SITE_CONFIG.whatsAppNumber }: 
                 priority
               />
               <div className={styles.logoText}>
-                <span className={styles.brandTitleLine1}>UNIQUE COMPUTER</span>
-                <span className={styles.brandTitleLine2}>CENTER</span>
+                <span className={styles.brandTitle}>UNIQUE COMPUTER CENTER</span>
                 <span className={styles.brandSubtitle}>CSC POINT</span>
               </div>
             </>
@@ -86,8 +85,7 @@ export default function Header({ whatsAppNumber = SITE_CONFIG.whatsAppNumber }: 
                 <span>U</span>
               </div>
               <div className={styles.logoText}>
-                <span className={styles.brandTitleLine1}>UNIQUE COMPUTER</span>
-                <span className={styles.brandTitleLine2}>CENTER</span>
+                <span className={styles.brandTitle}>UNIQUE COMPUTER CENTER</span>
                 <span className={styles.brandSubtitle}>CSC POINT</span>
               </div>
             </>
