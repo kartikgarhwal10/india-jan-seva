@@ -4,7 +4,7 @@ import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import HeroSlider from "@/components/Home/HeroSlider";
 import ServiceSearch from "@/components/Home/ServiceSearch";
-import { reviews, faqs, blogs, digitalProducts, educationCourses } from "@/lib/mockData";
+import { reviews, faqs, blogs } from "@/lib/mockData";
 import { prisma } from "@/lib/prisma";
 import { SITE_CONFIG } from "@/lib/config";
 import PVCProductCard from "@/components/PVCProductCard/PVCProductCard";
@@ -283,33 +283,15 @@ export default async function Home() {
           <div className={styles.container}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionBadge}>Digital Solutions</span>
-              <h2 className={styles.sectionTitle}>Digital Products &amp; Tools</h2>
+              <h2 className={styles.sectionTitle}>Digital Products</h2>
               <p className={styles.sectionSubtitle}>
-                Official state documentation processing, land records verification, and online form applications.
+                We&apos;re working on something useful for you. Our digital products will be available soon.
               </p>
             </div>
-
-            <div className={styles.servicesGrid}>
-              {digitalProducts.map((prod) => (
-                <div key={prod.id} className={styles.serviceCard}>
-                  <div className={styles.serviceHeader}>
-                    <span className={styles.serviceIcon}>{prod.icon}</span>
-                    <h3 className={styles.serviceName}>{prod.name}</h3>
-                  </div>
-                  <p className={styles.serviceDesc}>{prod.description}</p>
-                  <div className={styles.cardFooter}>
-                    <span className={styles.timeTag}>{prod.category}</span>
-                    <a
-                      href={SITE_CONFIG.getWhatsAppServiceLink(prod.name)}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={styles.enquireBtn}
-                    >
-                      Request Copy &rarr;
-                    </a>
-                  </div>
-                </div>
-              ))}
+            <div style={{ textAlign: "center", marginTop: "1rem" }}>
+              <Link href="/services/digital" className={styles.btnSecondary} style={{ display: "inline-block" }}>
+                Coming Soon &rarr;
+              </Link>
             </div>
           </div>
         </section>
@@ -319,33 +301,15 @@ export default async function Home() {
           <div className={styles.container}>
             <div className={styles.sectionHeader}>
               <span className={styles.sectionBadge}>Skill Development</span>
-              <h2 className={styles.sectionTitle}>Education &amp; Computer Courses</h2>
+              <h2 className={styles.sectionTitle}>Education &amp; Courses</h2>
               <p className={styles.sectionSubtitle}>
-                Build practical digital literacy, typing speed, and accounting skills at our centre.
+                Our courses and educational services are currently being prepared. They will be available soon.
               </p>
             </div>
-
-            <div className={styles.servicesGrid}>
-              {educationCourses.map((course) => (
-                <div key={course.id} className={styles.serviceCard}>
-                  <div className={styles.serviceHeader}>
-                    <span className={styles.serviceIcon}>{course.icon}</span>
-                    <h3 className={styles.serviceName}>{course.name}</h3>
-                  </div>
-                  <p className={styles.serviceDesc}>{course.description}</p>
-                  <div className={styles.cardFooter}>
-                    <span className={styles.timeTag}>{course.duration}</span>
-                    <a
-                      href={SITE_CONFIG.getWhatsAppServiceLink(`${course.name} Enrollment`)}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={styles.enquireBtn}
-                    >
-                      Enroll Now &rarr;
-                    </a>
-                  </div>
-                </div>
-              ))}
+            <div style={{ textAlign: "center", marginTop: "1rem" }}>
+              <Link href="/services/education" className={styles.btnSecondary} style={{ display: "inline-block" }}>
+                Coming Soon &rarr;
+              </Link>
             </div>
           </div>
         </section>
