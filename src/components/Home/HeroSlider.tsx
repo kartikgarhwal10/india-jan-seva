@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { SITE_CONFIG } from "@/lib/config";
 import styles from "./HeroSlider.module.css";
 
@@ -78,10 +79,20 @@ export default function HeroSlider() {
           <div
             key={slide.id}
             className={`${styles.slide} ${index === currentSlide ? styles.active : ""}`}
-            style={{
-              backgroundImage: `linear-gradient(to right, rgba(9, 21, 41, 0.75) 35%, rgba(9, 21, 41, 0.35) 100%), url(${slide.bgImage})`,
-            }}
           >
+            {/* Background Image with Focal Position & Responsive Overlay */}
+            <div className={styles.imageWrapper}>
+              <Image
+                src={slide.bgImage}
+                alt={slide.title}
+                fill
+                priority={index === 0}
+                sizes="100vw"
+                className={styles.heroImg}
+              />
+              <div className={styles.overlay} />
+            </div>
+
             <div className={styles.contentContainer}>
               <div className={`${styles.slideContent} ${index === currentSlide ? styles.fadeInUp : ""}`}>
                 <span className={styles.welcomeBadge}>{slide.badge}</span>
@@ -134,4 +145,3 @@ export default function HeroSlider() {
     </section>
   );
 }
-
