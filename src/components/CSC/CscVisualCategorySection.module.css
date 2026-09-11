@@ -1,0 +1,245 @@
+.containerWrapper {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.categoryGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.75rem;
+  align-items: stretch;
+}
+
+@media (max-width: 992px) {
+  .categoryGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.categoryCard {
+  background: #ffffff;
+  border-radius: 20px;
+  border: 2px solid var(--cat-color);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.categoryCard:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.09);
+}
+
+.fullWidthCategory {
+  grid-column: 1 / -1;
+}
+
+/* Category Ribbon Banner Header */
+.ribbonBanner {
+  background-color: var(--cat-color);
+  color: #ffffff;
+  padding: 0.65rem 1.25rem;
+  margin: 1.1rem 1.1rem 0.6rem;
+  border-radius: 999px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.ribbonTitleHi {
+  font-size: 1.18rem;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+}
+
+.ribbonTitleEn {
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-top: 0.15rem;
+}
+
+/* 3-Column Grid for Category 1 (Govt) and Category 2 (e-District) */
+.grid3Col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  padding: 1rem 1.1rem 1.25rem;
+  flex-grow: 1;
+}
+
+/* 2-Column Grid for Category 3 (Pension) */
+.grid2Col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.85rem;
+  padding: 1rem 1.1rem 1.25rem;
+  flex-grow: 1;
+}
+
+/* 2-Column Compact List for Category 4 (Banking) */
+.list2Col {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem 0.75rem;
+  padding: 1rem 1.1rem 1.25rem;
+  flex-grow: 1;
+}
+
+/* 4-Column Grid for Category 5 (Other Services) */
+.grid4Col {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  padding: 1rem 1.1rem 1.25rem;
+  flex-grow: 1;
+}
+
+@media (max-width: 1100px) {
+  .grid4Col {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid3Col, .grid4Col {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .grid2Col, .list2Col {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .grid3Col, .grid2Col, .list2Col, .grid4Col {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.55rem;
+    padding: 0.75rem 0.85rem 1rem;
+  }
+}
+
+/* Service Box Buttons */
+.gridItemBtn {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 0.85rem 0.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease;
+  width: 100%;
+}
+
+.gridItemBtn:hover, .gridItemBtn:focus-visible {
+  border-color: var(--cat-color);
+  background-color: #f8fafc;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+}
+
+.iconBox {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 0.45rem;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.gridItemBtn:hover .iconBox {
+  transform: scale(1.08);
+  background: #e2e8f0;
+}
+
+.itemTitleHi {
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: #0f172a;
+  line-height: 1.25;
+}
+
+.itemTitleEn {
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: #475569;
+  margin-top: 0.15rem;
+  line-height: 1.2;
+}
+
+/* Compact Row Buttons for Category 4 (Banking) */
+.listItemBtn {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 0.6rem 0.65rem;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  width: 100%;
+  transition: all 0.18s ease;
+}
+
+.listItemBtn:hover, .listItemBtn:focus-visible {
+  border-color: var(--cat-color);
+  background-color: #f8fafc;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.listIconBox {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  flex-shrink: 0;
+}
+
+.listTextGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.listTitleHi {
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #0f172a;
+  line-height: 1.2;
+}
+
+.listTitleEn {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: #475569;
+  line-height: 1.1;
+}

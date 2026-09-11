@@ -26,7 +26,7 @@ export default function HeroSlider() {
       id: 1,
       badge: "Unique CSC Point • Harchanda, Jarwal",
       title: "Unique Computer Centre – CSC Point",
-      subtitle: "Your Official Common Services Centre & SBI Customer Service Point in Harchanda, Jarwal, Bahraich.",
+      subtitle: "Official Common Services Centre & SBI Customer Service Point in Harchanda, Jarwal, Bahraich.",
       bgImage: "/images/hero-center-exterior.jpg",
       primaryCtaText: "Explore CSC Services",
       primaryCtaLink: "/services/csc",
@@ -36,33 +36,21 @@ export default function HeroSlider() {
     },
     {
       id: 2,
-      badge: "Customer Service Point",
+      badge: "Customer Service Point Counter",
       title: "Direct Government & Financial Assistance",
-      subtitle: "Aadhaar Print, PAN Card Correction, Ayushman Card & Instant Cash Withdrawal at Our Front Counter.",
+      subtitle: "Aadhaar Print, PAN Card Correction, Ayushman Card & Instant Cash Withdrawal at Our Counter.",
       bgImage: "/images/hero-center-counter.jpg",
       primaryCtaText: "View All Services",
-      primaryCtaLink: "/services",
+      primaryCtaLink: "/services/csc",
       secondaryCtaText: "Contact Centre",
       secondaryCtaLink: "/contact",
     },
     {
       id: 3,
-      badge: "SBI Customer Service Point (CSP)",
-      title: "SBI Banking & Government Scheme Registrations",
-      subtitle: "PM Suraksha Bima, Jeevan Jyoti Bima, Atal Pension Yojana & AEPS Cash Withdrawals.",
-      bgImage: "/images/hero-center-banking.jpg",
-      primaryCtaText: "Banking & Services",
-      primaryCtaLink: "/services/csc",
-      secondaryCtaText: "WhatsApp Support",
-      secondaryCtaLink: SITE_CONFIG.getWhatsAppHelpLink(),
-      isExternal: true,
-    },
-    {
-      id: 4,
       badge: "CSC Digital Documentation Hub",
-      title: "PM-Kisan eKYC, EPFO & Smart Card Prints",
-      subtitle: "Fast eKYC, APAAR ID, Driving Licence, Income/Caste Certificates & PVC Smart Card Printing.",
-      bgImage: "/images/hero-center-csc.jpg",
+      title: "Fast Processing & Computer Services",
+      subtitle: "PM-Kisan eKYC, EPFO, APAAR ID, Driving Licence, Income/Caste Certificates & PVC Card Printing.",
+      bgImage: "/images/hero-center-workspace.jpg",
       primaryCtaText: "Order PVC Card",
       primaryCtaLink: "/order",
       secondaryCtaText: "Track Order",
@@ -91,7 +79,7 @@ export default function HeroSlider() {
             key={slide.id}
             className={`${styles.slide} ${index === currentSlide ? styles.active : ""}`}
             style={{
-              backgroundImage: `linear-gradient(to right, rgba(9, 21, 41, 0.9) 35%, rgba(9, 21, 41, 0.5) 100%), url(${slide.bgImage})`,
+              backgroundImage: `linear-gradient(to right, rgba(9, 21, 41, 0.75) 35%, rgba(9, 21, 41, 0.35) 100%), url(${slide.bgImage})`,
             }}
           >
             <div className={styles.contentContainer}>

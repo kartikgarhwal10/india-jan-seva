@@ -65,14 +65,20 @@ export default function Header({ whatsAppNumber = SITE_CONFIG.whatsAppNumber }: 
       <div className={styles.container}>
         <Link href="/" className={styles.logoArea} aria-label="Unique CSC Point Homepage">
           {SITE_CONFIG.logoAssetPath ? (
-            <Image
-              src={SITE_CONFIG.logoAssetPath}
-              alt={SITE_CONFIG.brandName}
-              width={140}
-              height={42}
-              className={styles.logoImg}
-              priority
-            />
+            <>
+              <Image
+                src={SITE_CONFIG.logoAssetPath}
+                alt={SITE_CONFIG.brandName}
+                width={44}
+                height={44}
+                className={styles.logoBadge}
+                priority
+              />
+              <div className={styles.logoText}>
+                <span className={styles.brandTitle}>{SITE_CONFIG.brandName}</span>
+                <span className={styles.brandSubtitle}>CSC Point</span>
+              </div>
+            </>
           ) : (
             <>
               <div className={styles.logoIcon}>

@@ -10,10 +10,10 @@ export const SITE_CONFIG = {
   emailAddress: "Uniquecscpoint1020@gmail.com",
   businessAddress: "Aryavart bank ke bagal, Harchanda, Jarwal, Bahraich (UP) 271904",
   openingHours: "Monday - Saturday: 08:00 AM - 07:00 PM (Sunday Closed)",
-  fallbackBasePrice: 149,
+  fallbackBasePrice: 100,
 
   // Logo asset status
-  logoAssetPath: null, // Set to "/images/logo.png" once logo asset is provided by client
+  logoAssetPath: "/images/logo.jpg",
 
   // Helpers
   getWhatsAppProductLink: (productName: string) => {

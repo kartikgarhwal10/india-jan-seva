@@ -80,7 +80,7 @@ export default function PartnerLanding() {
                   <span className={styles.benefitIcon}>✓</span>
                   <div className={styles.benefitText}>
                     <h3>Reseller Discount Pricing</h3>
-                    <p>Order cards at a flat rate of just <strong>₹80</strong> (Standard rate: ₹149). Earn ₹69 profit per card!</p>
+                    <p>Order cards at a flat rate of just <strong>₹80</strong> (Standard rate: ₹100). Earn ₹20 profit per card!</p>
                   </div>
                 </div>
 

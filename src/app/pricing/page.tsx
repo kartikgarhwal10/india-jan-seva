@@ -42,7 +42,7 @@ export default function Pricing() {
                 <p style={{ color: "var(--text-light)", fontSize: "0.9rem" }}>Perfect for individual orders</p>
                 <div className={styles.priceWrapper}>
                   <span className={styles.currency}>₹</span>
-                  <span className={styles.price}>149</span>
+                  <span className={styles.price}>100</span>
                   <span className={styles.period}>/ card</span>
                 </div>
               </div>
@@ -82,7 +82,7 @@ export default function Pricing() {
               <ul className={styles.featuresList}>
                 <li className={styles.featureItem}>
                   <span className={styles.checkIcon}>✓</span>
-                  <span><strong>Reseller bulk pricing</strong> (Save ₹69 per card)</span>
+                  <span><strong>Reseller bulk pricing</strong> (Save ₹20 per card)</span>
                 </li>
                 <li className={styles.featureItem}>
                   <span className={styles.checkIcon}>✓</span>

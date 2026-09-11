@@ -110,7 +110,7 @@ const pvcProducts = [
   {
     slug: "aadhaar-pvc",
     name: "Aadhaar PVC Card",
-    price: 149,
+    price: 100,
     shortDescription: "Premium quality • Durable • Smart Look • Easy Ordering",
     description: "Order a durable, wallet-sized, waterproof Aadhaar smart card printed on premium plastic (PVC) with UV protection.",
     requirements: JSON.stringify([
@@ -131,7 +131,7 @@ const pvcProducts = [
   {
     slug: "pan-pvc",
     name: "PAN PVC Card",
-    price: 149,
+    price: 100,
     shortDescription: "Premium quality • Durable • Smart Look • Easy Ordering",
     description: "Get your Permanent Account Number printed on a premium glossy plastic PVC card. Convenient replacement for paper/faded cards.",
     requirements: JSON.stringify([
@@ -152,7 +152,7 @@ const pvcProducts = [
   {
     slug: "ayushman-pvc",
     name: "Ayushman PVC Card",
-    price: 149,
+    price: 100,
     shortDescription: "Premium quality • Durable • Smart Look • Easy Ordering",
     description: "Make your PM-JAY Golden health card easy to carry in your wallet. Crucial for emergency hospital admissions.",
     requirements: JSON.stringify([
@@ -173,7 +173,7 @@ const pvcProducts = [
   {
     slug: "rc-pvc",
     name: "Vehicle RC PVC Card",
-    price: 149,
+    price: 100,
     shortDescription: "Premium quality • Durable • Smart Look • Easy Ordering",
     description: "Order a durable plastic duplicate of your Vehicle Registration Certificate (RC) for dashboard convenience.",
     requirements: JSON.stringify([
@@ -194,7 +194,7 @@ const pvcProducts = [
   {
     slug: "student-id-pvc",
     name: "Student ID PVC Card",
-    price: 149,
+    price: 100,
     shortDescription: "Premium quality • Durable • Smart Look • Easy Ordering",
     description: "Print your school/college student identity card on a glossy, durable plastic PVC smart card with custom lanyards.",
     requirements: JSON.stringify([
@@ -215,7 +215,7 @@ const pvcProducts = [
   {
     slug: "abha-pvc",
     name: "ABHA PVC Card",
-    price: 149,
+    price: 100,
     shortDescription: "Premium quality • Durable • Smart Look • Easy Ordering",
     description: "Print your Ayushman Bharat Health Account (ABHA) card on premium plastic. Convenient, wallet-sized, and long-lasting for easy hospital scans.",
     requirements: JSON.stringify([
@@ -236,7 +236,7 @@ const pvcProducts = [
   {
     slug: "ration-pvc",
     name: "Ration Card PVC",
-    price: 149,
+    price: 100,
     shortDescription: "Premium quality • Durable • Smart Look • Easy Ordering",
     description: "Get your digital ration card details printed onto a durable, easy-to-carry PVC plastic card for convenient usage at government ration shops.",
     requirements: JSON.stringify([
@@ -257,7 +257,7 @@ const pvcProducts = [
   {
     slug: "driving-licence-pvc",
     name: "Vehicle DL PVC Card",
-    price: 149,
+    price: 100,
     shortDescription: "Premium quality • Durable • Smart Look • Easy Ordering",
     description: "Convert your temporary virtual driving licence PDF into a robust, high-quality plastic card to show to authorities.",
     requirements: JSON.stringify([
@@ -278,7 +278,7 @@ const pvcProducts = [
   {
     slug: "e-shram-pvc",
     name: "e-Shram PVC Card",
-    price: 149,
+    price: 100,
     shortDescription: "Premium quality • Durable • Smart Look • Easy Ordering",
     description: "Get your e-Shram worker identification card printed on a durable, waterproof PVC smart card to easily carry to work sites and secure government benefits.",
     requirements: JSON.stringify([
@@ -299,7 +299,7 @@ const pvcProducts = [
   {
     slug: "farmer-id-pvc",
     name: "Farmer ID PVC Card (Kisan Card)",
-    price: 149,
+    price: 100,
     shortDescription: "Premium quality • Durable • Smart Look • Easy Ordering",
     description: "Print your PM-Kisan Farmer ID registry details onto a glossy, waterproof plastic smart card for easy presentation at local cooperative markets and seeds counters.",
     requirements: JSON.stringify([
@@ -320,7 +320,7 @@ const pvcProducts = [
   {
     slug: "voter-pvc",
     name: "Voter ID PVC Card",
-    price: 149,
+    price: 100,
     shortDescription: "Premium quality • Durable • Smart Look • Easy Ordering",
     description: "Upgrade your old paper Voter Card to a modern, security-enabled PVC Smart Voter ID.",
     requirements: JSON.stringify([
@@ -341,7 +341,7 @@ const pvcProducts = [
   {
     slug: "udid-pvc",
     name: "Unique Disability ID (UDID) PVC Card",
-    price: 149,
+    price: 100,
     shortDescription: "Premium quality • Durable • Smart Look • Easy Ordering",
     description: "Convert your paper disability card into a wallet-sized, waterproof UDID smart card. Highly durable and convenient for obtaining travel and medical concessions.",
     requirements: JSON.stringify([
@@ -362,7 +362,7 @@ const pvcProducts = [
   {
     slug: "uan-pvc",
     name: "EPFO UAN PVC Card",
-    price: 149,
+    price: 100,
     shortDescription: "Premium quality • Durable • Smart Look • Easy Ordering",
     description: "Get your Universal Account Number (UAN) details printed on a glossy PVC smart card. Highly convenient for EPFO member verifications at bank branches and new offices.",
     requirements: JSON.stringify([
@@ -587,7 +587,7 @@ async function main() {
     { key: "business_phone", value: "+91 82993 15137" },
     { key: "business_email", value: "Uniquecscpoint1020@gmail.com" },
     { key: "business_address", value: "Aryavart bank ke bagal, Harchanda, Jarwal, Bahraich (UP) 271904" },
-    { key: "pvc_base_price", value: "149" },
+    { key: "pvc_base_price", value: "100" },
   ];
 
   for (const set of defaultSettings) {

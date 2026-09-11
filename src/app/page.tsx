@@ -4,10 +4,11 @@ import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import HeroSlider from "@/components/Home/HeroSlider";
 import ServiceSearch from "@/components/Home/ServiceSearch";
-import { services, reviews, faqs, blogs, digitalProducts, educationCourses } from "@/lib/mockData";
+import { reviews, faqs, blogs, digitalProducts, educationCourses } from "@/lib/mockData";
 import { prisma } from "@/lib/prisma";
 import { SITE_CONFIG } from "@/lib/config";
 import PVCProductCard from "@/components/PVCProductCard/PVCProductCard";
+import HomepageCscSection from "@/components/Home/HomepageCscSection";
 import styles from "./page.module.css";
 
 export default async function Home() {
@@ -20,7 +21,6 @@ export default async function Home() {
   }
 
   // Extract items for highlight
-  const popularServices = services.slice(0, 8);
   const featuredPvc = activeProducts.filter(p => p.featured);
   const showcasePvc = featuredPvc.length > 0 ? featuredPvc : activeProducts.slice(0, 3);
   const minPrice = activeProducts.length > 0 ? Math.min(...activeProducts.map(p => p.price)) : 149;
@@ -238,55 +238,8 @@ export default async function Home() {
           </div>
         </section>
 
-        {/* 3. Popular CSC Services Section */}
-        <section className={`${styles.section} ${styles.bgMuted}`} id="popular-services">
-          <div className={styles.container}>
-            <div className={styles.sectionHeader}>
-              <span className={styles.sectionBadge}>Top Requests</span>
-              <h2 className={styles.sectionTitle}>Popular CSC Services</h2>
-              <p className={styles.sectionSubtitle}>
-                Here are the most frequently requested digital services at our center in Harchanda, Jarwal.
-              </p>
-            </div>
-
-            <div className={styles.servicesGrid}>
-              {popularServices.map((service) => (
-                <div key={service.id} className={styles.serviceCard}>
-                  <div className={styles.serviceHeader}>
-                    <span className={styles.serviceIcon}>{service.icon}</span>
-                    <h3 className={styles.serviceName}>{service.name}</h3>
-                  </div>
-                  <p className={styles.serviceDesc}>{service.description}</p>
-                  <div className={styles.requirements}>
-                    <h5>Required:</h5>
-                    <ul>
-                      {service.requirements.map((req, idx) => (
-                        <li key={idx}>{req}</li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div className={styles.cardFooter}>
-                    <span className={styles.timeTag}>Time: {service.processingTime}</span>
-                    <a
-                      href={SITE_CONFIG.getWhatsAppServiceLink(service.name)}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className={styles.enquireBtn}
-                    >
-                      Enquire Now &rarr;
-                    </a>
-                  </div>
-                </div>
-              ))}
-            </div>
-            
-            <div style={{ textAlign: 'center', marginTop: '3rem' }}>
-              <Link href="/services/csc" className={styles.btnSecondary} style={{ display: 'inline-block' }}>
-                View All CSC Services
-              </Link>
-            </div>
-          </div>
-        </section>
+        {/* 3. CSC Services Visual Category Section */}
+        <HomepageCscSection />
 
         {/* 4. PVC Card Services Showcase */}
         <section className={styles.section} id="pvc-showcase">
@@ -489,35 +442,43 @@ export default async function Home() {
             <div className={styles.founderGrid}>
               <div className={styles.founderImageWrapper}>
                 <Image
-                  src="/images/founder.jpg"
-                  alt="Mohd Irfak Ahmad"
+                  src="/images/mohd-irfak-ahmad.jpg"
+                  alt="Mohd Irfak Ahmad - Founder, Unique Computer Centre - CSC Point"
                   width={400}
                   height={400}
                   className={styles.founderImage}
                 />
               </div>
               <div className={styles.founderDetails}>
-                <span className={styles.sectionBadge}>Centre Leadership</span>
+                <span className={styles.sectionBadge}>Founder&apos;s Message</span>
                 <h2 className={styles.founderName}>Mohd Irfak Ahmad</h2>
-                <span className={styles.founderRole}>Founder &amp; Operator</span>
+                <span className={styles.founderRole}>Founder, Unique Computer Centre – CSC Point (Serving Since 2019)</span>
                 <p className={styles.founderQuote}>
-                  &quot;हमारा उद्देश्य ग्रामीण और स्थानीय क्षेत्रों में प्रत्येक नागरिक तक सरकारी योजनाओं और डिजिटल सेवाओं को पारदर्शी और सुगम तरीके से पहुँचाना है।&quot;
+                  &quot;Technology और Digital Services को हर व्यक्ति तक सरल, सुविधाजनक और भरोसेमंद तरीके से पहुँचाना हमारा उद्देश्य है।&quot;
                 </p>
-                <p className={styles.founderText}>
-                  Mohd Irfak Ahmad established Unique Computer Centre in 2018 with a vision to bridge the digital divide in Harchanda, Jarwal. As a certified CSC operator with over 8 years of experience in computer services and digital documentation, he has assisted thousands of local residents and farmers in successfully securing government subsidies, ID cards, and academic scholarships.
-                </p>
+                <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+                  <p className={styles.founderText}>
+                    2019 से Unique Computer Centre – CSC Point लोगों को विभिन्न सरकारी एवं डिजिटल सेवाएं सरल, सुविधाजनक और भरोसेमंद तरीके से उपलब्ध कराने के उद्देश्य से निरंतर कार्य कर रहा है।
+                  </p>
+                  <p className={styles.founderText}>
+                    हमारा प्रयास है कि नागरिकों को आवश्यक सेवाओं के लिए <strong>सही जानकारी, उचित मार्गदर्शन और बेहतर सहायता</strong> उनके नजदीक ही मिल सके। हमारा मानना है कि डिजिटल सेवाएं तभी सार्थक हैं, जब वे आम नागरिक के लिए आसान और सुलभ हों।
+                  </p>
+                  <p className={styles.founderText}>
+                    आपके विश्वास और सहयोग के लिए हम हृदय से आभारी हैं। भविष्य में भी <strong>ईमानदारी, पारदर्शिता और बेहतर सेवा</strong> के साथ आपकी सेवा करते रहना हमारा संकल्प है।
+                  </p>
+                </div>
                 <div className={styles.founderStats}>
                   <div className={styles.statItem}>
-                    <span className={styles.statVal}>8+</span>
-                    <span className={styles.statLbl}>Years Exp</span>
+                    <span className={styles.statVal}>2019</span>
+                    <span className={styles.statLbl}>Serving Since</span>
                   </div>
                   <div className={styles.statItem}>
                     <span className={styles.statVal}>15K+</span>
                     <span className={styles.statLbl}>Happy Users</span>
                   </div>
                   <div className={styles.statItem}>
-                    <span className={styles.statVal}>20+</span>
-                    <span className={styles.statLbl}>Services</span>
+                    <span className={styles.statVal}>37+</span>
+                    <span className={styles.statLbl}>CSC Services</span>
                   </div>
                 </div>
               </div>

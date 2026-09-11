@@ -3,13 +3,14 @@
   height: 600px;
   width: 100%;
   overflow: hidden;
-  margin-top: 80px; /* offset header height */
+  margin-top: 90px; /* offset header height with padding clearance */
   background: var(--primary-dark);
 }
 
 @media (max-width: 768px) {
   .heroSection {
     height: 480px;
+    margin-top: 80px;
   }
 }
 
@@ -33,6 +34,7 @@
   transition: opacity var(--transition-slow) ease, visibility var(--transition-slow) ease;
   display: flex;
   align-items: center;
+  padding-top: 1.5rem;
   z-index: 1;
 }
 

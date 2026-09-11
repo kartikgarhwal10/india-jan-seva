@@ -11,7 +11,7 @@ interface PageProps {
 
 export const metadata = {
   title: "Order PVC Smart Cards Online | Unique Computer Centre - CSC Point",
-  description: "Get wallet-sized, waterproof PVC smart cards printed online for Aadhaar, PAN, Voter ID, Driving Licence, and RC starting at ₹149.",
+  description: "Get wallet-sized, waterproof PVC smart cards printed online for Aadhaar, PAN, Voter ID, Driving Licence, and RC starting at ₹100.",
 };
 
 import { pvcProducts } from "@/lib/mockData";
@@ -80,7 +80,7 @@ export default async function PvcCardsPage({ searchParams }: PageProps) {
         <section className={styles.hero} aria-labelledby="hero-title">
           <h1 id="hero-title" className={styles.heroTitle}>Premium PVC Smart Cards</h1>
           <p className={styles.heroSubtitle}>
-            Order high-quality, durable, waterproof plastic smart prints of your essential documents. Starting at just ₹149 with all India home delivery.
+            Order high-quality, durable, waterproof plastic smart prints of your essential documents. Starting at just ₹100 with all India home delivery.
           </p>
         </section>
 

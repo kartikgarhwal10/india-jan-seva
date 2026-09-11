@@ -37,12 +37,70 @@ export default function About() {
             </div>
             <div className={styles.introImageWrapper}>
               <Image
-                src="/images/csc-workspace.jpg"
-                alt="Unique CSC Centre workspace inside view"
+                src="/images/mohd-irfak-ahmad.jpg"
+                alt="Mohd Irfak Ahmad - Founder, Unique Computer Centre - CSC Point"
                 fill
                 sizes="(max-width: 900px) 100vw, 45vw"
                 className={styles.introImage}
+                style={{ objectFit: "cover" }}
               />
+            </div>
+          </div>
+
+          {/* Founder's Message Card */}
+          <div style={{
+            background: "var(--surface)",
+            border: "1px solid var(--border)",
+            borderRadius: "var(--radius-lg)",
+            padding: "2.5rem 2rem",
+            margin: "3rem 0",
+            boxShadow: "var(--shadow-sm)"
+          }}>
+            <div style={{ textAlign: "center", marginBottom: "1.5rem" }}>
+              <span className={styles.sectionBadge}>Leadership Word</span>
+              <h2 className={styles.title} style={{ margin: "0.25rem 0" }}>Founder&apos;s Message / संस्थापक का संदेश</h2>
+            </div>
+            
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "2rem" }}>
+              {/* Hindi Message */}
+              <div style={{ background: "var(--surface-alt)", padding: "1.5rem", borderRadius: "var(--radius-md)", borderLeft: "4px solid var(--primary)" }}>
+                <p style={{ fontStyle: "italic", fontWeight: 600, color: "var(--primary)", marginBottom: "1rem", fontSize: "1.05rem" }}>
+                  &quot;Technology और Digital Services को हर व्यक्ति तक सरल, सुविधाजनक और भरोसेमंद तरीके से पहुँचाना हमारा उद्देश्य है।&quot;
+                </p>
+                <p style={{ fontSize: "0.92rem", color: "var(--text-muted)", marginBottom: "0.75rem", lineHeight: 1.6 }}>
+                  2019 से Unique Computer Centre – CSC Point लोगों को विभिन्न सरकारी एवं डिजिटल सेवाएं सरल, सुविधाजनक और भरोसेमंद तरीके से उपलब्ध कराने के उद्देश्य से निरंतर कार्य कर रहा है।
+                </p>
+                <p style={{ fontSize: "0.92rem", color: "var(--text-muted)", marginBottom: "0.75rem", lineHeight: 1.6 }}>
+                  हमारा प्रयास है कि नागरिकों को आवश्यक सेवाओं के लिए <strong>सही जानकारी, उचित मार्गदर्शन और बेहतर सहायता</strong> उनके नजदीक ही मिल सके। हमारा मानना है कि डिजिटल सेवाएं तभी सार्थक हैं, जब वे आम नागरिक के लिए आसान और सुलभ हों।
+                </p>
+                <p style={{ fontSize: "0.92rem", color: "var(--text-muted)", marginBottom: "1rem", lineHeight: 1.6 }}>
+                  आपके विश्वास और सहयोग के लिए हम हृदय से आभारी हैं। भविष्य में भी <strong>ईमानदारी, पारदर्शिता और बेहतर सेवा</strong> के साथ आपकी सेवा करते रहना हमारा संकल्प है।
+                </p>
+                <div style={{ borderTop: "1px solid var(--border)", paddingTop: "0.75rem", fontWeight: 700, fontSize: "0.9rem", color: "var(--text-main)" }}>
+                  — Mohd Irfak Ahmad<br />
+                  <span style={{ fontSize: "0.8rem", fontWeight: 500, color: "var(--text-light)" }}>Founder, Unique Computer Centre – CSC Point (Serving Since 2019)</span>
+                </div>
+              </div>
+
+              {/* English Message */}
+              <div style={{ background: "var(--surface-alt)", padding: "1.5rem", borderRadius: "var(--radius-md)", borderLeft: "4px solid #10b981" }}>
+                <p style={{ fontStyle: "italic", fontWeight: 600, color: "#059669", marginBottom: "1rem", fontSize: "1.05rem" }}>
+                  &quot;Our mission is to make Technology and Digital Services simple, accessible, and reliable for everyone.&quot;
+                </p>
+                <p style={{ fontSize: "0.92rem", color: "var(--text-muted)", marginBottom: "0.75rem", lineHeight: 1.6 }}>
+                  Since 2019, Unique Computer Centre – CSC Point has been continuously working to provide citizens with various government and digital services in a simple, convenient, and reliable manner.
+                </p>
+                <p style={{ fontSize: "0.92rem", color: "var(--text-muted)", marginBottom: "0.75rem", lineHeight: 1.6 }}>
+                  Our aim is to ensure that citizens can access the <strong>right information, proper guidance, and better assistance</strong> for essential services, all at a convenient location near them. We believe that digital services are truly meaningful when they are simple and accessible to everyone.
+                </p>
+                <p style={{ fontSize: "0.92rem", color: "var(--text-muted)", marginBottom: "1rem", lineHeight: 1.6 }}>
+                  We are sincerely grateful for your trust and support. We remain committed to serving you with <strong>honesty, transparency, and better service</strong> and to continuously improving our services in the future.
+                </p>
+                <div style={{ borderTop: "1px solid var(--border)", paddingTop: "0.75rem", fontWeight: 700, fontSize: "0.9rem", color: "var(--text-main)" }}>
+                  — Mohd Irfak Ahmad<br />
+                  <span style={{ fontSize: "0.8rem", fontWeight: 500, color: "var(--text-light)" }}>Founder, Unique Computer Centre – CSC Point (Serving Since 2019)</span>
+                </div>
+              </div>
             </div>
           </div>
 
