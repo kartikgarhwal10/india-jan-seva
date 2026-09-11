@@ -4,8 +4,12 @@ import LoginForm from "./LoginForm";
 import DashboardManager from "./DashboardManager";
 
 export const metadata = {
-  title: "Operator Dashboard | Unique Computer Centre - CSC Point",
-  description: "Administrative interface to manage PVC orders, update tracking consignment numbers, adjust service listings, and check analytics.",
+  title: "Admin Dashboard | Unique Computer Centre - CSC Point",
+  description: "Administrative interface to manage PVC orders, update tracking consignment numbers, and manage service status.",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 export default async function AdminPage() {
@@ -19,15 +23,33 @@ export default async function AdminPage() {
     );
   }
 
-  // Query Dashboard Metrics
+  // Query Dashboard Metrics from actual DB
   const totalCount = await prisma.order.count();
   
+  const newCount = await prisma.order.count({
+    where: {
+      orderStatus: { in: ["ORDER_RECEIVED", "Order Received", "PENDING_PAYMENT"] },
+    },
+  });
+
   const pendingCount = await prisma.order.count({
     where: { paymentStatus: "PENDING" },
   });
 
   const paidCount = await prisma.order.count({
     where: { paymentStatus: "PAID" },
+  });
+
+  const printingCount = await prisma.order.count({
+    where: { orderStatus: "PRINTING" },
+  });
+
+  const packedCount = await prisma.order.count({
+    where: { orderStatus: "PACKED" },
+  });
+
+  const shippedCount = await prisma.order.count({
+    where: { orderStatus: "SHIPPED" },
   });
 
   const deliveredCount = await prisma.order.count({
@@ -46,7 +68,7 @@ export default async function AdminPage() {
 
   const totalRevenue = revenueResult._sum.amount || 0.0;
 
-  // Query Recent Orders
+  // Query Orders ordered by newest first
   const recentOrdersRaw = await prisma.order.findMany({
     orderBy: {
       createdAt: "desc",
@@ -55,6 +77,7 @@ export default async function AdminPage() {
       product: {
         select: {
           name: true,
+          price: true,
         },
       },
     },
@@ -72,11 +95,16 @@ export default async function AdminPage() {
       <DashboardManager
         orders={recentOrders}
         totalCount={totalCount}
+        newCount={newCount}
         pendingCount={pendingCount}
         paidCount={paidCount}
+        printingCount={printingCount}
+        packedCount={packedCount}
+        shippedCount={shippedCount}
         deliveredCount={deliveredCount}
         totalRevenue={totalRevenue}
       />
     </div>
   );
 }
+

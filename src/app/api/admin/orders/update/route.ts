@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
-import { verifyAdminSession } from "@/lib/adminAuth";
+import { verifyAdminSession, isValidOrderStatus, isValidPaymentStatus } from "@/lib/adminAuth";
 
 export async function POST(request: Request) {
   try {
@@ -17,7 +17,26 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Required fields are missing." }, { status: 400 });
     }
 
-    // 2. Update Order
+    // 2. Validate Order Status Enum
+    if (!isValidOrderStatus(orderStatus)) {
+      return NextResponse.json({ error: "Invalid order status value." }, { status: 400 });
+    }
+
+    // 3. Validate Payment Status Enum
+    if (!isValidPaymentStatus(paymentStatus)) {
+      return NextResponse.json({ error: "Invalid payment status value." }, { status: 400 });
+    }
+
+    // 4. Verify Order Exists
+    const existingOrder = await prisma.order.findUnique({
+      where: { id: orderId },
+    });
+
+    if (!existingOrder) {
+      return NextResponse.json({ error: "Order not found." }, { status: 404 });
+    }
+
+    // 5. Update Order
     const updatedOrder = await prisma.order.update({
       where: { id: orderId },
       data: {
@@ -33,6 +52,9 @@ export async function POST(request: Request) {
       success: true,
       message: "Order updated successfully",
       orderId: updatedOrder.id,
+      orderStatus: updatedOrder.orderStatus,
+      paymentStatus: updatedOrder.paymentStatus,
+      updatedAt: updatedOrder.updatedAt,
     });
   } catch (error) {
     console.error("Order Update API Error:", error);

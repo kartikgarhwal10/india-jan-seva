@@ -37,6 +37,17 @@ export default function HeroSlider() {
     },
     {
       id: 2,
+      badge: "Trusted Neighbourhood Kiosk",
+      title: "Direct Citizen & Public Services Counter",
+      subtitle: "Get All Government & Digital Services Under One Roof with Friendly Support.",
+      bgImage: "/images/hero-center-crowd.jpg",
+      primaryCtaText: "View CSC Services",
+      primaryCtaLink: "/services/csc",
+      secondaryCtaText: "Contact Us",
+      secondaryCtaLink: "/contact",
+    },
+    {
+      id: 3,
       badge: "Customer Service Point Counter",
       title: "Direct Government & Financial Assistance",
       subtitle: "Aadhaar Print, PAN Card Correction, Ayushman Card & Instant Cash Withdrawal at Our Counter.",
@@ -47,7 +58,7 @@ export default function HeroSlider() {
       secondaryCtaLink: "/contact",
     },
     {
-      id: 3,
+      id: 4,
       badge: "CSC Digital Documentation Hub",
       title: "Fast Processing & Computer Services",
       subtitle: "PM-Kisan eKYC, EPFO, APAAR ID, Driving Licence, Income/Caste Certificates & PVC Card Printing.",

@@ -1,5 +1,5 @@
 .wrapper {
-  margin-top: 80px;
+  margin-top: 75px;
   min-height: 90vh;
   background-color: var(--background);
   display: flex;
@@ -7,24 +7,26 @@
 
 /* Sidebar Layout */
 .sidebar {
-  width: 260px;
-  background-color: var(--primary-dark);
+  width: 250px;
+  background-color: #0f172a;
   color: #fff;
-  padding: 2.5rem 1.5rem;
+  padding: 2.5rem 1.25rem;
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
   flex-shrink: 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .sidebarHeader h2 {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 800;
   line-height: 1.2;
+  color: #ffffff;
 }
 
 .sidebarHeader p {
-  font-size: 0.75rem;
+  font-size: 0.72rem;
   color: #38bdf8;
   text-transform: uppercase;
   font-weight: 700;
@@ -47,7 +49,7 @@
   border-radius: var(--radius-sm);
   color: #cbd5e1;
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   transition: background var(--transition-fast), color var(--transition-fast);
   width: 100%;
   text-align: left;
@@ -57,7 +59,7 @@
 }
 
 .menuItem a:hover, .menuActive a, .logoutBtn:hover {
-  background-color: rgba(255, 255, 255, 0.05);
+  background-color: rgba(255, 255, 255, 0.08);
   color: #fff;
 }
 
@@ -69,75 +71,155 @@
 /* Main Content Panel */
 .contentPanel {
   flex: 1;
-  padding: 3rem;
+  padding: 2.5rem 3rem;
   overflow-x: auto;
 }
 
 .panelHeader {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2.5rem;
+  align-items: flex-start;
+  margin-bottom: 2rem;
 }
 
 .panelTitle {
-  font-size: 2rem;
+  font-size: 1.85rem;
   font-weight: 800;
   color: var(--text-main);
+}
+
+.logoutTopBtn {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: var(--radius-sm);
+  padding: 0.45rem 1rem;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.logoutTopBtn:hover {
+  background: rgba(239, 68, 68, 0.2);
 }
 
 /* Metric Cards Grid */
 .metricsGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 3.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2.5rem;
 }
 
 .metricCard {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  padding: 1.5rem 2rem;
+  padding: 1.25rem 1.5rem;
   box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.35rem;
 }
 
 .metricLabel {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 700;
   color: var(--text-light);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
 }
 
 .metricVal {
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 800;
   color: var(--text-main);
   line-height: 1.1;
 }
 
-/* Orders Table Section */
+/* Filter Section */
+.filterSection {
+  margin-bottom: 1.5rem;
+}
+
+.filterGroup {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.searchInput {
+  flex: 1;
+  min-width: 240px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 1rem;
+  font-size: 0.9rem;
+  background: var(--surface);
+  color: var(--text-main);
+}
+
+.filterSelect {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 1rem;
+  font-size: 0.9rem;
+  background: var(--surface);
+  color: var(--text-main);
+  cursor: pointer;
+}
+
+.clearFilterBtn {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-light);
+  cursor: pointer;
+}
+
+.clearFilterBtn:hover {
+  background: var(--surface-alt);
+  color: var(--text-main);
+}
+
+/* Table Section */
+.tableHeaderRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.tableTitle {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
 .tableContainer {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
-  overflow: hidden;
+  overflow-x: auto;
   box-shadow: var(--shadow-sm);
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .adminTable {
   width: 100%;
   border-collapse: collapse;
   text-align: left;
+  min-width: 800px;
 }
 
 .adminTable th, .adminTable td {
-  padding: 1.25rem 1.5rem;
+  padding: 1rem 1.25rem;
+  white-space: nowrap;
 }
 
 .adminTable th {
@@ -145,12 +227,15 @@
   font-weight: 700;
   color: var(--text-main);
   border-bottom: 2px solid var(--border);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 
 .adminTable td {
   border-bottom: 1px solid var(--border);
   color: var(--text-muted);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 
 .adminTable tr:last-child td {
@@ -160,20 +245,108 @@
 .rowLink {
   color: var(--primary);
   font-weight: 700;
+  cursor: pointer;
 }
 
 .rowLink:hover {
   text-decoration: underline;
 }
 
-/* Detail Editor View (Modal/Overlay) */
+.newBadge {
+  background: #ffe4e6;
+  color: #e11d48;
+  font-size: 0.68rem;
+  font-weight: 800;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  letter-spacing: 0.04em;
+}
+
+.statusPill {
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.3rem 0.65rem;
+  border-radius: 50px;
+  display: inline-block;
+}
+
+.viewBtn {
+  background: var(--primary-light);
+  color: var(--primary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.35rem 0.75rem;
+  font-weight: 700;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.viewBtn:hover {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+/* Pagination */
+.paginationContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.pageBtn {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-main);
+  cursor: pointer;
+}
+
+.pageBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pageNumbers {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.pageNumberBtn {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-main);
+  cursor: pointer;
+}
+
+.pageActive {
+  background: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+}
+
+/* Detail Modal Styles */
 .modalBackdrop {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(9, 13, 22, 0.6);
+  background-color: rgba(15, 23, 42, 0.75);
   backdrop-filter: blur(4px);
   z-index: 1050;
   display: flex;
@@ -187,26 +360,21 @@
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   width: 100%;
-  max-width: 650px;
+  max-width: 720px;
   max-height: 90vh;
   overflow-y: auto;
-  box-shadow: var(--shadow-premium);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
   display: flex;
   flex-direction: column;
 }
 
 .modalHeader {
-  padding: 1.5rem 2rem;
+  padding: 1.25rem 1.75rem;
   border-bottom: 1px solid var(--border);
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.modalHeader h3 {
-  font-size: 1.25rem;
-  font-weight: 800;
-  color: var(--text-main);
+  background: var(--surface-alt);
 }
 
 .modalCloseBtn {
@@ -218,44 +386,215 @@
 }
 
 .modalBody {
-  padding: 2rem;
+  padding: 1.75rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 
+.sectionHeading {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 0.75rem;
+}
+
+/* Timeline */
+.timelineSection {
+  background: var(--surface-alt);
+  padding: 1.25rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+}
+
+.timelineGrid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.timelineStep {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.35rem;
+}
+
+.stepDot {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--border);
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.stepDone .stepDot {
+  background: #22c55e;
+  color: #ffffff;
+}
+
+.stepActive .stepDot {
+  background: #2563eb;
+  color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.25);
+}
+
+.stepLabel {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-light);
+  line-height: 1.2;
+}
+
+.stepDone .stepLabel, .stepActive .stepLabel {
+  color: var(--text-main);
+  font-weight: 700;
+}
+
+/* Info Details Grid */
+.infoSection {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+}
+
+.detailsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.detailLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-light);
+  text-transform: uppercase;
+}
+
+.detailVal {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-main);
+  margin-top: 0.15rem;
+}
+
+.docLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+  padding: 0.6rem 1rem;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 0.88rem;
+  text-decoration: none;
+  transition: background 0.15s ease;
+}
+
+.docLink:hover {
+  background: #dbeafe;
+}
+
+/* Status Update Box */
+.updateBox {
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.fieldLabel {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.statusSelect, .textInput {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 0.65rem 0.85rem;
+  font-size: 0.9rem;
+  background: #ffffff;
+  color: #0f172a;
+}
+
 .modalFooter {
-  padding: 1.5rem 2rem;
+  padding: 1.25rem 1.75rem;
   border-top: 1px solid var(--border);
   display: flex;
   justify-content: flex-end;
   gap: 1rem;
+  background: var(--surface-alt);
 }
 
-.docLink {
-  background: var(--primary-light);
-  color: var(--primary);
-  font-weight: 700;
-  padding: 0.75rem 1.25rem;
-  border-radius: var(--radius-sm);
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  align-self: flex-start;
-}
-
-.docLink:hover {
-  background: var(--border);
-}
-
-/* Form Styles inside Modal */
-.statusSelect {
-  width: 100%;
+.cancelBtn {
+  background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
+  padding: 0.6rem 1.25rem;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.saveBtn {
+  background: var(--primary);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 0.6rem 1.5rem;
+  font-weight: 800;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.saveBtn:hover {
+  background: var(--primary-hover);
+}
+
+.errorAlert {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #991b1b;
   padding: 0.75rem 1rem;
-  font-size: 0.95rem;
-  background: var(--background);
+  border-radius: var(--radius-sm);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.successAlert {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #166534;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.88rem;
+  font-weight: 600;
 }
 
 /* Operator Login Form Styles */
@@ -311,10 +650,21 @@
   .sidebar {
     width: 100%;
     height: auto;
-    padding: 1.5rem;
+    padding: 1.25rem 1.5rem;
     gap: 1rem;
   }
   .contentPanel {
     padding: 1.5rem;
+  }
+  .timelineGrid {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 1rem;
+  }
+  .filterGroup {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .searchInput, .filterSelect, .clearFilterBtn {
+    width: 100%;
   }
 }

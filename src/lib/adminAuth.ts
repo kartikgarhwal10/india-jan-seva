@@ -45,3 +45,34 @@ export function getAdminCredentials() {
     password: process.env.ADMIN_PASSWORD || DEFAULT_ADMIN_PASS,
   };
 }
+
+export const ALLOWED_ORDER_STATUSES = [
+  "ORDER_RECEIVED",
+  "Order Received",
+  "PAYMENT_CONFIRMED",
+  "PAID",
+  "PENDING_PAYMENT",
+  "PROCESSING",
+  "PRINTING",
+  "QUALITY_CHECK",
+  "PACKED",
+  "SHIPPED",
+  "DELIVERED",
+  "CANCELLED",
+  "REFUNDED",
+] as const;
+
+export const ALLOWED_PAYMENT_STATUSES = [
+  "PENDING",
+  "PAID",
+  "FAILED",
+] as const;
+
+export function isValidOrderStatus(status: string): boolean {
+  return ALLOWED_ORDER_STATUSES.includes(status as typeof ALLOWED_ORDER_STATUSES[number]);
+}
+
+export function isValidPaymentStatus(status: string): boolean {
+  return ALLOWED_PAYMENT_STATUSES.includes(status as typeof ALLOWED_PAYMENT_STATUSES[number]);
+}
+
