@@ -69,6 +69,7 @@ export default function CscVisualCategorySection({
           return (
             <div
               key={cat.id}
+              id={cat.id}
               className={`${styles.categoryCard} ${isFullWidth ? styles.fullWidthCategory : ""}`}
               style={{ "--cat-color": catColor } as React.CSSProperties}
             >

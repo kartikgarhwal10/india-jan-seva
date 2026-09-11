@@ -23,7 +23,7 @@ export default async function Home() {
   // Extract items for highlight
   const featuredPvc = activeProducts.filter(p => p.featured);
   const showcasePvc = featuredPvc.length > 0 ? featuredPvc : activeProducts.slice(0, 3);
-  const minPrice = activeProducts.length > 0 ? Math.min(...activeProducts.map(p => p.price)) : 149;
+  const minPrice = activeProducts.length > 0 ? Math.min(...activeProducts.map(p => p.price)) : 100;
 
   const latestBlogs = blogs.slice(0, 3);
   const selectedReviews = reviews.slice(0, 3);
@@ -440,15 +440,6 @@ export default async function Home() {
         <section className={`${styles.section} ${styles.bgMuted}`} id="founder">
           <div className={styles.container}>
             <div className={styles.founderGrid}>
-              <div className={styles.founderImageWrapper}>
-                <Image
-                  src="/images/mohd-irfak-ahmad.jpg"
-                  alt="Mohd Irfak Ahmad - Founder, Unique Computer Centre - CSC Point"
-                  width={400}
-                  height={400}
-                  className={styles.founderImage}
-                />
-              </div>
               <div className={styles.founderDetails}>
                 <span className={styles.sectionBadge}>Founder&apos;s Message</span>
                 <h2 className={styles.founderName}>Mohd Irfak Ahmad</h2>
@@ -481,6 +472,16 @@ export default async function Home() {
                     <span className={styles.statLbl}>CSC Services</span>
                   </div>
                 </div>
+              </div>
+
+              <div className={styles.founderImageWrapper}>
+                <Image
+                  src="/images/mohd-irfak-ahmad.jpg"
+                  alt="Mohd Irfak Ahmad - Founder, Unique Computer Centre - CSC Point"
+                  width={400}
+                  height={400}
+                  className={styles.founderImage}
+                />
               </div>
             </div>
           </div>

@@ -63,20 +63,21 @@ export default function Header({ whatsAppNumber = SITE_CONFIG.whatsAppNumber }: 
   return (
     <header className={`${styles.header} ${isScrolled ? styles.scrolled : ""} ${isOpen ? styles.menuOpen : ""}`}>
       <div className={styles.container}>
-        <Link href="/" className={styles.logoArea} aria-label="Unique CSC Point Homepage">
+        <Link href="/" className={styles.logoArea} aria-label="Unique Computer Center CSC Point Homepage">
           {SITE_CONFIG.logoAssetPath ? (
             <>
               <Image
                 src={SITE_CONFIG.logoAssetPath}
-                alt={SITE_CONFIG.brandName}
+                alt="Unique Computer Center CSC Point"
                 width={44}
                 height={44}
                 className={styles.logoBadge}
                 priority
               />
               <div className={styles.logoText}>
-                <span className={styles.brandTitle}>{SITE_CONFIG.brandName}</span>
-                <span className={styles.brandSubtitle}>CSC Point</span>
+                <span className={styles.brandTitleLine1}>UNIQUE COMPUTER</span>
+                <span className={styles.brandTitleLine2}>CENTER</span>
+                <span className={styles.brandSubtitle}>CSC POINT</span>
               </div>
             </>
           ) : (
@@ -85,8 +86,9 @@ export default function Header({ whatsAppNumber = SITE_CONFIG.whatsAppNumber }: 
                 <span>U</span>
               </div>
               <div className={styles.logoText}>
-                <span className={styles.brandTitle}>{SITE_CONFIG.brandName}</span>
-                <span className={styles.brandSubtitle}>CSC Point</span>
+                <span className={styles.brandTitleLine1}>UNIQUE COMPUTER</span>
+                <span className={styles.brandTitleLine2}>CENTER</span>
+                <span className={styles.brandSubtitle}>CSC POINT</span>
               </div>
             </>
           )}

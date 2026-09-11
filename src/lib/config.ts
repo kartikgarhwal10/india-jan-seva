@@ -1,6 +1,6 @@
 export const SITE_CONFIG = {
   // Global business identity
-  brandName: "UNIQUE CSC POINT",
+  brandName: "UNIQUE COMPUTER CENTRE",
   brandSubtitle: "Unique Computer Centre – CSC Point",
   shortBrand: "Unique CSC Point",
 

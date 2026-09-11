@@ -1,0 +1,266 @@
+.section {
+  padding: 4rem 1.5rem;
+  background-color: var(--bg-surface, #f8fafc);
+}
+
+.container {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.sectionBadge {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--primary, #0d47a1);
+  background: rgba(13, 71, 161, 0.08);
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  margin-bottom: 0.75rem;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--text-dark, #0f172a);
+  margin-bottom: 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.sectionSubtitle {
+  font-size: 1.05rem;
+  color: var(--text-muted, #475569);
+  max-width: 750px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* DESKTOP: FIVE IN ONE ROW */
+.compactGrid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.cardLink {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.categoryCard {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  position: relative;
+}
+
+.categoryCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.09);
+  border-color: var(--card-accent, #0d47a1);
+}
+
+/* Top Ribbon Accent */
+.topAccentBar {
+  background: var(--card-accent, #0d47a1);
+  color: #ffffff;
+  padding: 0.5rem 0.75rem;
+  font-weight: 700;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  letter-spacing: 0.02em;
+}
+
+.badgeNumber {
+  background: rgba(255, 255, 255, 0.25);
+  padding: 0.1rem 0.45rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+/* Card Body */
+.cardBody {
+  padding: 1.25rem 0.85rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+
+.iconWrapper {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--card-light-bg, #eff6ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.65rem;
+  margin-bottom: 0.85rem;
+  transition: transform 0.25s ease;
+}
+
+.categoryCard:hover .iconWrapper {
+  transform: scale(1.12);
+}
+
+.titleHi {
+  font-size: 1.02rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.35;
+  margin-bottom: 0.3rem;
+}
+
+.titleEn {
+  font-size: 0.78rem;
+  color: #64748b;
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+  line-height: 1.25;
+}
+
+.countBadge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--card-accent, #0d47a1);
+  background: var(--card-light-bg, #eff6ff);
+  padding: 0.2rem 0.55rem;
+  border-radius: 6px;
+  margin-top: auto;
+}
+
+/* Card Footer / CTA */
+.cardFooter {
+  padding: 0.7rem 0.75rem;
+  background: #f8fafc;
+  border-top: 1px solid #f1f5f9;
+  text-align: center;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--card-accent, #0d47a1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  transition: background-color 0.2s ease;
+}
+
+.categoryCard:hover .cardFooter {
+  background: var(--card-light-bg, #eff6ff);
+}
+
+.ctaArrow {
+  transition: transform 0.2s ease;
+}
+
+.categoryCard:hover .ctaArrow {
+  transform: translateX(4px);
+}
+
+/* CTA Footer Wrapper below grid */
+.viewAllWrapper {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+.btnViewAll {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #ffffff;
+  color: var(--primary, #0d47a1);
+  border: 2px solid var(--primary, #0d47a1);
+  padding: 0.75rem 1.75rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(13, 71, 161, 0.08);
+}
+
+.btnViewAll:hover {
+  background: var(--primary, #0d47a1);
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(13, 71, 161, 0.2);
+  transform: translateY(-2px);
+}
+
+/* TABLET LAYOUT: 3 COLUMNS */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .compactGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+}
+
+/* MOBILE LAYOUT: 2 COLUMNS */
+@media (max-width: 767px) {
+  .section {
+    padding: 2.5rem 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.5rem;
+  }
+
+  .sectionSubtitle {
+    font-size: 0.92rem;
+  }
+
+  .compactGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .compactGrid > *:nth-child(5) {
+    grid-column: span 2;
+  }
+
+  .cardBody {
+    padding: 1rem 0.6rem;
+  }
+
+  .titleHi {
+    font-size: 0.92rem;
+  }
+
+  .titleEn {
+    font-size: 0.72rem;
+  }
+
+  .iconWrapper {
+    width: 44px;
+    height: 44px;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .topAccentBar {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.75rem;
+  }
+}

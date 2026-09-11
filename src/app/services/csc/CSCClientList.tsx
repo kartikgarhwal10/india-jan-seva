@@ -1,15 +1,30 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import { ServiceItem, cscCategories } from "@/lib/mockData";
 import ServiceFormModal from "@/components/CSC/ServiceFormModal";
 import CscVisualCategorySection from "@/components/CSC/CscVisualCategorySection";
 import styles from "../services.module.css";
 
 export default function CSCClientList() {
+  const searchParams = useSearchParams();
   const [selectedService, setSelectedService] = useState<ServiceItem | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [activeCategoryFilter, setActiveCategoryFilter] = useState<string>("all");
+
+  useEffect(() => {
+    const catParam = searchParams.get("category");
+    if (catParam) {
+      setActiveCategoryFilter(catParam);
+      setTimeout(() => {
+        const el = document.getElementById(catParam);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 100);
+    }
+  }, [searchParams]);
 
   // Filter category groups based on search & category filter
   const filteredCategories = cscCategories

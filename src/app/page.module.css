@@ -642,7 +642,7 @@
 /* Founder Section */
 .founderGrid {
   display: grid;
-  grid-template-columns: 1fr 1.8fr;
+  grid-template-columns: 1.5fr 1fr;
   gap: 3.5rem;
   align-items: center;
 }
@@ -994,7 +994,8 @@
 }
 
 @media (max-width: 900px) {
-  .contactGrid {
+  .contactGrid,
+  .founderGrid {
     grid-template-columns: 1fr;
     gap: 2.5rem;
   }

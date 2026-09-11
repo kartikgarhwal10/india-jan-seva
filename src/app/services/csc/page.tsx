@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import CSCClientList from "./CSCClientList";
@@ -23,7 +24,9 @@ export default function CscServices() {
         </section>
 
         <section className={styles.container}>
-          <CSCClientList />
+          <Suspense fallback={<div style={{ textAlign: "center", padding: "3rem" }}>Loading services...</div>}>
+            <CSCClientList />
+          </Suspense>
         </section>
       </main>
 
