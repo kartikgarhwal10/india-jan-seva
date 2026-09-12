@@ -12,6 +12,10 @@ export const SITE_CONFIG = {
   openingHours: "Monday - Saturday: 08:00 AM - 07:00 PM (Sunday Closed)",
   fallbackBasePrice: 100,
 
+  // Social media links
+  instagramUrl: "https://www.instagram.com/unique_csc_point/",
+  facebookUrl: "https://www.facebook.com/unique.csc.point?rdid=zAWEt1oVlpo3w8KL&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BBF3odqbY%2F#",
+
   // Logo asset status
   logoAssetPath: "/images/logo.jpg",
 

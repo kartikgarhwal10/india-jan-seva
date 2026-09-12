@@ -105,6 +105,26 @@ export default function Contact() {
                     <a href={`mailto:${SITE_CONFIG.emailAddress}`}>{SITE_CONFIG.emailAddress}</a>
                   </div>
                 </li>
+                <li className={styles.infoItem}>
+                  <div className={styles.icon}>📸</div>
+                  <div className={styles.infoDetails}>
+                    <h4>Instagram Channel</h4>
+                    <a href={SITE_CONFIG.instagramUrl} target="_blank" rel="noopener noreferrer">
+                      @unique_csc_point
+                    </a>
+                    <p style={{ fontSize: "0.85rem", color: "var(--text-light)" }}>Follow for latest updates &amp; notifications</p>
+                  </div>
+                </li>
+                <li className={styles.infoItem}>
+                  <div className={styles.icon}>🌐</div>
+                  <div className={styles.infoDetails}>
+                    <h4>Facebook Page</h4>
+                    <a href={SITE_CONFIG.facebookUrl} target="_blank" rel="noopener noreferrer">
+                      Unique CSC Point
+                    </a>
+                    <p style={{ fontSize: "0.85rem", color: "var(--text-light)" }}>Join our community on Facebook</p>
+                  </div>
+                </li>
               </ul>
             </div>
 
