@@ -43,6 +43,12 @@ export default function RootLayout({
       "postalCode": "271904",
       "addressCountry": "IN"
     },
+    "sameAs": [
+      SITE_CONFIG.socialLinks.youtube,
+      SITE_CONFIG.socialLinks.instagram,
+      SITE_CONFIG.socialLinks.facebook,
+      SITE_CONFIG.socialLinks.whatsappChannel
+    ],
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": [

@@ -13,8 +13,16 @@ export const SITE_CONFIG = {
   fallbackBasePrice: 100,
 
   // Social media links
+  socialLinks: {
+    youtube: "https://www.youtube.com/@Uniquecscpoint",
+    instagram: "https://www.instagram.com/unique_csc_point/",
+    facebook: "https://www.facebook.com/unique.csc.point?rdid=zAWEt1oVlpo3w8KL&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BBF3odqbY%2F#",
+    whatsappChannel: "https://whatsapp.com/channel/0029Vb6dtUn3rZZdQToYYB3h",
+  },
   instagramUrl: "https://www.instagram.com/unique_csc_point/",
   facebookUrl: "https://www.facebook.com/unique.csc.point?rdid=zAWEt1oVlpo3w8KL&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BBF3odqbY%2F#",
+  youtubeUrl: "https://www.youtube.com/@Uniquecscpoint",
+  whatsappChannelUrl: "https://whatsapp.com/channel/0029Vb6dtUn3rZZdQToYYB3h",
 
   // Logo asset status
   logoAssetPath: "/images/logo.jpg",
