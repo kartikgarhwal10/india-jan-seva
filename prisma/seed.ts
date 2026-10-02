@@ -536,18 +536,21 @@ async function main() {
     });
   }
 
-  // Seed Reviews
-  for (const r of reviews) {
-    await prisma.review.create({
-      data: {
-        rating: r.rating,
-        content: r.content,
-        author: r.author,
-        location: r.location,
-        date: r.date,
-        approved: true,
-      },
-    });
+  // Seed Reviews if none exist
+  const existingReviewsCount = await prisma.review.count();
+  if (existingReviewsCount === 0) {
+    for (const r of reviews) {
+      await prisma.review.create({
+        data: {
+          rating: r.rating,
+          content: r.content,
+          author: r.author,
+          location: r.location,
+          date: r.date,
+          approved: true,
+        },
+      });
+    }
   }
 
   // Seed Blogs
@@ -570,16 +573,19 @@ async function main() {
     });
   }
 
-  // Seed Gallery Items
-  for (const g of galleryItems) {
-    await prisma.galleryItem.create({
-      data: {
-        title: g.title,
-        category: g.category,
-        image: g.image,
-        alt: g.alt,
-      },
-    });
+  // Seed Gallery Items if none exist
+  const existingGalleryCount = await prisma.galleryItem.count();
+  if (existingGalleryCount === 0) {
+    for (const g of galleryItems) {
+      await prisma.galleryItem.create({
+        data: {
+          title: g.title,
+          category: g.category,
+          image: g.image,
+          alt: g.alt,
+        },
+      });
+    }
   }
 
   // Seed default settings
