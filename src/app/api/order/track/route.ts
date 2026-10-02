@@ -19,11 +19,14 @@ export async function GET(request: Request) {
             image: true,
           },
         },
+        statusHistory: {
+          orderBy: { createdAt: "asc" },
+        },
       },
     });
 
     if (!order) {
-      return NextResponse.json({ error: "Order not found" }, { status: 404 });
+      return NextResponse.json({ error: "Order not found. Please check your Order ID and try again." }, { status: 404 });
     }
 
     // Expose only safe fields (hide sensitive address details or document paths from guest tracking)
@@ -37,7 +40,13 @@ export async function GET(request: Request) {
       orderStatus: order.orderStatus,
       courierName: order.courierName,
       trackingNumber: order.trackingNumber,
+      createdAt: order.createdAt,
       updatedAt: order.updatedAt,
+      statusHistory: order.statusHistory.map((h) => ({
+        status: h.status,
+        note: h.note,
+        createdAt: h.createdAt,
+      })),
     });
   } catch (error) {
     console.error("Tracking API Error:", error);

@@ -15,15 +15,21 @@ export async function generateMetadata({ params }: PageProps) {
     where: { slug },
   });
 
-  if (!post) {
+  if (!post || !post.published) {
     return {
       title: "Article Not Found | Unique Computer Centre",
     };
   }
 
   return {
-    title: `${post.title} | Unique Computer Centre - CSC Point`,
-    description: post.summary,
+    title: post.seoTitle || `${post.title} | Unique Computer Centre - CSC Point`,
+    description: post.seoDescription || post.summary,
+    keywords: post.seoKeywords || undefined,
+    openGraph: {
+      title: post.seoTitle || post.title,
+      description: post.seoDescription || post.summary,
+      images: [post.image],
+    },
   };
 }
 
@@ -34,7 +40,7 @@ export default async function BlogPost({ params }: PageProps) {
     where: { slug },
   });
 
-  if (!post) {
+  if (!post || !post.published) {
     notFound();
   }
 

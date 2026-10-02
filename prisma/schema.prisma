@@ -72,22 +72,36 @@ model Order {
   partnerId      String?
   partner        Partner? @relation(fields: [partnerId], references: [id])
   commissions    PartnerCommission[]
+
+  statusHistory  OrderStatusHistory[]
+}
+
+model OrderStatusHistory {
+  id        String   @id @default(uuid())
+  orderId   String
+  order     Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  status    String
+  note      String?
+  createdAt DateTime @default(now())
 }
 
 model BlogPost {
-  id            String   @id @default(uuid())
-  title         String
-  slug          String   @unique
-  summary       String
-  content       String
-  category      String
-  author        String
-  publishedDate String
-  readTime      String
-  image         String
-  published     Boolean  @default(true)
-  createdAt     DateTime @default(now())
-  updatedAt     DateTime @updatedAt
+  id             String   @id @default(uuid())
+  title          String
+  slug           String   @unique
+  summary        String
+  content        String
+  category       String
+  author         String
+  publishedDate  String
+  readTime       String
+  image          String
+  published      Boolean  @default(true)
+  seoTitle       String?
+  seoDescription  String?
+  seoKeywords    String?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
 }
 
 model Review {

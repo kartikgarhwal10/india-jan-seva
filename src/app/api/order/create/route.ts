@@ -191,6 +191,15 @@ export async function POST(request: Request) {
       },
     });
 
+    // Create initial tracking history
+    await prisma.orderStatusHistory.create({
+      data: {
+        orderId: order.id,
+        status: "ORDER_RECEIVED",
+        note: "Your PVC Order has been received.",
+      },
+    });
+
     return NextResponse.json({
       success: true,
       orderId: order.id,

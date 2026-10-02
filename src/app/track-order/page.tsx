@@ -6,6 +6,12 @@ import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import styles from "./track.module.css";
 
+interface StatusHistoryItem {
+  status: string;
+  note: string | null;
+  createdAt: string;
+}
+
 interface OrderDetails {
   id: string;
   productName: string;
@@ -16,7 +22,9 @@ interface OrderDetails {
   orderStatus: string;
   courierName: string | null;
   trackingNumber: string | null;
+  createdAt?: string;
   updatedAt: string;
+  statusHistory?: StatusHistoryItem[];
 }
 
 function TrackingContent() {
@@ -41,13 +49,13 @@ function TrackingContent() {
       const data = await res.json();
 
       if (!res.ok || data.error) {
-        throw new Error(data.error || "Order not found.");
+        throw new Error(data.error || "Order not found. Please check your Order ID and try again.");
       }
 
       setOrder(data);
     } catch (err: unknown) {
       console.error(err);
-      setError(err instanceof Error ? err.message : "Failed to fetch order status. Please verify the ID.");
+      setError(err instanceof Error ? err.message : "Order not found. Please check your Order ID and try again.");
     } finally {
       setIsLoading(false);
     }
@@ -94,13 +102,14 @@ function TrackingContent() {
       currentStage = "Packed";
     } else if (upperStatus === "PRINTING" || upperStatus === "QUALITY_CHECK" || upperStatus === "PROCESSING") {
       currentStage = "Printing";
-    } else if (upperPay === "PAID" || upperStatus === "PAID") {
+    } else if (upperPay === "PAID" || upperStatus === "PAID" || upperStatus === "PAYMENT_CONFIRMED") {
       currentStage = "Payment Confirmed";
     } else {
       currentStage = "Order Received";
     }
 
     return {
+      currentStage,
       isDone: (stage: string) => {
         const currentIdx = stages.indexOf(currentStage);
         const stageIdx = stages.indexOf(stage);
@@ -130,15 +139,15 @@ function TrackingContent() {
       {isSuccess && urlOrderId && (
         <div className={styles.successBanner}>
           <span className={styles.successIcon}>🎉</span>
-          <h2 className={styles.successTitle}>Order Placed Successfully!</h2>
+          <h2 className={styles.successTitle}>Your PVC Order has been received.</h2>
           <p className={styles.successText}>
-            Thank you for ordering with Unique Computer Centre. Your payment status is logged, and we have received your documents securely.
+            Thank you for ordering with Unique Computer Centre. Your PVC order is being processed.
           </p>
           <div className={styles.highlightId}>
-            Order ID: {urlOrderId}
+            Order / Tracking ID: {urlOrderId}
           </div>
-          <p style={{ fontSize: "0.8rem", color: "var(--text-light)", marginTop: "0.5rem" }}>
-            Please write down or screenshot this ID to track your card delivery status.
+          <p style={{ fontSize: "0.85rem", color: "var(--text-light)", marginTop: "0.5rem", fontWeight: 600 }}>
+            Please write down or save this Order ID to check your card status anytime.
           </p>
         </div>
       )}
@@ -146,12 +155,12 @@ function TrackingContent() {
       {/* Order Search Input Box */}
       <div className={styles.searchCard}>
         <h2 className={styles.searchTitle}>Track Your PVC Card</h2>
-        <p className={styles.searchSubtitle}>Enter your unique Order ID to view printing and dispatch updates.</p>
+        <p className={styles.searchSubtitle}>Enter your Order ID to check your latest order status.</p>
         
         <form onSubmit={handleSearchSubmit} className={styles.searchBar}>
           <input
             type="text"
-            placeholder="e.g. UCCPVC10001"
+            placeholder="UCCPVC10001"
             value={orderIdInput}
             onChange={(e) => setOrderIdInput(e.target.value)}
             className={styles.input}
@@ -159,7 +168,7 @@ function TrackingContent() {
             disabled={isLoading}
           />
           <button type="submit" className={styles.searchBtn} disabled={isLoading}>
-            {isLoading ? "Searching..." : "Track Status"}
+            {isLoading ? "Searching..." : "Track Order"}
           </button>
         </form>
       </div>
@@ -170,22 +179,44 @@ function TrackingContent() {
       {/* Order Status Display Section */}
       {order && timeline && (
         <div className={styles.detailsCard}>
-          <div className={styles.detailsHeader}>
-            <div className={styles.orderMeta}>
-              <h3>Order details for {order.id}</h3>
-              <p>Product: <strong>{order.productName}</strong></p>
-              <p>Amount: <strong>₹{order.amount.toFixed(2)}</strong> ({order.paymentStatus})</p>
-              <p>Last Update: {new Date(order.updatedAt).toLocaleString("en-IN")}</p>
+          {/* Latest Status Banner */}
+          <div style={{
+            background: "linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(147, 51, 234, 0.1))",
+            border: "1px solid rgba(37, 99, 235, 0.3)",
+            borderRadius: "8px",
+            padding: "1rem 1.25rem",
+            marginBottom: "1.5rem",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            flexWrap: "wrap",
+            gap: "0.75rem"
+          }}>
+            <div>
+              <span style={{ fontSize: "0.8rem", textTransform: "uppercase", letterSpacing: "1px", fontWeight: 700, color: "var(--primary)" }}>Current Status</span>
+              <h3 style={{ fontSize: "1.3rem", fontWeight: 800, margin: "0.25rem 0 0 0", color: "var(--text-main)" }}>
+                Your latest status is: <span style={{ color: "var(--primary)" }}>{timeline.currentStage}</span>
+              </h3>
             </div>
             <span className={`${styles.statusBadge} ${styles[order.orderStatus.toLowerCase().replace(" ", "_")] || styles.processing}`}>
               {order.orderStatus}
             </span>
           </div>
 
+          <div className={styles.detailsHeader}>
+            <div className={styles.orderMeta}>
+              <h3>Order details for {order.id}</h3>
+              <p>Product: <strong>{order.productName}</strong></p>
+              <p>Customer Name: <strong>{order.customerName}</strong></p>
+              <p>Amount: <strong>₹{order.amount.toFixed(2)}</strong> ({order.paymentStatus})</p>
+              <p>Last Updated: {new Date(order.updatedAt).toLocaleString("en-IN")}</p>
+            </div>
+          </div>
+
           {/* Core Timeline Progress Component */}
           {order.orderStatus !== "CANCELLED" && order.orderStatus !== "REFUNDED" && order.orderStatus !== "Failed Payment" ? (
             <div>
-              <h4 style={{ fontWeight: 800, fontSize: "1.1rem", marginBottom: "1.5rem" }}>Delivery Timeline</h4>
+              <h4 style={{ fontWeight: 800, fontSize: "1.1rem", marginBottom: "1.5rem" }}>Live Order Status Timeline</h4>
               
               <div className={styles.timeline}>
                 {/* Horizontal line representation */}
@@ -225,6 +256,44 @@ function TrackingContent() {
                   <span className={styles.timelineLabel}>Delivered</span>
                 </div>
               </div>
+
+              {/* Status Update History Log */}
+              {order.statusHistory && order.statusHistory.length > 0 && (
+                <div style={{ marginTop: "2.5rem", borderTop: "1px solid var(--border-color)", paddingTop: "1.5rem" }}>
+                  <h4 style={{ fontWeight: 800, fontSize: "1rem", marginBottom: "1rem", color: "var(--text-main)" }}>
+                    Status History Log
+                  </h4>
+                  <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+                    {order.statusHistory.map((item, idx) => (
+                      <div key={idx} style={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "center",
+                        padding: "0.75rem 1rem",
+                        background: "var(--card-bg-subtle, rgba(255,255,255,0.03))",
+                        border: "1px solid var(--border-color)",
+                        borderRadius: "6px",
+                        fontSize: "0.9rem"
+                      }}>
+                        <div>
+                          <strong style={{ color: "var(--text-main)", display: "block" }}>{item.status.replace("_", " ")}</strong>
+                          {item.note && <span style={{ fontSize: "0.8rem", color: "var(--text-light)" }}>{item.note}</span>}
+                        </div>
+                        <span style={{ fontSize: "0.8rem", color: "var(--text-light)", whiteSpace: "nowrap" }}>
+                          {new Date(item.createdAt).toLocaleString("en-IN", {
+                            day: "2-digit",
+                            month: "short",
+                            year: "numeric",
+                            hour: "2-digit",
+                            minute: "2-digit",
+                            hour12: true
+                          })}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           ) : (
             <div className={styles.errorAlert} style={{ background: "rgba(239, 68, 68, 0.05)", color: "var(--danger)", border: "none" }}>

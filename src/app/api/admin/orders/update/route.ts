@@ -48,6 +48,17 @@ export async function POST(request: Request) {
       },
     });
 
+    // Create history record if status changed or no history exists
+    if (existingOrder.orderStatus !== orderStatus) {
+      await prisma.orderStatusHistory.create({
+        data: {
+          orderId: orderId,
+          status: orderStatus,
+          note: notes || `Status updated to ${orderStatus}`,
+        },
+      });
+    }
+
     return NextResponse.json({
       success: true,
       message: "Order updated successfully",

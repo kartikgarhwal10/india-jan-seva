@@ -56,6 +56,21 @@ export default async function AdminPage() {
     where: { orderStatus: "DELIVERED" },
   });
 
+  // Query Blog Metrics
+  const totalBlogs = await prisma.blogPost.count();
+  const publishedBlogs = await prisma.blogPost.count({ where: { published: true } });
+  const draftBlogs = await prisma.blogPost.count({ where: { published: false } });
+
+  const recentBlogsRaw = await prisma.blogPost.findMany({
+    orderBy: { createdAt: "desc" },
+  });
+
+  const recentBlogs = recentBlogsRaw.map((b) => ({
+    ...b,
+    createdAt: b.createdAt.toISOString(),
+    updatedAt: b.updatedAt.toISOString(),
+  }));
+
   // Calculate Net Revenue
   const revenueResult = await prisma.order.aggregate({
     _sum: {
@@ -103,6 +118,10 @@ export default async function AdminPage() {
         shippedCount={shippedCount}
         deliveredCount={deliveredCount}
         totalRevenue={totalRevenue}
+        initialBlogs={recentBlogs}
+        totalBlogs={totalBlogs}
+        publishedBlogs={publishedBlogs}
+        draftBlogs={draftBlogs}
       />
     </div>
   );
