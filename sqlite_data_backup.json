@@ -1,0 +1,3698 @@
+{
+  "exportedAt": "2026-10-02T16:27:12.137Z",
+  "counts": {
+    "Product": 13,
+    "Service": 11,
+    "Order": 0,
+    "OrderStatusHistory": 0,
+    "BlogPost": 2,
+    "Review": 156,
+    "GalleryItem": 208,
+    "Partner": 0,
+    "PartnerCommission": 0,
+    "Setting": 5
+  },
+  "data": {
+    "Product": [
+      {
+        "id": "67d7581d-4e10-4139-a446-05013a3c3cdd",
+        "slug": "aadhaar-pvc",
+        "name": "Aadhaar PVC Card",
+        "price": 149,
+        "description": "Order a durable, wallet-sized, waterproof Aadhaar smart card printed on premium plastic (PVC) with UV protection.",
+        "shortDescription": "Premium quality • Durable • Smart Look • Easy Ordering",
+        "requirements": "[\"Official Aadhaar PDF File (Downloaded from myAadhaar portal)\",\"OR Aadhaar Number + OTP for download assistance\"]",
+        "features": "[\"Wallet-sized (standard ATM size)\",\"Vibrant high-definition colors\",\"Scratch & water-resistant\",\"Guaranteed barcode/QR code scan readability\"]",
+        "deliveryTime": "3 - 7 Days across India",
+        "image": "/images/cards/aadhaar-pvc.jpg",
+        "category": "identity",
+        "active": true,
+        "featured": true,
+        "createdAt": "2026-08-27T19:46:42.155Z",
+        "updatedAt": "2026-10-02T16:20:49.771Z"
+      },
+      {
+        "id": "40716da7-a274-44bd-8240-e88dd494fabb",
+        "slug": "pan-pvc",
+        "name": "PAN PVC Card",
+        "price": 149,
+        "description": "Get your Permanent Account Number printed on a premium glossy plastic PVC card. Convenient replacement for paper/faded cards.",
+        "shortDescription": "Premium quality • Durable • Smart Look • Easy Ordering",
+        "requirements": "[\"Official e-PAN Card PDF file\",\"OR PAN Number + Date of Birth\"]",
+        "features": "[\"Durable credit-card style layout\",\"Glossy premium finish\",\"Perfect color representation\",\"Fits securely in wallets\"]",
+        "deliveryTime": "3 - 7 Days across India",
+        "image": "/images/cards/pan-pvc.jpg",
+        "category": "identity",
+        "active": true,
+        "featured": true,
+        "createdAt": "2026-08-27T19:46:42.158Z",
+        "updatedAt": "2026-10-02T16:20:49.776Z"
+      },
+      {
+        "id": "da43afed-7038-4181-97db-60236f65d28e",
+        "slug": "ayushman-pvc",
+        "name": "Ayushman PVC Card",
+        "price": 149,
+        "description": "Make your PM-JAY Golden health card easy to carry in your wallet. Crucial for emergency hospital admissions.",
+        "shortDescription": "Premium quality • Durable • Smart Look • Easy Ordering",
+        "requirements": "[\"Ayushman Golden Card PDF file\",\"OR Beneficiary Family ID / Aadhaar\"]",
+        "features": "[\"High durability for medical usage\",\"Clear font rendering of Scheme details\",\"Pocket-sized for immediate access\",\"Glossy protection overlay\"]",
+        "deliveryTime": "3 - 7 Days across India",
+        "image": "/images/cards/ayushman-pvc.jpg",
+        "category": "utility",
+        "active": true,
+        "featured": true,
+        "createdAt": "2026-08-27T19:46:42.161Z",
+        "updatedAt": "2026-10-02T16:20:49.779Z"
+      },
+      {
+        "id": "2f1e4a1f-c13d-4103-9235-96b837fbb18a",
+        "slug": "voter-pvc",
+        "name": "Voter ID PVC Card",
+        "price": 149,
+        "description": "Upgrade your old paper Voter Card to a modern, security-enabled PVC Smart Voter ID.",
+        "shortDescription": "Premium quality • Durable • Smart Look • Easy Ordering",
+        "requirements": "[\"Voter ID PDF or EPIC Number\",\"OR Voter card photo scan\"]",
+        "features": "[\"Official standard dimensions\",\"Enhanced durability\",\"Readable election barcode\",\"Dual-sided color printing\"]",
+        "deliveryTime": "3 - 7 Days across India",
+        "image": "/images/cards/voter-pvc.jpg",
+        "category": "identity",
+        "active": true,
+        "featured": false,
+        "createdAt": "2026-08-27T19:46:42.163Z",
+        "updatedAt": "2026-10-02T16:20:49.812Z"
+      },
+      {
+        "id": "f8e2cb04-952b-4899-aa00-e7b87a5e52e6",
+        "slug": "driving-licence-pvc",
+        "name": "Vehicle DL PVC Card",
+        "price": 149,
+        "description": "Convert your temporary virtual driving licence PDF into a robust, high-quality plastic card to show to authorities.",
+        "shortDescription": "Premium quality • Durable • Smart Look • Easy Ordering",
+        "requirements": "[\"Driving Licence PDF downloaded from Sarathi / DigiLocker\",\"OR Driving Licence Number\"]",
+        "features": "[\"Premium thick PVC material\",\"High resolution typography\",\"Official design alignment\",\"Waterproof finish\"]",
+        "deliveryTime": "3 - 7 Days across India",
+        "image": "/images/cards/dl-pvc.jpg",
+        "category": "identity",
+        "active": true,
+        "featured": false,
+        "createdAt": "2026-08-27T19:46:42.166Z",
+        "updatedAt": "2026-10-02T16:20:49.799Z"
+      },
+      {
+        "id": "34a5a5d6-b31c-4d6c-a99e-cbc2ffb1460b",
+        "slug": "rc-pvc",
+        "name": "Vehicle RC PVC Card",
+        "price": 149,
+        "description": "Order a durable plastic duplicate of your Vehicle Registration Certificate (RC) for dashboard convenience.",
+        "shortDescription": "Premium quality • Durable • Smart Look • Easy Ordering",
+        "requirements": "[\"Registration Certificate PDF from Vahan / DigiLocker\",\"OR Vehicle Registration Number\"]",
+        "features": "[\"Double-sided high-contrast printing\",\"Extremely long-lasting plastic\",\"Durable in humid/hot glove boxes\",\"Accurate official format\"]",
+        "deliveryTime": "3 - 7 Days across India",
+        "image": "/images/cards/rc-pvc.jpg",
+        "category": "identity",
+        "active": true,
+        "featured": true,
+        "createdAt": "2026-08-27T19:46:42.169Z",
+        "updatedAt": "2026-10-02T16:20:49.783Z"
+      },
+      {
+        "id": "23ec0bee-1b34-4a2e-bf8a-d0b5a3361386",
+        "slug": "e-shram-pvc",
+        "name": "e-Shram PVC Card",
+        "price": 149,
+        "description": "Get your e-Shram worker identification card printed on a durable, waterproof PVC smart card to easily carry to work sites and secure government benefits.",
+        "shortDescription": "Premium quality • Durable • Smart Look • Easy Ordering",
+        "requirements": "[\"e-Shram Card PDF downloaded from official portal\",\"OR e-Shram registered phone number\"]",
+        "features": "[\"High-contrast color print\",\"Standard credit card size\",\"Laminated moisture barrier\",\"Heavy duty plastic build\"]",
+        "deliveryTime": "3 - 7 Days across India",
+        "image": "/images/cards/eshram-pvc.jpg",
+        "category": "utility",
+        "active": true,
+        "featured": false,
+        "createdAt": "2026-08-28T06:08:02.604Z",
+        "updatedAt": "2026-10-02T16:20:49.803Z"
+      },
+      {
+        "id": "82fed3b0-b8a3-46c8-af22-c068ba904c7d",
+        "slug": "abha-pvc",
+        "name": "ABHA PVC Card",
+        "price": 149,
+        "description": "Print your Ayushman Bharat Health Account (ABHA) card on premium plastic. Convenient, wallet-sized, and long-lasting for easy hospital scans.",
+        "shortDescription": "Premium quality • Durable • Smart Look • Easy Ordering",
+        "requirements": "[\"ABHA Health Card PDF downloaded from ABHA portal\",\"OR Health ID Number\"]",
+        "features": "[\"Pocket-sized for medical emergencies\",\"Accurate QR barcode reproduction\",\"Waterproof glossy structure\",\"Official alignment layouts\"]",
+        "deliveryTime": "3 - 7 Days across India",
+        "image": "/images/cards/abha-pvc.jpg",
+        "category": "utility",
+        "active": true,
+        "featured": true,
+        "createdAt": "2026-08-28T06:08:02.610Z",
+        "updatedAt": "2026-10-02T16:20:49.792Z"
+      },
+      {
+        "id": "a5bc5f36-5433-49d6-b738-7fa47243ca53",
+        "slug": "udid-pvc",
+        "name": "Unique Disability ID (UDID) PVC Card",
+        "price": 149,
+        "description": "Convert your paper disability card into a wallet-sized, waterproof UDID smart card. Highly durable and convenient for obtaining travel and medical concessions.",
+        "shortDescription": "Premium quality • Durable • Smart Look • Easy Ordering",
+        "requirements": "[\"UDID Card PDF or Certificate PDF\",\"OR UDID Number details\"]",
+        "features": "[\"Reinforced heavy plastic structure\",\"Vibrant high-contrast visibility\",\"Dual-sided official layouts\",\"Waterproof and tearproof design\"]",
+        "deliveryTime": "3 - 7 Days across India",
+        "image": "/images/cards/udid-pvc.jpg",
+        "category": "utility",
+        "active": true,
+        "featured": false,
+        "createdAt": "2026-08-28T06:08:02.616Z",
+        "updatedAt": "2026-10-02T16:20:49.815Z"
+      },
+      {
+        "id": "b68f2d53-e86a-4106-bada-f3a0dd1ce012",
+        "slug": "ration-pvc",
+        "name": "Ration Card PVC",
+        "price": 149,
+        "description": "Get your digital ration card details printed onto a durable, easy-to-carry PVC plastic card for convenient usage at government ration shops.",
+        "shortDescription": "Premium quality • Durable • Smart Look • Easy Ordering",
+        "requirements": "[\"Ration Card PDF file or photo scan\",\"OR Ration Card Number + District\"]",
+        "features": "[\"ATM card size convenience\",\"Readable ration dealer barcodes\",\"Vibrant typography scaling\",\"Waterproof glossy finish\"]",
+        "deliveryTime": "3 - 7 Days across India",
+        "image": "/images/cards/ration-pvc.jpg",
+        "category": "utility",
+        "active": true,
+        "featured": true,
+        "createdAt": "2026-08-28T06:08:02.623Z",
+        "updatedAt": "2026-10-02T16:20:49.795Z"
+      },
+      {
+        "id": "ea30b919-733c-4a2e-a14f-17584ba8a824",
+        "slug": "uan-pvc",
+        "name": "EPFO UAN PVC Card",
+        "price": 149,
+        "description": "Get your Universal Account Number (UAN) details printed on a glossy PVC smart card. Highly convenient for EPFO member verifications at bank branches and new offices.",
+        "shortDescription": "Premium quality • Durable • Smart Look • Easy Ordering",
+        "requirements": "[\"UAN Card PDF from Unified Member Portal\",\"OR UAN Number details\"]",
+        "features": "[\"ATM card dimensions template\",\"Glossy wear-resistant laminate\",\"Official EPFO green themes matching\",\"Clear Member details rendering\"]",
+        "deliveryTime": "3 - 7 Days across India",
+        "image": "/images/cards/uan-pvc.jpg",
+        "category": "utility",
+        "active": true,
+        "featured": false,
+        "createdAt": "2026-08-28T06:08:02.628Z",
+        "updatedAt": "2026-10-02T16:20:49.818Z"
+      },
+      {
+        "id": "d910b15c-ee95-4f3d-b675-3a355fce4872",
+        "slug": "farmer-id-pvc",
+        "name": "Farmer ID PVC Card (Kisan Card)",
+        "price": 149,
+        "description": "Print your PM-Kisan Farmer ID registry details onto a glossy, waterproof plastic smart card for easy presentation at local cooperative markets and seeds counters.",
+        "shortDescription": "Premium quality • Durable • Smart Look • Easy Ordering",
+        "requirements": "[\"PM-Kisan registry summary or Farmer Certificate PDF\",\"OR Farmer Registration ID\"]",
+        "features": "[\"Extremely long-lasting plastic\",\"Waterproof for agricultural environments\",\"Official crop scheme credentials layout\",\"ATM pocket-friendly shape\"]",
+        "deliveryTime": "3 - 7 Days across India",
+        "image": "/images/cards/kisan-pvc.jpg",
+        "category": "academic_others",
+        "active": true,
+        "featured": false,
+        "createdAt": "2026-08-28T06:08:02.633Z",
+        "updatedAt": "2026-10-02T16:20:49.807Z"
+      },
+      {
+        "id": "de0da519-4f9f-4e62-937a-d108b31dc46c",
+        "slug": "student-id-pvc",
+        "name": "Student ID PVC Card",
+        "price": 149,
+        "description": "Print your school/college student identity card on a glossy, durable plastic PVC smart card with custom lanyards.",
+        "shortDescription": "Premium quality • Durable • Smart Look • Easy Ordering",
+        "requirements": "[\"Student ID Card layout PDF or high-res photo scan\",\"OR Admission form receipt with student photo\"]",
+        "features": "[\"Vivid color rendering\",\"Durable badge protection coating\",\"Double-sided custom print matching\",\"Free lanyard slot punch if requested\"]",
+        "deliveryTime": "3 - 7 Days across India",
+        "image": "/images/cards/student-id-pvc.jpg",
+        "category": "academic_others",
+        "active": true,
+        "featured": true,
+        "createdAt": "2026-08-28T06:08:02.639Z",
+        "updatedAt": "2026-10-02T16:20:49.788Z"
+      }
+    ],
+    "Service": [
+      {
+        "id": "9ffac527-3fc3-4eaa-a801-9b06d862b641",
+        "slug": "new-pan-card-correction",
+        "name": "New PAN Card & Correction",
+        "category": "digital",
+        "icon": "💳",
+        "description": "Apply for a new Permanent Account Number (PAN) or make corrections to your existing PAN card details (name, DOB, photo, signature).",
+        "requirements": "[\"Aadhaar Card\",\"2 Passport Size Photos\",\"Active Mobile Number\"]",
+        "processingTime": "7 - 10 working days",
+        "officialLink": "https://www.onlineservices.nsdl.com/paam/endUserRegisterContact.html",
+        "active": true,
+        "createdAt": "2026-08-27T19:46:42.115Z",
+        "updatedAt": "2026-08-27T19:46:42.115Z"
+      },
+      {
+        "id": "8048e0da-7f1e-4cfa-9d68-0a1b66031586",
+        "slug": "aadhaar-card-download-print",
+        "name": "Aadhaar Card Download & Print",
+        "category": "csc",
+        "icon": "🆔",
+        "description": "Get your official Aadhaar card downloaded and high-quality color prints on premium paper or smart cards.",
+        "requirements": "[\"Aadhaar Number or Enrolment ID\",\"OTP sent to registered mobile\"]",
+        "processingTime": "Instant (15 mins)",
+        "officialLink": "https://myaadhaar.uidai.gov.in/",
+        "active": true,
+        "createdAt": "2026-08-27T19:46:42.121Z",
+        "updatedAt": "2026-08-27T19:46:42.121Z"
+      },
+      {
+        "id": "0ff96eae-f4c4-4339-8444-91ae6c0314fd",
+        "slug": "ayushman-bharat-golden-card",
+        "name": "Ayushman Bharat Golden Card",
+        "category": "csc",
+        "icon": "🏥",
+        "description": "Apply for or download your Ayushman Bharat PM-JAY Golden Card to get free health insurance cover of up to ₹5 Lakhs per year.",
+        "requirements": "[\"Ration Card (Patrata Parchi)\",\"Aadhaar Card\",\"Mobile Number linked to Aadhaar\"]",
+        "processingTime": "2 - 3 working days",
+        "officialLink": "https://beneficiary.nha.gov.in/",
+        "active": true,
+        "createdAt": "2026-08-27T19:46:42.125Z",
+        "updatedAt": "2026-08-27T19:46:42.125Z"
+      },
+      {
+        "id": "c15b5306-9b50-464a-92eb-c6301f3c55be",
+        "slug": "pm-kisan-registration-ekyc",
+        "name": "PM-Kisan Registration & eKYC",
+        "category": "csc",
+        "icon": "🌾",
+        "description": "New registration for PM-Kisan Samman Nidhi Yojana and completion of mandatory biometric or OTP eKYC.",
+        "requirements": "[\"Land Khatauni / Land Details\",\"Aadhaar Card\",\"Bank Passbook\",\"Mobile Number\"]",
+        "processingTime": "Instant KYC, Approval takes 15-30 days",
+        "officialLink": "https://pmkisan.gov.in/",
+        "active": true,
+        "createdAt": "2026-08-27T19:46:42.128Z",
+        "updatedAt": "2026-08-27T19:46:42.128Z"
+      },
+      {
+        "id": "05cd6d34-0802-44df-84d9-4639d5024df0",
+        "slug": "e-shram-registration-card",
+        "name": "e-Shram Registration & Card",
+        "category": "csc",
+        "icon": "👷",
+        "description": "Registration for unorganized sector workers to secure government scheme benefits and financial aids.",
+        "requirements": "[\"Aadhaar Card\",\"Bank Account Details\",\"Mobile Number linked to Aadhaar\"]",
+        "processingTime": "Instant (15 mins)",
+        "officialLink": "https://eshram.gov.in/",
+        "active": true,
+        "createdAt": "2026-08-27T19:46:42.132Z",
+        "updatedAt": "2026-08-27T19:46:42.132Z"
+      },
+      {
+        "id": "87c1d198-e37a-46ef-9bd2-b1ac59e0f6fc",
+        "slug": "voter-id-registration-card-correction",
+        "name": "Voter ID Registration & Card Correction",
+        "category": "digital",
+        "icon": "🗳️",
+        "description": "Apply for a new Voter ID card, transfer vote, or correct details like name, address, and age.",
+        "requirements": "[\"Aadhaar Card or Birth Certificate\",\"Address Proof\",\"1 Passport Size Photo\"]",
+        "processingTime": "15 - 30 working days",
+        "officialLink": "https://voters.eci.gov.in/",
+        "active": true,
+        "createdAt": "2026-08-27T19:46:42.134Z",
+        "updatedAt": "2026-08-27T19:46:42.134Z"
+      },
+      {
+        "id": "414197de-1d75-4c52-8296-1c2b3cc6ccab",
+        "slug": "income-caste-domicle-certificates",
+        "name": "Income, Caste & Domicle Certificates",
+        "category": "digital",
+        "icon": "📄",
+        "description": "Apply for official Uttar Pradesh government certificates: Income (Aay Praman Patra), Caste (Jati Praman Patra), and Domicile (Nivas Praman Patra).",
+        "requirements": "[\"Self-Declaration Form\",\"Aadhaar Card\",\"Ration Card or Voter ID\",\"Passport Size Photo\"]",
+        "processingTime": "7 - 15 working days",
+        "officialLink": "https://edistrict.up.gov.in/",
+        "active": true,
+        "createdAt": "2026-08-27T19:46:42.138Z",
+        "updatedAt": "2026-08-27T19:46:42.138Z"
+      },
+      {
+        "id": "0192dc4a-cf10-40de-a59a-656f5b44116d",
+        "slug": "aeps-cash-deposit-withdrawal",
+        "name": "AePS Cash Deposit & Withdrawal",
+        "category": "banking",
+        "icon": "🏦",
+        "description": "Aadhaar Enabled Payment System (AePS) allowing you to withdraw, deposit, or check balance of any bank account using biometrics.",
+        "requirements": "[\"Aadhaar Card\",\"Linked Bank Account\",\"Biometric (Fingerprint) Verification\"]",
+        "processingTime": "Instant",
+        "officialLink": null,
+        "active": true,
+        "createdAt": "2026-08-27T19:46:42.143Z",
+        "updatedAt": "2026-08-27T19:46:42.143Z"
+      },
+      {
+        "id": "9e3f6e3c-39cf-442b-bd24-7895cd27775f",
+        "slug": "board-university-exam-forms",
+        "name": "Board & University Exam Forms",
+        "category": "education",
+        "icon": "📝",
+        "description": "Professional assistance with error-free filling of UP Board, CBSE, and local university examination and admission forms.",
+        "requirements": "[\"Previous Year Marksheet\",\"Passport Photo\",\"Signature\",\"Admit Card / Roll Number\"]",
+        "processingTime": "Instant (30 mins)",
+        "officialLink": null,
+        "active": true,
+        "createdAt": "2026-08-27T19:46:42.145Z",
+        "updatedAt": "2026-08-27T19:46:42.145Z"
+      },
+      {
+        "id": "a12b43ab-46db-4a56-90d3-9508158ac624",
+        "slug": "up-pre-post-matric-scholarship",
+        "name": "UP Pre/Post Matric Scholarship",
+        "category": "education",
+        "icon": "🎓",
+        "description": "Apply online for government financial support for Class 9, 10, 11, 12 and university/diploma courses in Uttar Pradesh.",
+        "requirements": "[\"Aadhaar Card\",\"Income, Caste & Domicile Certificates\",\"Fee Receipt & College ID\",\"Bank Passbook\"]",
+        "processingTime": "15 - 25 days (Verification pending college)",
+        "officialLink": "https://scholarship.up.gov.in/",
+        "active": true,
+        "createdAt": "2026-08-27T19:46:42.148Z",
+        "updatedAt": "2026-08-27T19:46:42.148Z"
+      },
+      {
+        "id": "b47d0e01-5537-44f5-aa06-c5f4a385897d",
+        "slug": "basic-computer-courses-training",
+        "name": "Basic Computer Courses & Training",
+        "category": "education",
+        "icon": "💻",
+        "description": "Learn typing, MS Office, internet skills, and digital literacy under specialized guidance at our physical computer centre.",
+        "requirements": "[\"Interest to Learn\",\"Photo ID Proof\"]",
+        "processingTime": "1 Month to 3 Months courses",
+        "officialLink": null,
+        "active": true,
+        "createdAt": "2026-08-27T19:46:42.151Z",
+        "updatedAt": "2026-08-27T19:46:42.151Z"
+      }
+    ],
+    "Order": [],
+    "OrderStatusHistory": [],
+    "BlogPost": [
+      {
+        "id": "53e04591-4dfe-492c-b9cc-49e5f8ec4424",
+        "title": "How to Download and Print Your Smart PVC Aadhaar Card Online",
+        "slug": "download-print-smart-pvc-aadhaar",
+        "summary": "A step-by-step guide explaining how to securely download your e-Aadhaar PDF card from the UIDAI portal and print it on a wallet-sized durable plastic PVC card.",
+        "content": "## Introduction\nThe Aadhaar card is the most crucial identity document in India. Carrying the paper printout in your pocket can lead to tearing, wetting, or wear. A premium PVC smart Aadhaar card is the perfect alternative. Here is a step-by-step guide on how to print your Aadhaar on PVC.\n\n## Step 1: Download your e-Aadhaar PDF\nTo print your Aadhaar, you need the official e-Aadhaar PDF file. You can download it directly from the UIDAI portal (myaadhaar.uidai.gov.in) using your Aadhaar number or Enrolment ID.\n\n## Step 2: Ensure OTP verification\nDuring download, UIDAI will send a one-time password (OTP) to your registered mobile number. Complete this verification to download the password-protected PDF file.\n\n## Step 3: Order on UniqueCSCPoint\nGo to our orders page, select 'Aadhaar PVC Smart Card', enter your name and phone, upload the downloaded PDF file, specify your village/district address, and complete the ₹149 payment. We print it on a high-definition PVC card and ship it with free delivery!",
+        "category": "UIDAI Guides",
+        "author": "Mohd Irfak Ahmad",
+        "publishedDate": "24 Aug 2026",
+        "readTime": "4 mins read",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "published": true,
+        "seoTitle": null,
+        "seoDescription": null,
+        "seoKeywords": null,
+        "createdAt": "2026-08-27T19:46:42.180Z",
+        "updatedAt": "2026-08-27T19:46:42.180Z"
+      },
+      {
+        "id": "7f739d1a-3627-4ca5-b5ea-2e902ef0c749",
+        "title": "Applying for Income, Caste, and Domicile Certificates in UP",
+        "slug": "apply-income-caste-domicile-up",
+        "summary": "A complete guide for citizens of Bahraich and wider Uttar Pradesh on the documents required and steps to apply for official e-District certificates.",
+        "content": "## Overview\nIncome (Aay), Caste (Jati), and Domicile (Nivas) certificates are vital documents for students applying for scholarships and citizens seeking government benefits in Uttar Pradesh. Here is how you can apply for these online.\n\n## Documents Required\nTo apply, you need the following scanned copies:\n- Clear passport size photo\n- Aadhaar card as identity proof\n- Self-Declaration Form (Swaghosna Patra)\n- Ration card copy or Voter ID\n\n## Processing Timeline\nOnce submitted, the files are verified by your local Lekhpal (revenue officer) and Tehsildar. The process typically takes 7 to 15 working days. You can check updates on the UP e-District site or visit our physical counter in Harchanda, Jarwal for swift execution.",
+        "category": "e-District",
+        "author": "Mohd Irfak Ahmad",
+        "publishedDate": "18 Aug 2026",
+        "readTime": "5 mins read",
+        "image": "/images/csc-workspace.jpg",
+        "published": true,
+        "seoTitle": null,
+        "seoDescription": null,
+        "seoKeywords": null,
+        "createdAt": "2026-08-27T19:46:42.182Z",
+        "updatedAt": "2026-08-27T19:46:42.182Z"
+      }
+    ],
+    "Review": [
+      {
+        "id": "0236cb71-736f-4584-8351-9b0b27e5e3bd",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-08-27T19:46:42.172Z"
+      },
+      {
+        "id": "9a3dcabc-cdb6-45bd-8608-24e697396ad3",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-08-27T19:46:42.174Z"
+      },
+      {
+        "id": "3bfc1cf6-e09c-4feb-91cb-c1b216a7b6da",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-08-27T19:46:42.176Z"
+      },
+      {
+        "id": "a5dafdb0-f088-4a80-a19d-a2a7625e94cf",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-08-28T06:08:02.647Z"
+      },
+      {
+        "id": "ed137cd8-4b75-4151-9e14-56ea7fd74bfa",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-08-28T06:08:02.653Z"
+      },
+      {
+        "id": "6b04b842-1222-44a7-8559-2c2bfaee0083",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-08-28T06:08:02.658Z"
+      },
+      {
+        "id": "a8a06e0e-226e-4ae0-b6fa-f07f5d37efa9",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-09T04:39:55.582Z"
+      },
+      {
+        "id": "adfcce89-8d96-4812-a0da-94d6be3ad66e",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-09T04:39:55.584Z"
+      },
+      {
+        "id": "a6bcfb70-5f0c-4052-ac44-305f360e4a02",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-09-09T04:39:55.587Z"
+      },
+      {
+        "id": "42332988-406c-4123-bf09-219bddb5b89d",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-09T04:41:36.781Z"
+      },
+      {
+        "id": "ac6ffbe3-2c53-4158-a81d-843447fa3f64",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-09T04:41:36.783Z"
+      },
+      {
+        "id": "5e948475-504c-4751-9c77-21fc982af33a",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-09-09T04:41:36.785Z"
+      },
+      {
+        "id": "bea0609f-a993-4adb-bf03-c3fce887dae7",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-09T04:49:15.312Z"
+      },
+      {
+        "id": "cb7f4510-56f8-4e33-9c59-f701b3ef84bf",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-09T04:49:15.314Z"
+      },
+      {
+        "id": "02a33528-4c2b-4dca-bbe4-7319d9f380dc",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-09-09T04:49:15.317Z"
+      },
+      {
+        "id": "312fdf2a-c1e4-45e8-9a88-bd74e7afc22f",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-09T04:50:12.570Z"
+      },
+      {
+        "id": "f6698a50-b9bb-4dfa-a9c7-eadcdfaca74f",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-09T04:50:12.572Z"
+      },
+      {
+        "id": "dc172b95-d9bd-48d1-98f9-069a36b68051",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-09-09T04:50:12.574Z"
+      },
+      {
+        "id": "953661d3-1c30-418f-8249-f79abdc3f478",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-09T04:56:19.693Z"
+      },
+      {
+        "id": "34d83109-00d2-44dc-8e16-6742507af54f",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-09T04:56:19.695Z"
+      },
+      {
+        "id": "c9ff40dc-57e5-4e3c-aac4-704fe618c09b",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-09-09T04:56:19.698Z"
+      },
+      {
+        "id": "e3524e4e-fa0f-4699-8c5e-85df3abafdb5",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-09T05:22:45.491Z"
+      },
+      {
+        "id": "596eefc4-40af-470e-98cf-d7cebe0f143d",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-09T05:22:45.494Z"
+      },
+      {
+        "id": "6db745ba-bda2-4c3e-99d4-3f78189f20e3",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-09-09T05:22:45.496Z"
+      },
+      {
+        "id": "e27b8823-6e32-4e62-8630-6aa7c3418440",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-09T05:24:00.065Z"
+      },
+      {
+        "id": "0eb1b7c2-0cf8-4ddd-adc8-52b419b12d25",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-09T05:24:00.067Z"
+      },
+      {
+        "id": "f579d03b-d849-4041-8faf-5fd9e2a45447",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-09-09T05:24:00.069Z"
+      },
+      {
+        "id": "2a1f526d-e74c-41ae-a3c4-37b03d683b05",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-09T05:44:04.106Z"
+      },
+      {
+        "id": "91e40e83-1da6-49e4-a668-79a1a77be760",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-09T05:44:04.109Z"
+      },
+      {
+        "id": "a2a27b3e-b9d9-40e3-bfe2-da10deb485a9",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-09-09T05:44:04.111Z"
+      },
+      {
+        "id": "b1656d9d-1190-41b3-9ad5-f4d547d30222",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-09T06:14:02.551Z"
+      },
+      {
+        "id": "6da5394e-4504-4ab2-ba9f-7039787d86a5",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-09T06:14:02.554Z"
+      },
+      {
+        "id": "87b03962-7ae8-4c21-881f-18c64e00ee0d",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-09-09T06:14:02.556Z"
+      },
+      {
+        "id": "fe6c4a59-c719-4375-93a3-40255e86b6a3",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T05:25:39.846Z"
+      },
+      {
+        "id": "cf60e9ac-7f34-4c8a-a03d-c38a1762cefb",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T05:25:39.848Z"
+      },
+      {
+        "id": "08f471e8-79cf-4499-ad05-95e4a7096dec",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T05:25:39.850Z"
+      },
+      {
+        "id": "45f7b619-7685-4996-8467-23851728d2ad",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T05:29:05.555Z"
+      },
+      {
+        "id": "2355fa61-019d-40cc-9b57-665721d28ce6",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T05:29:05.559Z"
+      },
+      {
+        "id": "3ea716bb-0fe6-4d26-ac16-e913205012c5",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T05:29:05.562Z"
+      },
+      {
+        "id": "dc5fba35-49be-427f-a2ef-259318888607",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T05:33:00.491Z"
+      },
+      {
+        "id": "7936c196-0ee4-481a-8ebb-cfade39821f0",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T05:33:00.494Z"
+      },
+      {
+        "id": "fcdb904a-56d6-4f66-9894-1da462145664",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T05:33:00.496Z"
+      },
+      {
+        "id": "a090535e-fd02-4d85-895f-bc9961b8cc26",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T05:37:27.742Z"
+      },
+      {
+        "id": "4c7c0827-49bd-4ea9-98c9-94f4a5796c84",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T05:37:27.745Z"
+      },
+      {
+        "id": "a46472a6-aeb1-4eac-a087-191dfbf393cb",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T05:37:27.748Z"
+      },
+      {
+        "id": "5b804446-3e83-4018-a8c7-fcd0c743adc8",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T05:41:27.542Z"
+      },
+      {
+        "id": "1578d96f-3b09-408e-acaf-75411d85110d",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T05:41:27.546Z"
+      },
+      {
+        "id": "6246a4cb-c0ca-4d49-a959-999f5f43e72b",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T05:41:27.549Z"
+      },
+      {
+        "id": "f297716b-3372-4a59-bac6-0b9b52c73422",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T05:58:24.024Z"
+      },
+      {
+        "id": "1445fa39-e3e9-4f25-b504-e4ad0cc5609c",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T05:58:24.027Z"
+      },
+      {
+        "id": "da725dc9-cd0a-4e12-ae0c-69179faade15",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T05:58:24.029Z"
+      },
+      {
+        "id": "3095b06c-5c01-4d54-a3ba-a931894584e3",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T05:59:22.844Z"
+      },
+      {
+        "id": "76b58e45-4889-41ee-a428-a0d22c0315b7",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T05:59:22.846Z"
+      },
+      {
+        "id": "7bc59bac-b6fb-4be5-a643-9f3f18001578",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T05:59:22.848Z"
+      },
+      {
+        "id": "1963467a-80bb-40e5-a139-2aa042d631da",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T06:06:13.840Z"
+      },
+      {
+        "id": "c62bf170-b8f7-4911-9842-21904455d9a7",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T06:06:13.843Z"
+      },
+      {
+        "id": "6e038c22-db84-4f1c-979b-f7cc95c63c75",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T06:06:13.845Z"
+      },
+      {
+        "id": "c90b3168-cd99-4cc9-aa7f-dd9dfa87c6b7",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T06:19:17.212Z"
+      },
+      {
+        "id": "61d8b1f6-372b-4cdf-9e7d-083baee717c3",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T06:19:17.216Z"
+      },
+      {
+        "id": "81629ab0-7e6a-4e7f-a747-19e3092bf64e",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T06:19:17.220Z"
+      },
+      {
+        "id": "e2a56264-0b4c-4f64-9264-77a190fde490",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T06:24:00.235Z"
+      },
+      {
+        "id": "41106221-2406-4cbf-8b78-9b45a2c1cd5b",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T06:24:00.237Z"
+      },
+      {
+        "id": "beff75f3-da47-4d02-beb3-1a6adb668208",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T06:24:00.239Z"
+      },
+      {
+        "id": "376d55f9-4df0-4099-9729-a82b6e39d08b",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T06:30:21.645Z"
+      },
+      {
+        "id": "b15ff1ab-76ea-4fc1-8e51-a1e947f6f927",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T06:30:21.648Z"
+      },
+      {
+        "id": "989e4458-9b0a-4ce0-8135-ffe7954f6adb",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T06:30:21.650Z"
+      },
+      {
+        "id": "f3246c80-4399-4a8d-bf71-6ccaabcddce5",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T06:40:51.178Z"
+      },
+      {
+        "id": "38a5023f-08ad-47fa-b8bd-ae2a945a3f6b",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T06:40:51.181Z"
+      },
+      {
+        "id": "373c927f-f1e1-4730-ac05-ee102ea0471c",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T06:40:51.184Z"
+      },
+      {
+        "id": "e4f033f9-447b-4b00-9831-d84ee955f951",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T16:14:01.289Z"
+      },
+      {
+        "id": "3ca96052-c118-4840-8b2d-56c3179493f8",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T16:14:01.291Z"
+      },
+      {
+        "id": "4c1f52cf-b8b5-475d-a3c5-9bbc0bd8d17b",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T16:14:01.293Z"
+      },
+      {
+        "id": "f7a53800-6b36-4a78-924d-57975eaa4b4d",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T16:21:26.303Z"
+      },
+      {
+        "id": "7cc9dfd4-32a2-49fc-b389-e8706337fc55",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T16:21:26.306Z"
+      },
+      {
+        "id": "b589a9c8-8a2c-4946-a2ca-7ca35fae806f",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T16:21:26.308Z"
+      },
+      {
+        "id": "6125d725-bc5e-4ad9-b6f8-80d969f93ef0",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T16:25:41.851Z"
+      },
+      {
+        "id": "62e88cd4-f2e3-4d2a-8ece-b16df7fb5be7",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T16:25:41.854Z"
+      },
+      {
+        "id": "af7df341-1c2e-463d-9e2e-6b7f0dea35af",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T16:25:41.856Z"
+      },
+      {
+        "id": "8fa14dda-c067-4e04-b0e6-4ac7d6b66457",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T16:29:08.322Z"
+      },
+      {
+        "id": "9fa28c65-d5ed-4319-95c5-2b7f1b1288e3",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T16:29:08.325Z"
+      },
+      {
+        "id": "56e11039-7880-44a2-b3ea-0e66e96b3567",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T16:29:08.327Z"
+      },
+      {
+        "id": "5715e9d1-8f42-4a07-b8cf-6b3267b65e20",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T16:35:40.148Z"
+      },
+      {
+        "id": "f7ce5e4f-9678-4332-8d40-3f53a712783d",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T16:35:40.151Z"
+      },
+      {
+        "id": "5db1e4f3-429e-4dd5-8047-b682a2473b20",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T16:35:40.153Z"
+      },
+      {
+        "id": "a6261642-b6cb-41cc-86dc-40d69d6695ab",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T16:46:34.048Z"
+      },
+      {
+        "id": "2f73530c-801b-4cc8-b1f2-14c43e630b78",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T16:46:34.051Z"
+      },
+      {
+        "id": "54ffafbb-5b4a-4fc8-ab36-a0d3b28e9641",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T16:46:34.053Z"
+      },
+      {
+        "id": "4aa445b0-9e67-4f2a-8117-7640c730a900",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T18:29:25.624Z"
+      },
+      {
+        "id": "cade5b31-fee4-4479-aadb-ffbfcd904582",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T18:29:25.627Z"
+      },
+      {
+        "id": "202c1fa0-4b12-4a7b-bd21-7ffd878da307",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T18:29:25.631Z"
+      },
+      {
+        "id": "8dd60509-1c79-4b19-9d02-d0dc89d4f3db",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T18:36:23.975Z"
+      },
+      {
+        "id": "fd1a6710-fdc7-48f4-b405-79f001ba2dba",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T18:36:23.977Z"
+      },
+      {
+        "id": "5e916177-8ac2-4549-80b2-eabf1f615ef1",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T18:36:23.979Z"
+      },
+      {
+        "id": "715aca91-f3d7-4107-b478-59b8e32bf3e5",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T18:41:23.316Z"
+      },
+      {
+        "id": "6bc33c6f-03f9-4698-8657-ac5a997ce21f",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T18:41:23.319Z"
+      },
+      {
+        "id": "075dab40-48dd-4d88-9b14-3136dc37b36b",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-09-11T18:41:23.321Z"
+      },
+      {
+        "id": "b21fe85a-13fb-4ef1-b18f-89a66f02ceb4",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-12T05:27:00.222Z"
+      },
+      {
+        "id": "9a3ddb6a-9b7b-464b-a7e0-77e420b4fbe3",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-12T05:27:00.224Z"
+      },
+      {
+        "id": "9006f094-feb8-4f5b-aaba-1048ef383c3e",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-09-12T05:27:00.226Z"
+      },
+      {
+        "id": "98792eb3-5393-41a7-a17d-2a37e21b45cc",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-22T11:26:23.055Z"
+      },
+      {
+        "id": "1c257d8c-0eb5-40e8-8b74-bc17b20bf4ae",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-09-22T11:26:23.059Z"
+      },
+      {
+        "id": "f419855f-95a2-4094-a6a7-e7699e967452",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-09-22T11:26:23.061Z"
+      },
+      {
+        "id": "e32eeb50-b1b2-4f92-be3a-f02a4d12dbd4",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T14:18:40.760Z"
+      },
+      {
+        "id": "65c7a0a5-3668-427a-a027-91cacdcf47ab",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T14:18:40.766Z"
+      },
+      {
+        "id": "e2900302-3a78-4f4f-85fc-bd4fe778e5d0",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T14:18:40.770Z"
+      },
+      {
+        "id": "cfe7e6f8-ed5b-4bb6-b088-4a240aba91a5",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T14:20:18.042Z"
+      },
+      {
+        "id": "545402dd-a5d2-4af8-a7ee-d7850cc20d44",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T14:20:18.044Z"
+      },
+      {
+        "id": "6243908d-bb12-45d9-8e0d-99984ceb494c",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T14:20:18.047Z"
+      },
+      {
+        "id": "38e0c5f2-aee4-4fdb-b702-8b1e7942c954",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T14:24:26.384Z"
+      },
+      {
+        "id": "9c41d1cd-bd97-4ec1-ae32-6fac55c1f761",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T14:24:26.387Z"
+      },
+      {
+        "id": "e4a00639-2b0d-4a84-a3e7-789a31661dfb",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T14:24:26.390Z"
+      },
+      {
+        "id": "6968ea72-4ae6-4cfd-b332-a4020bff4b01",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T14:26:47.687Z"
+      },
+      {
+        "id": "8ee61417-d1d1-44f4-890b-0c6aaa5bb6a1",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T14:26:47.690Z"
+      },
+      {
+        "id": "c3d1c2e8-1616-49e0-83f4-a0fcd2423ab9",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T14:26:47.692Z"
+      },
+      {
+        "id": "40357951-f84c-4119-82cc-019cc205c37f",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T14:29:50.764Z"
+      },
+      {
+        "id": "546f94e0-62a6-4df8-babd-1f2560bcd882",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T14:29:50.771Z"
+      },
+      {
+        "id": "f4a2926f-0f17-46c1-9ac4-8f8c178f3300",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T14:29:50.779Z"
+      },
+      {
+        "id": "3194ca87-62af-4380-a59e-964d3607e0d8",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T14:34:07.215Z"
+      },
+      {
+        "id": "535a50c7-ab10-4e9c-824a-775f7b8945cd",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T14:34:07.218Z"
+      },
+      {
+        "id": "feeff46b-2d9a-4d26-8b1d-623faf74fc35",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T14:34:07.221Z"
+      },
+      {
+        "id": "975e68d8-c0cb-4eab-9c26-6fff77f777e9",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T14:40:09.590Z"
+      },
+      {
+        "id": "3668fef8-c34d-4685-a14f-9f3c30e0d2b1",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T14:40:09.592Z"
+      },
+      {
+        "id": "e38880a3-da66-47ad-89f9-148d67811ab4",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T14:40:09.594Z"
+      },
+      {
+        "id": "e409c8b8-4f0d-4595-9e1c-6917284a151e",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T14:47:33.494Z"
+      },
+      {
+        "id": "d526ba30-3a74-444d-b46c-7b6b01ff09b5",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T14:47:33.496Z"
+      },
+      {
+        "id": "983bbe87-0246-4cb9-aa34-76257977d5a3",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T14:47:33.499Z"
+      },
+      {
+        "id": "db054f55-f93d-41c7-8354-43eefc4b604a",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T14:54:32.126Z"
+      },
+      {
+        "id": "12f66b48-6756-4c65-9a37-19c48cf496ea",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T14:54:32.129Z"
+      },
+      {
+        "id": "8708fb11-22f1-4768-957a-2cad9015d93c",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T14:54:32.131Z"
+      },
+      {
+        "id": "cc6cff33-d0ee-444a-a50d-33a02cc398f0",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T14:56:09.001Z"
+      },
+      {
+        "id": "a47e85ce-1eea-48e0-8b0d-79470373a08b",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T14:56:09.003Z"
+      },
+      {
+        "id": "dd441449-8c59-429d-aecd-9cd3dd78cc6c",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T14:56:09.006Z"
+      },
+      {
+        "id": "abbda616-9bde-4d9f-a607-5cf497fe5a6a",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T15:04:03.296Z"
+      },
+      {
+        "id": "0f971ddd-5f8a-4b2c-bdf1-bf3ccfc8dc77",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T15:04:03.298Z"
+      },
+      {
+        "id": "70d48b2a-7eff-4f3c-9f78-867d149c8c8c",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T15:04:03.300Z"
+      },
+      {
+        "id": "0b8da3aa-0c11-4c59-9e4c-23a0791eef07",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T15:13:59.608Z"
+      },
+      {
+        "id": "8cbbadf0-49a0-437a-902a-28e8418d31ab",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T15:13:59.610Z"
+      },
+      {
+        "id": "18ea1f13-f0d8-4849-af6d-5bbd24c885dc",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T15:13:59.613Z"
+      },
+      {
+        "id": "92bd9ad3-4228-4fbb-a833-144e9fc4ab4c",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T15:19:15.373Z"
+      },
+      {
+        "id": "c719664f-ec12-487f-9bb9-600cb3012fff",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T15:19:15.375Z"
+      },
+      {
+        "id": "b4d0e507-b3f2-468d-b09e-1488eac4820c",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T15:19:15.377Z"
+      },
+      {
+        "id": "88c3411f-04a8-45bb-9e87-7b4aa47882c6",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T15:53:51.357Z"
+      },
+      {
+        "id": "f04c76b6-cf11-4096-8ef0-982f2ea326e5",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T15:53:51.361Z"
+      },
+      {
+        "id": "5d5c4832-df0b-482f-948c-34086f4c7770",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T15:53:51.363Z"
+      },
+      {
+        "id": "3243123d-f20b-41f7-ae6d-c4af4f0efa70",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T16:02:53.650Z"
+      },
+      {
+        "id": "991c68b7-e7ed-4da0-a803-53ef56b6c48d",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T16:02:53.654Z"
+      },
+      {
+        "id": "20fe2147-6df4-4ff1-8330-bff68e3d1310",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T16:02:53.657Z"
+      },
+      {
+        "id": "b3a9fb7b-1d93-4efd-8a7c-351b4580c299",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T16:14:32.942Z"
+      },
+      {
+        "id": "2dc6db11-d1ec-4fea-bde9-420fd438ab42",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T16:14:32.945Z"
+      },
+      {
+        "id": "3d2ec2ce-c700-4e71-8f9c-697c4d5d1d1b",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T16:14:32.948Z"
+      },
+      {
+        "id": "7d0e7213-abc7-4087-adbb-67a7a71103ff",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T16:15:42.439Z"
+      },
+      {
+        "id": "46f4d951-5532-4a1a-b1ec-eb159bb8884d",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T16:15:42.441Z"
+      },
+      {
+        "id": "debf7ccf-2f3a-44d8-9a43-74e444f8744b",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T16:15:42.443Z"
+      },
+      {
+        "id": "e25f5ac1-de61-489f-9d18-9bb9e7f0742f",
+        "rating": 5,
+        "content": "मैंने यहाँ से अपना आधार और पैन कार्ड PVC में प्रिंट करवाया। बहुत ही बढ़िया क्वालिटी है, बिल्कुल असली ATM कार्ड जैसा दिखता है।",
+        "author": "Rahul Verma",
+        "location": "Jarwal Road, Bahraich",
+        "date": "12 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T16:20:49.822Z"
+      },
+      {
+        "id": "de49e01f-ebab-43ef-955e-2b6ee12da5a3",
+        "rating": 5,
+        "content": "Unique Computer Centre has excellent service! I filled my university scholarship form here. Irfak ji was very patient and made sure all details were correct.",
+        "author": "Amit Kumar Yadav",
+        "location": "Harchanda, Jarwal",
+        "date": "05 Aug 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T16:20:49.827Z"
+      },
+      {
+        "id": "177c32f4-3621-4868-916c-ec341e6af53b",
+        "rating": 5,
+        "content": "मैंने पीएम किसान ई-केवाईसी करवाई थी। दुकान पर भीड़ होने के बावजूद उन्होंने 5 मिनट में मेरा काम कर दिया। बहुत बढ़िया व्यव्हार है।",
+        "author": "Ramesh Prasad",
+        "location": "Bahraich",
+        "date": "28 Jul 2026",
+        "approved": true,
+        "createdAt": "2026-10-02T16:20:49.831Z"
+      }
+    ],
+    "GalleryItem": [
+      {
+        "id": "0f5db1c9-9f0f-404c-8104-3fd9b096a6ae",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-08-27T19:46:42.185Z"
+      },
+      {
+        "id": "9520e031-0a35-4d91-8f24-5bbac052659b",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-08-27T19:46:42.187Z"
+      },
+      {
+        "id": "2675a380-7836-4a32-9851-fbdc30241eb2",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-08-27T19:46:42.189Z"
+      },
+      {
+        "id": "711ec10b-de6b-46e9-8640-2cc13dec19d4",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-08-27T19:46:42.192Z"
+      },
+      {
+        "id": "296b5c51-ab42-4103-a45b-34f7c480d756",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-08-28T06:08:02.671Z"
+      },
+      {
+        "id": "f5ed5ce9-7809-4a7b-a6ac-ed7a5ba27fd1",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-08-28T06:08:02.676Z"
+      },
+      {
+        "id": "477a5884-01f9-4380-a56a-7d9fa3ef5bdf",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-08-28T06:08:02.681Z"
+      },
+      {
+        "id": "904ff312-24a2-4f95-9d3a-5d4c9f98d2e2",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-08-28T06:08:02.686Z"
+      },
+      {
+        "id": "55d41af1-b16a-4506-a6b9-574827f4df20",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-09-09T04:39:55.592Z"
+      },
+      {
+        "id": "a46cfed4-6091-4a7d-8449-e30c87d78a8d",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-09-09T04:39:55.594Z"
+      },
+      {
+        "id": "a7af8895-d4ae-4595-b39d-06381d97fa1e",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-09-09T04:39:55.599Z"
+      },
+      {
+        "id": "6c77a364-2f2c-4f29-b914-a1071e7abd93",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-09-09T04:39:55.601Z"
+      },
+      {
+        "id": "e96ee320-9261-470b-a045-6b3a282ac786",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-09-09T04:41:36.790Z"
+      },
+      {
+        "id": "dee8c316-1ccd-4ee5-801d-398a1a4a1bac",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-09-09T04:41:36.793Z"
+      },
+      {
+        "id": "6dc61510-4afd-4200-a981-ae6f579b760d",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-09-09T04:41:36.795Z"
+      },
+      {
+        "id": "eb10bb3a-40a3-4829-98ca-9cab46a1457d",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-09-09T04:41:36.798Z"
+      },
+      {
+        "id": "e77e0832-3c43-42f0-9b8c-e80f8b2cc25b",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-09-09T04:49:15.323Z"
+      },
+      {
+        "id": "c6570d4d-5314-42e2-bd88-daa20f3d6ad3",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-09-09T04:49:15.326Z"
+      },
+      {
+        "id": "c845d83f-d68f-4146-92e4-5ddb42dc007a",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-09-09T04:49:15.327Z"
+      },
+      {
+        "id": "d2a0c20a-7946-4564-830e-ae60ad199b6d",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-09-09T04:49:15.330Z"
+      },
+      {
+        "id": "90bcf3c4-6c05-4da8-8852-8f911ad3b9fd",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-09-09T04:50:12.580Z"
+      },
+      {
+        "id": "68cba908-fceb-4879-ac41-c10232f7ec3d",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-09-09T04:50:12.582Z"
+      },
+      {
+        "id": "35c1cf91-e175-4adb-847f-62a1f4f1227f",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-09-09T04:50:12.584Z"
+      },
+      {
+        "id": "d331bede-18ba-4edf-b81a-be25a52b2bb0",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-09-09T04:50:12.586Z"
+      },
+      {
+        "id": "f9663ea6-67d0-4ce3-a932-d85ce39253c2",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-09-09T04:56:19.704Z"
+      },
+      {
+        "id": "f913e4fb-3c4e-4504-8a78-ff44c3614d08",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-09-09T04:56:19.707Z"
+      },
+      {
+        "id": "76f36a8e-88ac-46b1-8f12-141145f2e3d0",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-09-09T04:56:19.710Z"
+      },
+      {
+        "id": "76b12454-66ec-44f3-b920-6cfd1fe5bd12",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-09-09T04:56:19.712Z"
+      },
+      {
+        "id": "36e3106f-2f8d-4c72-8c9c-9257dfe64337",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-09-09T05:22:45.501Z"
+      },
+      {
+        "id": "590c8cd9-7b97-436f-87c9-1d6868e5a5bc",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-09-09T05:22:45.504Z"
+      },
+      {
+        "id": "dafcf091-8368-4c1f-94ed-3187dd68a13a",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-09-09T05:22:45.506Z"
+      },
+      {
+        "id": "fdf05b09-91c6-4899-b686-22c558c603f8",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-09-09T05:22:45.507Z"
+      },
+      {
+        "id": "4b41e075-c72a-4fa5-95b5-5dd313710955",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-09-09T05:24:00.075Z"
+      },
+      {
+        "id": "75ff286e-21ec-456e-b0d7-1fba5f92554d",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-09-09T05:24:00.077Z"
+      },
+      {
+        "id": "d31bfb3e-be01-44f8-87a9-493735d6f982",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-09-09T05:24:00.079Z"
+      },
+      {
+        "id": "5ed5f19d-fbc7-4775-9889-1f8f6cf91f14",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-09-09T05:24:00.081Z"
+      },
+      {
+        "id": "985f06e8-7af2-446b-ba4d-b707ef667f28",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-09-09T05:44:04.116Z"
+      },
+      {
+        "id": "fb63c37e-4c30-4500-8fa3-a65791abe1d7",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-09-09T05:44:04.118Z"
+      },
+      {
+        "id": "b96c18fa-8c17-449f-8811-01c94db212c1",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-09-09T05:44:04.120Z"
+      },
+      {
+        "id": "637adfe8-4672-43da-9c47-392d0910cbda",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-09-09T05:44:04.122Z"
+      },
+      {
+        "id": "a3aeb6fc-1bc2-44da-8f83-40a5d112cb7b",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-09-09T06:14:02.566Z"
+      },
+      {
+        "id": "60a46d9b-391f-4a48-a93a-0fa53c0da99a",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-09-09T06:14:02.568Z"
+      },
+      {
+        "id": "9665a50a-efbf-4d89-9be3-dc7e2df5e794",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-09-09T06:14:02.570Z"
+      },
+      {
+        "id": "277a7e18-3914-4d02-8093-acfca6969bf8",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-09-09T06:14:02.572Z"
+      },
+      {
+        "id": "4c2592a1-ce80-4d57-90b3-02f58376ce95",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-09-11T05:25:39.856Z"
+      },
+      {
+        "id": "8aa87bb0-a991-48b6-87d6-d81109a45c1e",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-09-11T05:25:39.858Z"
+      },
+      {
+        "id": "407d67e6-0b59-4301-bbb9-a95647d1c311",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-09-11T05:25:39.860Z"
+      },
+      {
+        "id": "47966a76-46ab-41d7-b97b-7af419628231",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-09-11T05:25:39.861Z"
+      },
+      {
+        "id": "54878b6d-e574-415d-b1d8-c0d71e258a59",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-09-11T05:29:05.568Z"
+      },
+      {
+        "id": "e8b58e78-af0f-4c70-9b4b-b42d1bef49a8",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-09-11T05:29:05.571Z"
+      },
+      {
+        "id": "59c30918-8e81-4e07-a56f-d2fd35511eb5",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-09-11T05:29:05.574Z"
+      },
+      {
+        "id": "9aea1464-f42d-444a-884b-d701872ceba5",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-09-11T05:29:05.576Z"
+      },
+      {
+        "id": "4a822dce-42a8-4f5a-a3c0-6bf183484cfe",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-09-11T05:33:00.501Z"
+      },
+      {
+        "id": "c5aeb6d9-5723-4c35-8901-ecba56e4228c",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-09-11T05:33:00.503Z"
+      },
+      {
+        "id": "612ddd98-2746-4d22-b016-6b89d3d8bfce",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-09-11T05:33:00.506Z"
+      },
+      {
+        "id": "45b624e2-2215-43d7-8350-7d9340975fcd",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-09-11T05:33:00.508Z"
+      },
+      {
+        "id": "610fae33-3c72-4db4-8083-44982c88be8d",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-09-11T05:37:27.753Z"
+      },
+      {
+        "id": "e76098cc-bf34-43fe-b089-8aef6e1a8305",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-09-11T05:37:27.756Z"
+      },
+      {
+        "id": "d974a4fe-64bf-4eb2-b15b-fa8c7beea9c0",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-09-11T05:37:27.759Z"
+      },
+      {
+        "id": "2e6b07a2-d92d-4808-b61e-ab64cf56f5d5",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-09-11T05:37:27.763Z"
+      },
+      {
+        "id": "3397eed7-0b60-45eb-9eae-a537c4c88731",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-09-11T05:41:27.556Z"
+      },
+      {
+        "id": "11271f31-7ab4-4dea-aa18-b2a7345d97eb",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-09-11T05:41:27.558Z"
+      },
+      {
+        "id": "3a09175f-2d78-4bb3-9c1a-5b7c8abdf96f",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-09-11T05:41:27.561Z"
+      },
+      {
+        "id": "5d4c1abe-b7bb-4e07-9b76-2d3f80e64ade",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-09-11T05:41:27.563Z"
+      },
+      {
+        "id": "bf10fbd1-b870-49e1-8a0c-7f773c3f2e63",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-09-11T05:58:24.034Z"
+      },
+      {
+        "id": "d5d9143b-e509-4160-bc58-77ec63f73fe2",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-09-11T05:58:24.037Z"
+      },
+      {
+        "id": "c5a64f51-b234-4067-b7cc-4d5fa76b10bb",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-09-11T05:58:24.039Z"
+      },
+      {
+        "id": "de081c45-0767-48fa-969e-3958ba3dc16c",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-09-11T05:58:24.041Z"
+      },
+      {
+        "id": "9ece7fc6-4b58-4ceb-a882-f3d2238a326c",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-09-11T05:59:22.853Z"
+      },
+      {
+        "id": "fcc238e2-241a-45aa-a461-d2bccf0c954f",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-09-11T05:59:22.856Z"
+      },
+      {
+        "id": "747fadc3-7123-454a-b638-c9c84e2635ca",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-09-11T05:59:22.857Z"
+      },
+      {
+        "id": "8ac32309-7440-49ba-baa2-62b1b6d9ccab",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-09-11T05:59:22.859Z"
+      },
+      {
+        "id": "d21bab4d-0768-4ae9-9563-a37023c9c1d3",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-09-11T06:06:13.850Z"
+      },
+      {
+        "id": "48a2662b-5672-490c-8e06-49997a0e15f1",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-09-11T06:06:13.852Z"
+      },
+      {
+        "id": "4fa65c73-d90f-4795-920a-a8bece00acd7",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-09-11T06:06:13.854Z"
+      },
+      {
+        "id": "b8eb26a6-d506-4414-9669-39d605b4d98f",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-09-11T06:06:13.856Z"
+      },
+      {
+        "id": "1b6682ed-3416-486c-902f-bb89953d837c",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-09-11T06:19:17.228Z"
+      },
+      {
+        "id": "4b1024ae-5eb3-4782-a1ee-dae6f585d0ba",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-09-11T06:19:17.232Z"
+      },
+      {
+        "id": "52e9963a-aef9-42d5-b8b5-54fd391e7f36",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-09-11T06:19:17.234Z"
+      },
+      {
+        "id": "d5e2d66a-f169-4019-a98c-207499a339df",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-09-11T06:19:17.237Z"
+      },
+      {
+        "id": "70fd9052-5349-4621-b641-2329fcff4028",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-09-11T06:24:00.245Z"
+      },
+      {
+        "id": "549b5e90-0545-4903-add6-8ae59df1e7d3",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-09-11T06:24:00.248Z"
+      },
+      {
+        "id": "95a59d80-dd92-44c5-bcc9-de8c71457abf",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-09-11T06:24:00.250Z"
+      },
+      {
+        "id": "4cef7ba8-f256-43c9-bd3e-e3e6df80c5ab",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-09-11T06:24:00.252Z"
+      },
+      {
+        "id": "52490d1a-f1c8-4c1a-ad72-025a9ae7ecbb",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-09-11T06:30:21.655Z"
+      },
+      {
+        "id": "6a498a56-5c17-4954-a1c6-24104928767b",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-09-11T06:30:21.658Z"
+      },
+      {
+        "id": "700e8c78-5001-4a19-9dd8-8b83fd9e8965",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-09-11T06:30:21.660Z"
+      },
+      {
+        "id": "1f7ead91-4279-4525-82b9-7bf480b87fc5",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-09-11T06:30:21.662Z"
+      },
+      {
+        "id": "526d4f78-cbe3-485c-9478-47bf130401ea",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-09-11T06:40:51.190Z"
+      },
+      {
+        "id": "66a43cf7-b8b4-473a-b360-8a373cd4c78a",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-09-11T06:40:51.193Z"
+      },
+      {
+        "id": "3aca5383-4342-44e2-880c-f220615f9d4d",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-09-11T06:40:51.195Z"
+      },
+      {
+        "id": "7c864f85-9647-4038-8e61-d2faa37e68ae",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-09-11T06:40:51.197Z"
+      },
+      {
+        "id": "e4950c82-68a2-4862-9ac6-b879b03eb2d7",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-09-11T16:14:01.298Z"
+      },
+      {
+        "id": "69b92f95-d09b-443e-a107-b5c28fe4dee9",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-09-11T16:14:01.300Z"
+      },
+      {
+        "id": "6095876d-dc7e-4725-a180-b2bf159d79fa",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-09-11T16:14:01.302Z"
+      },
+      {
+        "id": "b4196099-4815-4bcc-906d-480867839bd8",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-09-11T16:14:01.304Z"
+      },
+      {
+        "id": "c86dabc9-89a6-46c6-a71f-58a0ae0ff8b6",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-09-11T16:21:26.314Z"
+      },
+      {
+        "id": "cfad8193-e963-41c4-9254-72441b01fb18",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-09-11T16:21:26.317Z"
+      },
+      {
+        "id": "98838a04-025e-438f-bb3a-f6b511344af4",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-09-11T16:21:26.319Z"
+      },
+      {
+        "id": "bbe608c7-520e-434f-8a2c-6665738499e8",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-09-11T16:21:26.321Z"
+      },
+      {
+        "id": "ae108b48-fb31-4517-8a96-b532bf50143c",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-09-11T16:25:41.863Z"
+      },
+      {
+        "id": "d5c7144f-0850-4419-b24f-90e3b58f1557",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-09-11T16:25:41.865Z"
+      },
+      {
+        "id": "388fcead-10fe-4100-b9f6-f14de2d72920",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-09-11T16:25:41.868Z"
+      },
+      {
+        "id": "b71df347-0f46-4d28-a05f-0c73749708da",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-09-11T16:25:41.870Z"
+      },
+      {
+        "id": "aee85bdb-9724-4b4f-aeb5-367f73981fc2",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-09-11T16:29:08.334Z"
+      },
+      {
+        "id": "e5138fca-bd60-4441-b414-180b9e1ed85a",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-09-11T16:29:08.336Z"
+      },
+      {
+        "id": "db0185f7-8b7f-4a94-8ffc-ee86af0bd7c2",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-09-11T16:29:08.339Z"
+      },
+      {
+        "id": "2a4d55f5-ab76-4300-9032-8382c47304d4",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-09-11T16:29:08.341Z"
+      },
+      {
+        "id": "cdfe3f18-c926-4eb1-8397-6f6251eb28fe",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-09-11T16:35:40.158Z"
+      },
+      {
+        "id": "62a58431-c685-4e49-9ecc-222b413e8506",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-09-11T16:35:40.160Z"
+      },
+      {
+        "id": "78523060-6ef6-4778-9c7f-a71a834fb294",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-09-11T16:35:40.162Z"
+      },
+      {
+        "id": "f845c9c5-3279-4b0d-97e4-a1339b3cf9d5",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-09-11T16:35:40.164Z"
+      },
+      {
+        "id": "e795fd4b-c18e-44ca-b259-86ad96fce197",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-09-11T16:46:34.061Z"
+      },
+      {
+        "id": "876d4937-7796-4568-b1ac-4e81433159c8",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-09-11T16:46:34.063Z"
+      },
+      {
+        "id": "8f816894-fa1c-4cdb-b548-a65341a9aaba",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-09-11T16:46:34.066Z"
+      },
+      {
+        "id": "2111e0a8-cb4b-474f-b52d-eca514e99f58",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-09-11T16:46:34.069Z"
+      },
+      {
+        "id": "10ef7715-0632-4af9-bc74-d91a0288d5b5",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-09-11T18:29:25.638Z"
+      },
+      {
+        "id": "b38a286b-e5a1-4b82-a42b-95c183490492",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-09-11T18:29:25.641Z"
+      },
+      {
+        "id": "947b010a-3f8b-46c0-9d40-e0bb611b22d1",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-09-11T18:29:25.644Z"
+      },
+      {
+        "id": "a500e16a-10ed-4bc0-a4fa-c3deaa575469",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-09-11T18:29:25.646Z"
+      },
+      {
+        "id": "b93850d7-5391-450a-91bd-f73501196150",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-09-11T18:36:23.985Z"
+      },
+      {
+        "id": "923dcc70-76c9-422a-8102-b000647e04c1",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-09-11T18:36:23.987Z"
+      },
+      {
+        "id": "6679962b-a168-4ff0-a3a7-f842de796cc0",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-09-11T18:36:23.989Z"
+      },
+      {
+        "id": "5fb8c312-8449-464d-960a-dc1d4cf66b57",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-09-11T18:36:23.991Z"
+      },
+      {
+        "id": "fae62737-c167-4af4-b537-ecfcb3ef2b7f",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-09-11T18:41:23.327Z"
+      },
+      {
+        "id": "618e1345-12c8-4530-a3f5-2104c9728d96",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-09-11T18:41:23.330Z"
+      },
+      {
+        "id": "21946fb9-3eec-4706-8142-3f5ecb9ca638",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-09-11T18:41:23.334Z"
+      },
+      {
+        "id": "337a037a-39d9-4b5e-9bae-f77c9d8a1098",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-09-11T18:41:23.337Z"
+      },
+      {
+        "id": "332fb588-e23f-4410-a6aa-0b80facb93d6",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-09-12T05:27:00.231Z"
+      },
+      {
+        "id": "d8c0f774-c87b-4c54-ab7d-d9c88604eb1d",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-09-12T05:27:00.233Z"
+      },
+      {
+        "id": "55048395-ec7b-4743-9f95-68b23d8b5146",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-09-12T05:27:00.235Z"
+      },
+      {
+        "id": "cef94a02-8572-4c49-9718-98c90134720b",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-09-12T05:27:00.237Z"
+      },
+      {
+        "id": "e86c7299-b900-4bc8-8ef9-cd461e2936a6",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-09-22T11:26:23.067Z"
+      },
+      {
+        "id": "ad5153c9-ce32-4866-ae5e-45b6f8c38567",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-09-22T11:26:23.069Z"
+      },
+      {
+        "id": "e41655cc-112e-424e-8907-3a1157e0d3bb",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-09-22T11:26:23.071Z"
+      },
+      {
+        "id": "90e3c9a2-e512-40ef-ae0f-c885478d21e0",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-09-22T11:26:23.073Z"
+      },
+      {
+        "id": "7ba9c531-bee3-4b1c-8378-51fd64eb469c",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-10-02T14:18:40.777Z"
+      },
+      {
+        "id": "60045928-d6b3-4e16-9076-5dac134b142f",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-10-02T14:18:40.782Z"
+      },
+      {
+        "id": "526531f8-31e0-4d57-bef6-e3a243f95afe",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-10-02T14:18:40.785Z"
+      },
+      {
+        "id": "faaeb26d-e9b9-478e-a5b9-cc33f34fe5f8",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-10-02T14:18:40.788Z"
+      },
+      {
+        "id": "178f37af-3c7c-4988-8b98-ef2bbdf41600",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-10-02T14:20:18.052Z"
+      },
+      {
+        "id": "b7eec8f1-59d2-4f7d-8cf0-1599867482d9",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-10-02T14:20:18.055Z"
+      },
+      {
+        "id": "446da8bb-db4a-45da-80b6-742e06b9c1b7",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-10-02T14:20:18.056Z"
+      },
+      {
+        "id": "b38f06fe-ddcd-4be0-9c64-785d7bae9899",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-10-02T14:20:18.058Z"
+      },
+      {
+        "id": "d30ec704-69d4-42cc-8a0d-83bab5f3ba60",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-10-02T14:24:26.397Z"
+      },
+      {
+        "id": "30cd7869-0e5f-4978-ac19-2f1a6249ebcf",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-10-02T14:24:26.400Z"
+      },
+      {
+        "id": "2d30b5bd-1d5d-417c-9c31-4e399a0ea193",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-10-02T14:24:26.403Z"
+      },
+      {
+        "id": "9f147b31-214a-41f2-a426-1c03b244fab4",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-10-02T14:24:26.405Z"
+      },
+      {
+        "id": "61515654-8318-4e73-afca-c1159e1e28e5",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-10-02T14:26:47.699Z"
+      },
+      {
+        "id": "d2ad4f6c-ffc0-4912-ad47-ef7ec9846a50",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-10-02T14:26:47.701Z"
+      },
+      {
+        "id": "e305ad2c-ff92-4d89-849d-c9633b07e05a",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-10-02T14:26:47.703Z"
+      },
+      {
+        "id": "d7762a8f-07f8-4540-930e-3085c41c6bef",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-10-02T14:26:47.706Z"
+      },
+      {
+        "id": "7e6d67b0-c10b-42c8-8ca0-535b7c15ff89",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-10-02T14:29:50.789Z"
+      },
+      {
+        "id": "76b6fa99-cd13-4d34-aa07-28510b6aa5bf",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-10-02T14:29:50.796Z"
+      },
+      {
+        "id": "9454485d-c3e3-4d1b-9025-9b3f35241cf7",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-10-02T14:29:50.802Z"
+      },
+      {
+        "id": "a32992e9-0dde-4616-9f23-5a78f9eea84b",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-10-02T14:29:50.809Z"
+      },
+      {
+        "id": "8d59d855-a3f2-4882-9f6d-dd22b369d434",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-10-02T14:34:07.228Z"
+      },
+      {
+        "id": "de1569e1-fda8-4a13-9d3a-33778b3aea31",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-10-02T14:34:07.231Z"
+      },
+      {
+        "id": "0a7c4864-b9d3-4d1e-ae33-693e8e0f7576",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-10-02T14:34:07.234Z"
+      },
+      {
+        "id": "a0b5c91f-1f3d-4d3c-a77f-38bf7e860b1d",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-10-02T14:34:07.237Z"
+      },
+      {
+        "id": "0fddc5cd-e8a4-4c9c-a96b-61aeb29e833c",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-10-02T14:40:09.600Z"
+      },
+      {
+        "id": "ace9db54-efcc-4e7b-bce8-9356950c5e69",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-10-02T14:40:09.602Z"
+      },
+      {
+        "id": "bec1341a-5beb-499c-8550-82743fb2cf64",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-10-02T14:40:09.604Z"
+      },
+      {
+        "id": "aca783bb-fbb5-45ef-a65f-c125a9928751",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-10-02T14:40:09.607Z"
+      },
+      {
+        "id": "61d1156c-e972-48cd-8933-be7313128508",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-10-02T14:47:33.505Z"
+      },
+      {
+        "id": "65dc74fc-64dc-42ff-b4aa-d63faa8a4050",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-10-02T14:47:33.507Z"
+      },
+      {
+        "id": "12cd7309-950b-42e8-b122-c5cf5398d69c",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-10-02T14:47:33.509Z"
+      },
+      {
+        "id": "e40b936d-f653-4580-a4d9-8bfe4c296f7b",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-10-02T14:47:33.510Z"
+      },
+      {
+        "id": "633bda3c-549e-4d14-88f6-2a42d3a5be28",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-10-02T14:54:32.137Z"
+      },
+      {
+        "id": "c1befaac-b14e-4462-8183-336e095328f9",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-10-02T14:54:32.139Z"
+      },
+      {
+        "id": "d8029b17-2146-4d72-aac5-5e48674e49a5",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-10-02T14:54:32.141Z"
+      },
+      {
+        "id": "6931b77d-ff86-4461-9708-258672994655",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-10-02T14:54:32.143Z"
+      },
+      {
+        "id": "2ac7e232-3c66-4e1e-9a01-274624547023",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-10-02T14:56:09.012Z"
+      },
+      {
+        "id": "6fdc9ee9-e5ef-4209-a8c5-e4bc9e775c3d",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-10-02T14:56:09.014Z"
+      },
+      {
+        "id": "1514b4a0-a167-4430-8032-c4b913a99397",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-10-02T14:56:09.016Z"
+      },
+      {
+        "id": "db58aaa9-e72b-4db8-9d29-b57df5b31e8e",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-10-02T14:56:09.018Z"
+      },
+      {
+        "id": "731373f8-6d20-4b84-a722-1668815b0c0a",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-10-02T15:04:03.306Z"
+      },
+      {
+        "id": "7455d84b-6bf3-419f-bb1f-b989c0a674a5",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-10-02T15:04:03.309Z"
+      },
+      {
+        "id": "15ca9d98-0c97-4dd1-a3a2-c2febec841d5",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-10-02T15:04:03.312Z"
+      },
+      {
+        "id": "cfad3500-642b-4afa-bc21-340cffd9f876",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-10-02T15:04:03.314Z"
+      },
+      {
+        "id": "d0844298-f9d8-49ad-89ac-dc867e809be7",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-10-02T15:13:59.620Z"
+      },
+      {
+        "id": "fbc47cf7-7cc3-40d4-bbd4-9eef9a9e52d3",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-10-02T15:13:59.622Z"
+      },
+      {
+        "id": "1bce537d-6a0e-417c-bbb5-3dc74e7f10d0",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-10-02T15:13:59.624Z"
+      },
+      {
+        "id": "cb18147d-03de-46b9-b4aa-b8fa1ebe18fd",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-10-02T15:13:59.626Z"
+      },
+      {
+        "id": "32e6016b-b8b9-420c-8764-8f49065eeee1",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-10-02T15:19:15.383Z"
+      },
+      {
+        "id": "213eb5b7-4e48-4119-9c96-371445a78c6d",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-10-02T15:19:15.386Z"
+      },
+      {
+        "id": "f3e66225-8032-4a4a-9189-6b48759e679d",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-10-02T15:19:15.389Z"
+      },
+      {
+        "id": "9b946192-4f6a-4b10-a824-a43975c19780",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-10-02T15:19:15.391Z"
+      },
+      {
+        "id": "d183403a-397e-43b0-972b-10d21e68fb49",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-10-02T15:53:51.371Z"
+      },
+      {
+        "id": "5e93b21d-6912-47bc-9346-f5cc8b090840",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-10-02T15:53:51.375Z"
+      },
+      {
+        "id": "763263cc-2629-4e1c-91ce-86a671b30207",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-10-02T15:53:51.378Z"
+      },
+      {
+        "id": "88f2ffac-d191-4551-b9de-35e25405b133",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-10-02T15:53:51.380Z"
+      },
+      {
+        "id": "375d8ebd-d19c-4977-bcf0-181119d1ed9f",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-10-02T16:02:53.665Z"
+      },
+      {
+        "id": "6aac5d66-5ca5-4ae2-b53a-e1127608ac49",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-10-02T16:02:53.668Z"
+      },
+      {
+        "id": "4ecde79f-7cbc-4479-84fe-fa5962596ccf",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-10-02T16:02:53.671Z"
+      },
+      {
+        "id": "17c28534-337d-4fc4-80f9-e32e44c1add8",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-10-02T16:02:53.674Z"
+      },
+      {
+        "id": "3d0c18d1-6aa1-4332-8669-51a67aed4f19",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-10-02T16:14:32.954Z"
+      },
+      {
+        "id": "df415394-6bba-440c-93e0-64a32f20d04a",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-10-02T16:14:32.958Z"
+      },
+      {
+        "id": "ff962da4-cda2-433e-83d1-116f1ff749ab",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-10-02T16:14:32.962Z"
+      },
+      {
+        "id": "fe688bb1-dba1-4e04-8ec9-bd68529063b6",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-10-02T16:14:32.965Z"
+      },
+      {
+        "id": "abaaca44-d6fa-4020-b499-3e0982848016",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-10-02T16:15:42.450Z"
+      },
+      {
+        "id": "8f2ef74a-2e5a-4253-98a2-cf27e591d9ed",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-10-02T16:15:42.453Z"
+      },
+      {
+        "id": "73c4e125-3b26-44b1-bfcf-e77c0580d7c9",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-10-02T16:15:42.455Z"
+      },
+      {
+        "id": "e9ed9474-741c-4553-a2d3-43cd24331d69",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-10-02T16:15:42.457Z"
+      },
+      {
+        "id": "f98e3106-082c-4da7-ac8d-4b417fb3a9b3",
+        "title": "Main Computer Workspace Area",
+        "category": "centre",
+        "image": "/images/csc-workspace.jpg",
+        "alt": "Inside view of Unique Computer Centre desktop workstations and printers",
+        "createdAt": "2026-10-02T16:20:49.839Z"
+      },
+      {
+        "id": "8b351c7b-0a49-455d-8376-3e5031dbc3b2",
+        "title": "Glossy Aadhaar PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-aadhaar-mockup.jpg",
+        "alt": "Mockup print sample of Aadhaar PVC smart card with barcode details",
+        "createdAt": "2026-10-02T16:20:49.842Z"
+      },
+      {
+        "id": "13edd42d-90b4-4464-bd17-921df0539580",
+        "title": "Mohd Irfak Ahmad at Center Desk",
+        "category": "staff",
+        "image": "/images/founder.jpg",
+        "alt": "Mohd Irfak Ahmad, founder of Unique Computer Centre smiling at his desk",
+        "createdAt": "2026-10-02T16:20:49.846Z"
+      },
+      {
+        "id": "99c7918a-eb8e-44c2-b5c4-04fc3790f521",
+        "title": "Glossy PAN PVC Smart Cards",
+        "category": "pvc",
+        "image": "/images/pvc-pan-mockup.jpg",
+        "alt": "Mockup print sample of Permanent Account Number PAN card on plastic smart card",
+        "createdAt": "2026-10-02T16:20:49.850Z"
+      }
+    ],
+    "Partner": [],
+    "PartnerCommission": [],
+    "Setting": [
+      {
+        "id": "6b29d863-bbe7-4a8a-a475-e820a78c3af2",
+        "key": "whatsapp_number",
+        "value": "917084666326",
+        "updatedAt": "2026-08-27T19:46:42.195Z"
+      },
+      {
+        "id": "ff868cbd-ae53-42d0-bf89-e93eb67b7f55",
+        "key": "business_phone",
+        "value": "+91 70846 66326",
+        "updatedAt": "2026-08-27T19:46:42.198Z"
+      },
+      {
+        "id": "a0e02938-51e2-45fa-b42a-e2cd064dacfb",
+        "key": "business_email",
+        "value": "support@uniquecscpoint.in",
+        "updatedAt": "2026-08-27T19:46:42.200Z"
+      },
+      {
+        "id": "bf401976-df9c-40b9-a0b8-93964e059623",
+        "key": "business_address",
+        "value": "Harchanda, Jarwal, Bahraich, Uttar Pradesh, 271904",
+        "updatedAt": "2026-08-27T19:46:42.203Z"
+      },
+      {
+        "id": "31635f50-66e7-4a41-8b71-49a0c740445e",
+        "key": "pvc_base_price",
+        "value": "149",
+        "updatedAt": "2026-08-27T19:46:42.205Z"
+      }
+    ]
+  }
+}

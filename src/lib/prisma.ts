@@ -1,18 +1,19 @@
+import { Pool } from "pg";
+import { PrismaPg } from "@prisma/adapter-pg";
 import { PrismaClient } from "@/generated/prisma";
-import { PrismaBetterSqlite3 } from "@prisma/adapter-better-sqlite3";
 
 const globalForPrisma = globalThis as unknown as {
   prisma: PrismaClient | undefined;
 };
 
 /**
- * Returns a PrismaClient instance configured for Node.js / Vercel serverless execution.
+ * Returns a PrismaClient instance configured for Node.js / Vercel serverless PostgreSQL execution using PrismaPg adapter.
  */
 export function getPrisma(): PrismaClient {
   if (!globalForPrisma.prisma) {
-    const adapter = new PrismaBetterSqlite3({
-      url: process.env.DATABASE_URL || "file:./dev.db",
-    });
+    const connectionString = process.env.DATABASE_URL || process.env.DIRECT_URL;
+    const pool = new Pool({ connectionString });
+    const adapter = new PrismaPg(pool);
     globalForPrisma.prisma = new PrismaClient({ adapter });
   }
 
@@ -29,4 +30,3 @@ export const prisma = new Proxy({} as PrismaClient, {
     return value;
   },
 });
-
