@@ -13,7 +13,7 @@ export default function Pricing() {
     { name: "New PAN Card Application", price: "₹200", details: "Includes official processing fee & physical card delivery" },
     { name: "PAN Card Detail Correction", price: "₹200", details: "Name, DOB, or signature update assistance" },
     { name: "UP e-District Certificates (Income/Caste/Domicile)", price: "₹100", details: "Government fees & application processing" },
-    { name: "Aadhaar Card Download & Smart Print", price: "₹100", details: "Instant service at centre with biometric/OTP download" },
+    { name: "Aadhaar Card Download & Smart Print", price: "₹149", details: "Instant service at centre with biometric/OTP download" },
     { name: "UP Board / College Exam Form Filling", price: "₹50 - ₹100", details: "Depending on board criteria, excludes form fee" },
     { name: "UP Scholarship Application Submission", price: "₹120", details: "Detailed documentation review & receipt copy" },
     { name: "Biometric eKYC Verification (PM-Kisan/e-Shram)", price: "₹50", details: "Fingerprint scanner verification at center" },

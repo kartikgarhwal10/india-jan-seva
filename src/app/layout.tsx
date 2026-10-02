@@ -13,6 +13,11 @@ export const metadata: Metadata = {
   title: "Unique CSC Point | Unique Computer Centre - CSC Point",
   description: "Official Common Services Centre (CSC) offering Aadhaar assistance, PAN cards, PVC smart cards, Ayushman cards, Digital Products, and Education Courses in Jarwal, Bahraich, UP.",
   keywords: ["Unique CSC Point", "CSC Center Jarwal", "CSC Bahraich", "PVC Card print online", "PAN card correction", "Aadhaar print UP", "Digital Products Harchanda"],
+  icons: {
+    icon: "/images/logo.jpg",
+    shortcut: "/images/logo.jpg",
+    apple: "/images/logo.jpg",
+  },
   openGraph: {
     title: "Unique CSC Point | Unique Computer Centre",
     description: "Your trusted Common Services Centre in Jarwal, Bahraich. Aadhaar assistance, PAN cards, PVC smart cards, Digital Products, and Education Courses.",

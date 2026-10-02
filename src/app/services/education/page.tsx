@@ -24,10 +24,10 @@ export default function EducationPage() {
 
         <ComingSoon
           badge="Skill Development"
-          title="EDUCATION"
+          title="CSC COMPLETE COURSE"
           subtitle="Coming Soon"
           description="Our courses and educational services are currently being prepared. They will be available soon."
-          icon="🎓"
+          bannerImage="/images/education-coming-soon.jpg"
         />
       </main>
 

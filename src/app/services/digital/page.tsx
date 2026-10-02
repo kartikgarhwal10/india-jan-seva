@@ -27,7 +27,7 @@ export default function DigitalProductsPage() {
           title="DIGITAL PRODUCTS"
           subtitle="Coming Soon"
           description="We're working on something useful for you. Our digital products will be available soon."
-          icon="💻"
+          bannerImage="/images/digital-coming-soon.jpg"
         />
       </main>
 

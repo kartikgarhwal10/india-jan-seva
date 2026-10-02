@@ -22,7 +22,7 @@ export default async function Home() {
 
   // Extract items for highlight
   const featuredPvc = activeProducts.filter(p => p.featured);
-  const showcasePvc = featuredPvc.length > 0 ? featuredPvc : activeProducts.slice(0, 3);
+  const showcasePvc = (featuredPvc.length >= 4 ? featuredPvc : activeProducts).slice(0, 4);
   const minPrice = activeProducts.length > 0 ? Math.min(...activeProducts.map(p => p.price)) : 100;
 
   const latestBlogs = blogs.slice(0, 3);
@@ -41,7 +41,7 @@ export default async function Home() {
         <ServiceSearch />
 
         {/* 2. Explore Our Services Section */}
-        <section className={styles.section} id="categories">
+        <section className={`${styles.section} ${styles.exploreSection}`} id="categories">
           <div className={styles.container}>
             <div className={styles.exploreHeader}>
               <h2 className={styles.exploreTitle}>
@@ -55,11 +55,11 @@ export default async function Home() {
               <div className={styles.exploreCard}>
                 <div className={`${styles.cardBanner} ${styles.cardBannerCsc}`}>
                   <Image
-                    src="/images/csc-banner.jpg"
+                    src="/images/explore-csc-banner.jpg"
                     alt="CSC Services"
                     width={400}
                     height={200}
-                    style={{ objectFit: "cover", width: "100%", height: "100%" }}
+                    style={{ objectFit: "contain", width: "100%", height: "100%" }}
                   />
                 </div>
                 <div className={styles.cardBody}>
@@ -101,11 +101,11 @@ export default async function Home() {
               <div className={styles.exploreCard}>
                 <div className={`${styles.cardBanner} ${styles.cardBannerPvc}`}>
                   <Image
-                    src="/images/pvc-banner.jpg"
+                    src="/images/explore-pvc-banner.jpg"
                     alt="PVC Card Services"
                     width={400}
                     height={200}
-                    style={{ objectFit: "cover", width: "100%", height: "100%" }}
+                    style={{ objectFit: "contain", width: "100%", height: "100%" }}
                   />
                 </div>
                 <div className={styles.cardBody}>
@@ -147,11 +147,11 @@ export default async function Home() {
               <div className={styles.exploreCard}>
                 <div className={`${styles.cardBanner} ${styles.cardBannerDigital}`}>
                   <Image
-                    src="/images/digital-banner.jpg"
+                    src="/images/explore-digital-banner.jpg"
                     alt="Digital Products"
                     width={400}
                     height={200}
-                    style={{ objectFit: "cover", width: "100%", height: "100%" }}
+                    style={{ objectFit: "contain", width: "100%", height: "100%" }}
                   />
                 </div>
                 <div className={styles.cardBody}>
@@ -193,7 +193,7 @@ export default async function Home() {
               <div className={styles.exploreCard}>
                 <div className={`${styles.cardBanner} ${styles.cardBannerEducation}`}>
                   <Image
-                    src="/images/education-banner.svg"
+                    src="/images/explore-education-banner.jpg"
                     alt="Education Services"
                     width={400}
                     height={200}
@@ -288,9 +288,20 @@ export default async function Home() {
                 We&apos;re working on something useful for you. Our digital products will be available soon.
               </p>
             </div>
+
+            <div style={{ maxWidth: "950px", margin: "0 auto 2rem", borderRadius: "16px", overflow: "hidden", boxShadow: "0 10px 30px rgba(0,0,0,0.08)" }}>
+              <Image
+                src="/images/digital-coming-soon.jpg"
+                alt="CSC Digital Products Coming Soon"
+                width={1200}
+                height={450}
+                style={{ width: "100%", height: "auto", display: "block" }}
+              />
+            </div>
+
             <div style={{ textAlign: "center", marginTop: "1rem" }}>
               <Link href="/services/digital" className={styles.btnSecondary} style={{ display: "inline-block" }}>
-                Coming Soon &rarr;
+                Explore Digital Products &rarr;
               </Link>
             </div>
           </div>
@@ -306,9 +317,20 @@ export default async function Home() {
                 Our courses and educational services are currently being prepared. They will be available soon.
               </p>
             </div>
+
+            <div style={{ maxWidth: "950px", margin: "0 auto 2rem", borderRadius: "16px", overflow: "hidden", boxShadow: "0 10px 30px rgba(0,0,0,0.08)" }}>
+              <Image
+                src="/images/education-coming-soon.jpg"
+                alt="CSC Complete Course Coming Soon"
+                width={1200}
+                height={450}
+                style={{ width: "100%", height: "auto", display: "block" }}
+              />
+            </div>
+
             <div style={{ textAlign: "center", marginTop: "1rem" }}>
               <Link href="/services/education" className={styles.btnSecondary} style={{ display: "inline-block" }}>
-                Coming Soon &rarr;
+                Explore CSC Courses &rarr;
               </Link>
             </div>
           </div>

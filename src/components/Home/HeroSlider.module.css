@@ -3,7 +3,7 @@
   height: 560px;
   width: 100%;
   overflow: hidden;
-  margin-top: 85px; /* Offset fixed header height */
+  margin-top: 74px; /* Exactly offsets fixed header, eliminating white line gap */
   background: #0f172a;
 }
 
@@ -235,7 +235,7 @@
 @media (max-width: 1024px) and (min-width: 769px) {
   .heroSection {
     height: 500px;
-    margin-top: 75px;
+    margin-top: 68px;
   }
   .title {
     font-size: 2.35rem;
@@ -249,7 +249,7 @@
 @media (max-width: 768px) {
   .heroSection {
     height: 470px;
-    margin-top: 72px;
+    margin-top: 64px;
   }
 
   /* Position photo focal area higher so center/workstation/banner is clearly visible */
@@ -323,7 +323,7 @@
 @media (max-width: 360px) {
   .heroSection {
     height: 450px;
-    margin-top: 68px;
+    margin-top: 60px;
   }
 
   .title {
