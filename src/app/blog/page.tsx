@@ -4,17 +4,34 @@ import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import styles from "./blog.module.css";
 
+export const dynamic = "force-dynamic";
+
 export const metadata = {
   title: "Official Blog & Guides | Unique Computer Centre",
   description: "Learn how to apply for online certificates in Uttar Pradesh, download e-Aadhaar, correct Voter ID cards, and order PVC cards.",
 };
 
+interface BlogPostItem {
+  id: string;
+  title: string;
+  slug: string;
+  summary: string;
+  category: string;
+  publishedDate: string;
+  readTime: string;
+  image: string;
+}
+
 export default async function BlogIndex() {
-  // Query all published posts from database
-  const posts = await prisma.blogPost.findMany({
-    where: { published: true },
-    orderBy: { publishedDate: "desc" },
-  });
+  let posts: BlogPostItem[] = [];
+  try {
+    posts = await prisma.blogPost.findMany({
+      where: { published: true },
+      orderBy: { createdAt: "desc" },
+    });
+  } catch (err) {
+    console.error("Blog Index DB Error:", err);
+  }
 
   return (
     <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>

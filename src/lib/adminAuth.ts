@@ -6,17 +6,21 @@ const DEFAULT_ADMIN_USER = "admin";
 const DEFAULT_ADMIN_PASS = "admin123";
 
 export async function verifyAdminSession(): Promise<boolean> {
-  const cookieStore = await cookies();
-  const sessionToken = cookieStore.get(SESSION_COOKIE_NAME)?.value;
+  try {
+    const cookieStore = await cookies();
+    const sessionToken = cookieStore.get(SESSION_COOKIE_NAME)?.value;
 
-  if (!sessionToken) return false;
+    if (!sessionToken) return false;
 
-  // Simple token format: "admin_token_hash"
-  const expectedToken = Buffer.from(
-    `${process.env.ADMIN_USERNAME || DEFAULT_ADMIN_USER}_token_auth`
-  ).toString("base64");
+    // Simple token format: "admin_token_hash"
+    const expectedToken = Buffer.from(
+      `${process.env.ADMIN_USERNAME || DEFAULT_ADMIN_USER}_token_auth`
+    ).toString("base64");
 
-  return sessionToken === expectedToken;
+    return sessionToken === expectedToken;
+  } catch {
+    return false;
+  }
 }
 
 export async function createAdminSession(): Promise<void> {

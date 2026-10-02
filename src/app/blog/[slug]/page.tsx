@@ -4,41 +4,52 @@ import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import styles from "../blog.module.css";
 
+export const dynamic = "force-dynamic";
+
 interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
 // Dynamic SEO metadata generation
 export async function generateMetadata({ params }: PageProps) {
-  const { slug } = await params;
-  const post = await prisma.blogPost.findUnique({
-    where: { slug },
-  });
+  try {
+    const { slug } = await params;
+    const post = await prisma.blogPost.findUnique({
+      where: { slug },
+    });
 
-  if (!post || !post.published) {
+    if (!post || !post.published) {
+      return {
+        title: "Article Not Found | Unique Computer Centre",
+      };
+    }
+
     return {
-      title: "Article Not Found | Unique Computer Centre",
-    };
-  }
-
-  return {
-    title: post.seoTitle || `${post.title} | Unique Computer Centre - CSC Point`,
-    description: post.seoDescription || post.summary,
-    keywords: post.seoKeywords || undefined,
-    openGraph: {
-      title: post.seoTitle || post.title,
+      title: post.seoTitle || `${post.title} | Unique Computer Centre - CSC Point`,
       description: post.seoDescription || post.summary,
-      images: [post.image],
-    },
-  };
+      keywords: post.seoKeywords || undefined,
+      openGraph: {
+        title: post.seoTitle || post.title,
+        description: post.seoDescription || post.summary,
+        images: [post.image],
+      },
+    };
+  } catch {
+    return { title: "Official Blog | Unique Computer Centre" };
+  }
 }
 
 export default async function BlogPost({ params }: PageProps) {
   const { slug } = await params;
-  
-  const post = await prisma.blogPost.findUnique({
-    where: { slug },
-  });
+  let post = null;
+
+  try {
+    post = await prisma.blogPost.findUnique({
+      where: { slug },
+    });
+  } catch (err) {
+    console.error("BlogPost Detail DB Error:", err);
+  }
 
   if (!post || !post.published) {
     notFound();
