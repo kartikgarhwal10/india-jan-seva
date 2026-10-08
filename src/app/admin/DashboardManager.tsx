@@ -1109,7 +1109,7 @@ export default function DashboardManager({
                 <div className={styles.infoSection}>
                   <h4 className={styles.sectionHeading}>Attached Customer File</h4>
                   <a
-                    href={`/api/admin/documents/${selectedOrder.documentPath}`}
+                    href={`/api/admin/documents/${encodeURI(selectedOrder.documentPath)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={styles.docLink}

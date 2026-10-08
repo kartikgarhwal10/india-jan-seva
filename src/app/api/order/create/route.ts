@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
-import { promises as fs } from "fs";
 import path from "path";
 import { prisma } from "@/lib/prisma";
+import { uploadDocumentToSupabase, removeDocumentFromSupabase } from "@/lib/supabaseServer";
 
 export async function POST(request: Request) {
   try {
@@ -89,7 +89,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: "Unsupported file extension. Only PDF, JPG, and PNG are allowed." }, { status: 400 });
     }
 
-    // 7. Product Lookup & Availability (Always compute price on server from D1)
+    // 7. Product Lookup & Availability
     const product = await prisma.product.findUnique({
       where: { id: productId },
     });
@@ -136,28 +136,7 @@ export async function POST(request: Request) {
       );
     }
 
-    // 9. Document File Write Operations (Private Directory / /tmp for Serverless Worker)
-    const fileBytes = await file.arrayBuffer();
-    const fileBuffer = Buffer.from(fileBytes);
-    const baseDir = process.env.NODE_ENV === "production" ? "/tmp" : process.cwd();
-    const uploadDir = path.join(baseDir, "private_uploads");
-    
-    try {
-      await fs.mkdir(uploadDir, { recursive: true });
-    } catch {
-      // directory already exists
-    }
-
-    const uniqueFilename = `${crypto.randomUUID()}${fileExt}`;
-    const filePath = path.join(uploadDir, uniqueFilename);
-    
-    try {
-      await fs.writeFile(filePath, fileBuffer);
-    } catch (writeErr) {
-      console.warn("[DOCUMENT STORAGE] File write warning:", writeErr);
-    }
-
-    // 10. Generate custom unique Order ID (collision-free retry loop)
+    // 9. Generate custom unique Order ID (collision-free retry loop)
     const count = await prisma.order.count();
     let customOrderId = `UCCPVC${10001 + count}`;
     let attempts = 0;
@@ -168,37 +147,64 @@ export async function POST(request: Request) {
       customOrderId = `UCCPVC${10001 + count + attempts}`;
     }
 
-    // 11. Save Order to Database
-    const order = await prisma.order.create({
-      data: {
-        id: customOrderId,
-        productId: product.id,
-        customerName: trimmedName,
-        customerMobile: mobileTrim,
-        customerEmail: emailTrim,
-        deliveryAddress: deliveryAddress.trim(),
-        villageTown: villageTown.trim(),
-        district: district.trim(),
-        state: state.trim(),
-        pinCode: pinTrim,
-        documentPath: uniqueFilename, // Stored safely inside private_uploads directory
-        amount: finalAmount,
-        paymentStatus: "PENDING", // Initial payment state
-        orderStatus: "ORDER_RECEIVED", // Initial workflow state
-        razorpayOrderId: null,
-        partnerId,
-        notes: notes.trim(),
-      },
+    // 10. Document Storage Upload (Private Supabase Storage Bucket)
+    const fileBytes = await file.arrayBuffer();
+    const fileBuffer = Buffer.from(fileBytes);
+
+    const { storagePath, error: uploadError } = await uploadDocumentToSupabase({
+      orderId: customOrderId,
+      fileBuffer,
+      fileExt,
+      mimeType: file.type || "application/octet-stream",
     });
 
-    // Create initial tracking history
-    await prisma.orderStatusHistory.create({
-      data: {
-        orderId: order.id,
-        status: "ORDER_RECEIVED",
-        note: "Your PVC Order has been received.",
-      },
-    });
+    if (uploadError || !storagePath) {
+      console.error("[ORDER CREATE] Supabase Storage upload error:", uploadError);
+      return NextResponse.json(
+        { error: "Document upload failed. Storage error occurred." },
+        { status: 500 }
+      );
+    }
+
+    // 11. Save Order to Database
+    let order;
+    try {
+      order = await prisma.order.create({
+        data: {
+          id: customOrderId,
+          productId: product.id,
+          customerName: trimmedName,
+          customerMobile: mobileTrim,
+          customerEmail: emailTrim,
+          deliveryAddress: deliveryAddress.trim(),
+          villageTown: villageTown.trim(),
+          district: district.trim(),
+          state: state.trim(),
+          pinCode: pinTrim,
+          documentPath: storagePath, // Stored safely in Supabase Private Storage path
+          amount: finalAmount,
+          paymentStatus: "PENDING", // Initial payment state
+          orderStatus: "ORDER_RECEIVED", // Initial workflow state
+          razorpayOrderId: null,
+          partnerId,
+          notes: notes.trim(),
+        },
+      });
+
+      // Create initial tracking history
+      await prisma.orderStatusHistory.create({
+        data: {
+          orderId: order.id,
+          status: "ORDER_RECEIVED",
+          note: "Your PVC Order has been received.",
+        },
+      });
+    } catch (dbError) {
+      console.error("[ORDER CREATE] DB insertion failed, rolling back storage object:", dbError);
+      // Clean up orphaned storage object
+      await removeDocumentFromSupabase(storagePath);
+      throw dbError;
+    }
 
     return NextResponse.json({
       success: true,
