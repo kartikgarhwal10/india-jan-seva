@@ -193,6 +193,27 @@ const pvcProducts = [
     featured: true
   },
   {
+    slug: "apaar-pvc",
+    name: "APAAR Card - Student PVC Smart Card",
+    price: 149,
+    shortDescription: "CSC Verified • High Quality • Waterproof • Doorstep Delivery",
+    description: "APAAR Card – आपकी शिक्षा और पहचान एक जगह! Print your Automated Permanent Academic Account Registry (APAAR) ID on a durable, waterproof PVC smart card.",
+    requirements: JSON.stringify([
+      "APAAR Card PDF download (from DigiLocker / ABC Portal)",
+      "OR 12-Digit APAAR ID Number + Student Details"
+    ]),
+    features: JSON.stringify([
+      "Ministry of Education & Academic Bank of Credits layout",
+      "High definition scannable QR code",
+      "Waterproof & scratch-proof plastic finish",
+      "Standard wallet-sized ATM card format"
+    ]),
+    deliveryTime: "3 - 7 Days across India",
+    image: "/images/cards/apaar-pvc.jpg",
+    category: "academic_others",
+    featured: true
+  },
+  {
     slug: "student-id-pvc",
     name: "Student ID PVC Card",
     price: 149,
@@ -209,7 +230,7 @@ const pvcProducts = [
       "Free lanyard slot punch if requested"
     ]),
     deliveryTime: "3 - 7 Days across India",
-    image: "/images/cards/student-id-pvc.jpg",
+    image: "/images/cards/apaar-student-pvc.jpg",
     category: "academic_others",
     featured: true
   },

@@ -39,6 +39,42 @@ export async function generateMetadata({ params }: PageProps) {
   }
 }
 
+function getYouTubeEmbedUrl(url?: string | null): string | null {
+  if (!url || !url.trim()) return null;
+  const trimmed = url.trim();
+
+  // 1. Standard youtube.com/watch?v=ID
+  const watchMatch = trimmed.match(/(?:youtube\.com\/watch\?v=)([^&]+)/i);
+  if (watchMatch && watchMatch[1]) {
+    return `https://www.youtube.com/embed/${watchMatch[1]}`;
+  }
+
+  // 2. Shortened youtu.be/ID
+  const shortMatch = trimmed.match(/(?:youtu\.be\/)([^?&]+)/i);
+  if (shortMatch && shortMatch[1]) {
+    return `https://www.youtube.com/embed/${shortMatch[1]}`;
+  }
+
+  // 3. Shorts youtube.com/shorts/ID
+  const shortsMatch = trimmed.match(/(?:youtube\.com\/shorts\/)([^?&]+)/i);
+  if (shortsMatch && shortsMatch[1]) {
+    return `https://www.youtube.com/embed/${shortsMatch[1]}`;
+  }
+
+  // 4. Already an embed URL https://www.youtube.com/embed/ID
+  const embedMatch = trimmed.match(/(?:youtube\.com\/embed\/)([^?&]+)/i);
+  if (embedMatch && embedMatch[1]) {
+    return `https://www.youtube.com/embed/${embedMatch[1]}`;
+  }
+
+  // 5. Raw video ID (11 characters)
+  if (/^[a-zA-Z0-9_-]{11}$/.test(trimmed)) {
+    return `https://www.youtube.com/embed/${trimmed}`;
+  }
+
+  return null;
+}
+
 export default async function BlogPost({ params }: PageProps) {
   const { slug } = await params;
   let post = null;
@@ -54,6 +90,8 @@ export default async function BlogPost({ params }: PageProps) {
   if (!post || !post.published) {
     notFound();
   }
+
+  const embedUrl = getYouTubeEmbedUrl(post.youtubeUrl);
 
   // Simple, secure, and fast parser to convert paragraphs and headings
   const renderContent = (text: string) => {
@@ -102,11 +140,27 @@ export default async function BlogPost({ params }: PageProps) {
 
           <div className={styles.detailImgWrapper}>
             <img
-              src={post.image}
+              src={post.image && post.image.trim() ? post.image : "/images/pvc-banner.jpg"}
               alt={post.title}
               className={styles.detailImage}
             />
           </div>
+
+          {/* Embedded YouTube Video Section */}
+          {embedUrl && (
+            <div className={styles.videoSection}>
+              <h3 className={styles.videoTitle}>🎥 Watch Official Video Guide</h3>
+              <div className={styles.videoResponsiveWrapper}>
+                <iframe
+                  src={embedUrl}
+                  title={`${post.title} Video Guide`}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  className={styles.videoIframe}
+                />
+              </div>
+            </div>
+          )}
 
           <div className={styles.bodyContent}>
             {renderContent(post.content)}

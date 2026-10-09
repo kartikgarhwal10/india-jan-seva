@@ -4,7 +4,7 @@ import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import HeroSlider from "@/components/Home/HeroSlider";
 import ServiceSearch from "@/components/Home/ServiceSearch";
-import { reviews, faqs, blogs } from "@/lib/mockData";
+import { reviews, faqs, blogs, pvcProducts, PVCProduct } from "@/lib/mockData";
 import { prisma } from "@/lib/prisma";
 import { SITE_CONFIG } from "@/lib/config";
 import PVCProductCard from "@/components/PVCProductCard/PVCProductCard";
@@ -20,10 +20,25 @@ export default async function Home() {
     activeProducts = [];
   }
 
-  // Extract items for highlight
-  const featuredPvc = activeProducts.filter(p => p.featured);
-  const showcasePvc = (featuredPvc.length >= 4 ? featuredPvc : activeProducts).slice(0, 4);
-  const minPrice = activeProducts.length > 0 ? Math.min(...activeProducts.map(p => p.price)) : 100;
+  if (!activeProducts || activeProducts.length === 0) {
+    activeProducts = pvcProducts.map((p: PVCProduct) => ({
+      id: p.id,
+      slug: p.slug,
+      name: p.name,
+      price: p.price,
+      shortDescription: "Premium quality • Durable • Smart Look • Easy Ordering",
+      description: p.description,
+      image: p.image,
+      active: true,
+      featured: true,
+    }));
+  }
+
+  // Extract items for highlight - explicitly include APAAR PVC Card in the homepage section
+  const apaarCard = activeProducts.find(p => p.slug === "apaar-pvc" || p.id === "pvc-apaar");
+  const otherPvc = activeProducts.filter(p => p.slug !== "apaar-pvc" && p.id !== "pvc-apaar");
+  const showcasePvc = apaarCard ? [apaarCard, ...otherPvc].slice(0, 8) : activeProducts.slice(0, 8);
+  const minPrice = activeProducts.length > 0 ? Math.min(...activeProducts.map(p => p.price)) : 149;
 
   const latestBlogs = blogs.slice(0, 3);
   const selectedReviews = reviews.slice(0, 3);

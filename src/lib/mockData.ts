@@ -557,9 +557,20 @@ export const pvcProducts: PVCProduct[] = [
     image: "/images/cards/rc-pvc.jpg"
   },
   {
+    id: "pvc-apaar",
+    slug: "apaar-pvc",
+    name: "APAAR Card - Student PVC Smart Card",
+    price: 149,
+    description: "APAAR Card – आपकी शिक्षा और पहचान एक जगह! Print your Automated Permanent Academic Account Registry (APAAR) ID on a durable, waterproof PVC smart card.",
+    requirements: ["APAAR Card PDF download (from DigiLocker / ABC Portal)", "OR 12-Digit APAAR ID Number + Student Details"],
+    features: ["Ministry of Education compliant design", "High definition scannable QR code", "Waterproof & scratch-proof plastic finish", "Standard wallet-sized ATM card format"],
+    deliveryTime: "3 - 7 Days across India",
+    image: "/images/cards/apaar-pvc.jpg"
+  },
+  {
     id: "pvc-student",
     slug: "student-id-pvc",
-    name: "Student ID PVC Card (APAAR)",
+    name: "Student ID PVC Card",
     price: 149,
     description: "Print your APAAR Academic ID or school/college student identity card on a glossy, durable plastic card.",
     requirements: ["APAAR Card PDF layout or high-res photo scan", "OR Student ID / Admission receipt"],
@@ -653,18 +664,7 @@ export const pvcProducts: PVCProduct[] = [
     requirements: ["UAN Card PDF from Unified Member Portal", "OR UAN Number details"],
     features: ["ATM card dimensions template", "Glossy wear-resistant laminate", "Official EPFO green themes matching", "Clear Member details rendering"],
     deliveryTime: "3 - 7 Days across India",
-    image: "/images/pvc-aadhaar-mockup.jpg"
-  },
-  {
-    id: "pvc-student",
-    slug: "student-id-pvc",
-    name: "Student ID PVC Card",
-    price: 149,
-    description: "Convert your temporary paper student identity documents or school/college registry cards into a glossy, durable plastic card.",
-    requirements: ["Student ID Card layout PDF or high-res photo scan", "OR Admission receipt with photo"],
-    features: ["Vivid color rendering", "Durable badge protection coating", "Double-sided custom print matching", "Free lanyard slot punch if requested"],
-    deliveryTime: "3 - 7 Days across India",
-    image: "/images/pvc-pan-mockup.jpg"
+    image: "/images/cards/uan-pvc.jpg"
   }
 ];
 

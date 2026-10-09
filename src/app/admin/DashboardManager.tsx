@@ -45,6 +45,7 @@ interface BlogPost {
   seoTitle?: string | null;
   seoDescription?: string | null;
   seoKeywords?: string | null;
+  youtubeUrl?: string | null;
   createdAt: string;
   updatedAt: string;
 }
@@ -121,6 +122,7 @@ export default function DashboardManager({
   const [blogSeoTitle, setBlogSeoTitle] = useState("");
   const [blogSeoDescription, setBlogSeoDescription] = useState("");
   const [blogSeoKeywords, setBlogSeoKeywords] = useState("");
+  const [blogYoutubeUrl, setBlogYoutubeUrl] = useState("");
   const [editorMode, setEditorMode] = useState<"edit" | "preview">("edit");
   const [isSavingBlog, setIsSavingBlog] = useState(false);
   const [isUploadingImage, setIsUploadingImage] = useState(false);
@@ -268,6 +270,7 @@ export default function DashboardManager({
     setBlogSeoTitle("");
     setBlogSeoDescription("");
     setBlogSeoKeywords("");
+    setBlogYoutubeUrl("");
     setEditorMode("edit");
     setBlogErrorMsg("");
     setBlogSuccessMsg("");
@@ -286,6 +289,7 @@ export default function DashboardManager({
     setBlogSeoTitle(blog.seoTitle || "");
     setBlogSeoDescription(blog.seoDescription || "");
     setBlogSeoKeywords(blog.seoKeywords || "");
+    setBlogYoutubeUrl(blog.youtubeUrl || "");
     setEditorMode("edit");
     setBlogErrorMsg("");
     setBlogSuccessMsg("");
@@ -349,6 +353,7 @@ export default function DashboardManager({
       seoTitle: blogSeoTitle,
       seoDescription: blogSeoDescription,
       seoKeywords: blogSeoKeywords,
+      youtubeUrl: blogYoutubeUrl,
     };
 
     try {
@@ -1314,6 +1319,17 @@ export default function DashboardManager({
                           <input type="file" accept="image/*" onChange={handleImageUpload} style={{ display: "none" }} />
                         </label>
                       </div>
+                    </div>
+
+                    <div className={styles.fieldGroup}>
+                      <label className={styles.fieldLabel}>YouTube Video Link (Optional)</label>
+                      <input
+                        type="text"
+                        value={blogYoutubeUrl}
+                        onChange={(e) => setBlogYoutubeUrl(e.target.value)}
+                        className={styles.textInput}
+                        placeholder="e.g. https://www.youtube.com/watch?v=... or https://youtu.be/..."
+                      />
                     </div>
                   </div>
 

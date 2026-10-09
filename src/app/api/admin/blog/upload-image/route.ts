@@ -45,18 +45,31 @@ export async function POST(request: Request) {
     const fileBytes = await file.arrayBuffer();
     const buffer = Buffer.from(fileBytes);
 
-    // Save to public/images/blog directory
-    const uploadDir = path.join(process.cwd(), "public", "images", "blog");
+    // Save to public/images/blog and blog_uploads directories for dual persistence
+    const publicUploadDir = path.join(process.cwd(), "public", "images", "blog");
+    const blogUploadsDir = path.join(process.cwd(), "blog_uploads");
+
     try {
-      await fs.mkdir(uploadDir, { recursive: true });
+      await fs.mkdir(publicUploadDir, { recursive: true });
+    } catch {
+      // directory exists
+    }
+
+    try {
+      await fs.mkdir(blogUploadsDir, { recursive: true });
     } catch {
       // directory exists
     }
 
     const filename = `blog-${Date.now()}-${Math.floor(Math.random() * 1000)}${ext}`;
-    const filePath = path.join(uploadDir, filename);
+    const publicFilePath = path.join(publicUploadDir, filename);
+    const blogFilePath = path.join(blogUploadsDir, filename);
 
-    await fs.writeFile(filePath, buffer);
+    // Save to both locations
+    await Promise.all([
+      fs.writeFile(publicFilePath, buffer),
+      fs.writeFile(blogFilePath, buffer),
+    ]);
 
     const publicUrl = `/images/blog/${filename}`;
 

@@ -54,7 +54,7 @@ export default async function BlogIndex() {
                 <article key={post.id} className={styles.postCard}>
                   <div className={styles.imgWrapper}>
                     <img
-                      src={post.image}
+                      src={post.image && post.image.trim() ? post.image : "/images/pvc-banner.jpg"}
                       alt={post.title}
                       className={styles.image}
                       loading="lazy"

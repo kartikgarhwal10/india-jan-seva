@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import { SITE_CONFIG } from "@/lib/config";
+import SocialNotificationPopup from "@/components/SocialNotificationPopup/SocialNotificationPopup";
 import "./globals.css";
 
 const roboto = Roboto({
@@ -77,6 +78,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         {children}
+        <SocialNotificationPopup />
       </body>
     </html>
   );

@@ -38,6 +38,7 @@ export async function POST(request: Request) {
       seoTitle,
       seoDescription,
       seoKeywords,
+      youtubeUrl,
     } = body;
 
     if (!id) {
@@ -85,6 +86,7 @@ export async function POST(request: Request) {
         seoTitle: seoTitle ? seoTitle.trim() : null,
         seoDescription: seoDescription ? seoDescription.trim() : null,
         seoKeywords: seoKeywords ? seoKeywords.trim() : null,
+        youtubeUrl: youtubeUrl !== undefined ? (youtubeUrl ? youtubeUrl.trim() : null) : existingPost.youtubeUrl,
       },
     });
 

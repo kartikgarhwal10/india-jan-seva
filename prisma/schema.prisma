@@ -100,6 +100,7 @@ model BlogPost {
   seoTitle       String?
   seoDescription  String?
   seoKeywords    String?
+  youtubeUrl     String?
   createdAt      DateTime @default(now())
   updatedAt      DateTime @updatedAt
 }
