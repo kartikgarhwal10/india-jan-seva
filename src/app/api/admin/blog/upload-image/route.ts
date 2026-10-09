@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
-import { promises as fs } from "fs";
 import path from "path";
 import { verifyAdminSession } from "@/lib/adminAuth";
+import { uploadBlogImageToSupabase } from "@/lib/supabaseServer";
 
 export async function POST(request: Request) {
   try {
@@ -30,55 +30,47 @@ export async function POST(request: Request) {
 
     // File type validation
     const ALLOWED_TYPES = ["image/jpeg", "image/png", "image/webp", "image/gif", "image/jpg"];
-    if (!ALLOWED_TYPES.includes(file.type.toLowerCase())) {
-      return NextResponse.json({ error: "Unsupported image format. Allowed: JPG, PNG, WebP, GIF." }, { status: 400 });
+    const mimeType = file.type.toLowerCase();
+    if (!ALLOWED_TYPES.includes(mimeType)) {
+      return NextResponse.json(
+        { error: "Unsupported image format. Allowed: JPG, PNG, WebP, GIF." },
+        { status: 400 }
+      );
     }
 
     let ext = path.extname(file.name).toLowerCase();
     if (!ext) {
-      if (file.type === "image/png") ext = ".png";
-      else if (file.type === "image/webp") ext = ".webp";
-      else if (file.type === "image/gif") ext = ".gif";
+      if (mimeType === "image/png") ext = ".png";
+      else if (mimeType === "image/webp") ext = ".webp";
+      else if (mimeType === "image/gif") ext = ".gif";
       else ext = ".jpg";
     }
 
     const fileBytes = await file.arrayBuffer();
     const buffer = Buffer.from(fileBytes);
 
-    // Save to public/images/blog and blog_uploads directories for dual persistence
-    const publicUploadDir = path.join(process.cwd(), "public", "images", "blog");
-    const blogUploadsDir = path.join(process.cwd(), "blog_uploads");
+    // Upload to public Supabase Storage bucket `ucc-blog-images`
+    const { publicUrl, error: uploadError } = await uploadBlogImageToSupabase({
+      fileBuffer: buffer,
+      fileExt: ext,
+      mimeType,
+    });
 
-    try {
-      await fs.mkdir(publicUploadDir, { recursive: true });
-    } catch {
-      // directory exists
+    if (uploadError || !publicUrl) {
+      console.error("[BLOG IMAGE UPLOAD] Supabase upload failed:", uploadError);
+      return NextResponse.json(
+        { error: uploadError || "Failed to upload image to storage bucket." },
+        { status: 500 }
+      );
     }
-
-    try {
-      await fs.mkdir(blogUploadsDir, { recursive: true });
-    } catch {
-      // directory exists
-    }
-
-    const filename = `blog-${Date.now()}-${Math.floor(Math.random() * 1000)}${ext}`;
-    const publicFilePath = path.join(publicUploadDir, filename);
-    const blogFilePath = path.join(blogUploadsDir, filename);
-
-    // Save to both locations
-    await Promise.all([
-      fs.writeFile(publicFilePath, buffer),
-      fs.writeFile(blogFilePath, buffer),
-    ]);
-
-    const publicUrl = `/images/blog/${filename}`;
 
     return NextResponse.json({
       success: true,
       imageUrl: publicUrl,
     });
   } catch (error) {
+    const message = error instanceof Error ? error.message : "Failed to upload image.";
     console.error("Blog Image Upload Error:", error);
-    return NextResponse.json({ error: "Failed to upload image." }, { status: 500 });
+    return NextResponse.json({ error: message }, { status: 500 });
   }
 }

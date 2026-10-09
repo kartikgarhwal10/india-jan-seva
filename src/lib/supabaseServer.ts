@@ -1,6 +1,7 @@
 import { createClient, SupabaseClient } from "@supabase/supabase-js";
 
 export const BUCKET_NAME = "ucc-private-documents";
+export const BLOG_BUCKET_NAME = "ucc-blog-images";
 
 /**
  * Creates and returns a Supabase client using server-side service role credentials.
@@ -26,6 +27,81 @@ export function getSupabaseServerClient(): SupabaseClient {
       autoRefreshToken: false,
     },
   });
+}
+
+/**
+ * Ensures that the public bucket `ucc-blog-images` exists on Supabase Storage.
+ * Attempts to create it if missing or updates its status to public.
+ */
+export async function ensurePublicBlogBucket(): Promise<boolean> {
+  try {
+    const supabase = getSupabaseServerClient();
+    const { data: bucket, error } = await supabase.storage.getBucket(BLOG_BUCKET_NAME);
+
+    if (error || !bucket) {
+      const { error: createError } = await supabase.storage.createBucket(BLOG_BUCKET_NAME, {
+        public: true,
+        fileSizeLimit: 5242880, // 5 MB
+        allowedMimeTypes: ["image/jpeg", "image/png", "image/webp", "image/gif", "image/jpg"],
+      });
+
+      if (createError) {
+        console.error("[SUPABASE STORAGE] Error creating public blog bucket:", createError.message);
+        return false;
+      }
+    } else if (!bucket.public) {
+      await supabase.storage.updateBucket(BLOG_BUCKET_NAME, { public: true });
+    }
+    return true;
+  } catch (err) {
+    console.error("[SUPABASE STORAGE] Public blog bucket check exception:", err);
+    return false;
+  }
+}
+
+/**
+ * Uploads a blog image buffer to Supabase Public Storage bucket `ucc-blog-images`.
+ * Returns the public object URL.
+ */
+export async function uploadBlogImageToSupabase({
+  fileBuffer,
+  fileExt,
+  mimeType,
+}: {
+  fileBuffer: Buffer;
+  fileExt: string;
+  mimeType: string;
+}): Promise<{ publicUrl: string | null; error: string | null }> {
+  try {
+    const supabase = getSupabaseServerClient();
+    await ensurePublicBlogBucket();
+
+    const uniqueId = crypto.randomUUID();
+    const cleanExt = fileExt.startsWith(".") ? fileExt : `.${fileExt}`;
+    const storagePath = `blog/${Date.now()}-${uniqueId}${cleanExt}`;
+
+    const { error: uploadError } = await supabase.storage
+      .from(BLOG_BUCKET_NAME)
+      .upload(storagePath, fileBuffer, {
+        contentType: mimeType,
+        upsert: false,
+      });
+
+    if (uploadError) {
+      console.error("[SUPABASE STORAGE] Blog image upload failed:", uploadError.message);
+      return { publicUrl: null, error: uploadError.message };
+    }
+
+    const { data: publicUrlData } = supabase.storage
+      .from(BLOG_BUCKET_NAME)
+      .getPublicUrl(storagePath);
+
+    return { publicUrl: publicUrlData.publicUrl, error: null };
+  } catch (err) {
+    const message = err instanceof Error ? err.message : "Unknown error during blog image upload";
+    console.error("[SUPABASE STORAGE] Exception during blog image upload:", err);
+    return { publicUrl: null, error: message };
+  }
 }
 
 /**

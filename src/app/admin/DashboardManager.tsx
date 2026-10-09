@@ -315,13 +315,16 @@ export default function DashboardManager({
       const data = await res.json();
       if (res.ok && data.imageUrl) {
         setBlogImage(data.imageUrl);
+        setBlogSuccessMsg("Featured image uploaded successfully to storage!");
       } else {
         setBlogErrorMsg(data.error || "Failed to upload image.");
       }
-    } catch {
-      setBlogErrorMsg("Image upload failed due to network error.");
+    } catch (error) {
+      const msg = error instanceof Error ? error.message : "Image upload failed due to network error.";
+      setBlogErrorMsg(msg);
     } finally {
       setIsUploadingImage(false);
+      e.target.value = "";
     }
   };
 
