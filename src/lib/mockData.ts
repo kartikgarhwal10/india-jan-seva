@@ -570,7 +570,7 @@ export const pvcProducts: PVCProduct[] = [
   {
     id: "pvc-student",
     slug: "student-id-pvc",
-    name: "Student ID PVC Card",
+    name: "APAAR PVC Card",
     price: 149,
     description: "Print your APAAR Academic ID or school/college student identity card on a glossy, durable plastic card.",
     requirements: ["APAAR Card PDF layout or high-res photo scan", "OR Student ID / Admission receipt"],

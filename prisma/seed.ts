@@ -215,7 +215,7 @@ const pvcProducts = [
   },
   {
     slug: "student-id-pvc",
-    name: "Student ID PVC Card",
+    name: "APAAR PVC Card",
     price: 149,
     shortDescription: "Premium quality • Durable • Smart Look • Easy Ordering",
     description: "Print your school/college student identity card on a glossy, durable plastic PVC smart card with custom lanyards.",
