@@ -221,6 +221,7 @@
   justify-content: center;
   gap: 3px;
   margin-top: 6px;
+  flex-wrap: wrap;
 }
 
 .dot {
